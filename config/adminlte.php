@@ -246,7 +246,37 @@ return [
             'url'  => 'change-password',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        ['header' => 'labels'],
+        'FEATURES',
+        [
+            'text' => 'Santri',
+            'url'  => 'santri',
+            'icon' => 'fas fa-fw fa-users',
+        ],
+        [
+            'text' => 'Kelas',
+            'url'  => 'kelas',
+            'icon' => 'fas fa-fw fa-university',
+        ],
+        [
+            'text' => 'Pelajaran',
+            'url'  => 'pelajaran',
+            'icon' => 'fas fa-fw fa-book',
+        ],
+        [
+            'text' => 'Guru',
+            'url'  => 'guru',
+            'icon' => 'fas fa-fw fa-user-secret',
+        ],
+        [
+            'text' => 'Laporan',
+            'url'  => 'laporan',
+            'icon' => 'fas fa-fw fa-newspaper',
+        ],
+        [
+            'text' => 'Nilai Raport',
+            'url'  => 'nilai-raport',
+            'icon' => 'fas fa-fw fa-sticky-note',
+        ],
 
     ],
 

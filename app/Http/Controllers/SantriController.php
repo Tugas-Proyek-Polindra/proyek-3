@@ -12,9 +12,15 @@ class SantriController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        //
+        return view('admin.santri.index');
     }
 
     /**
@@ -24,7 +30,7 @@ class SantriController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

@@ -1,8 +1,12 @@
 @extends('adminlte::page')
 
-@section('title', 'Santri')
+@section('title', 'Kelas')
 
-@section('plugins.Datatables', true)
+@section('content_header')
+    <!-- Content Header (Page header) -->
+    {{-- <section class="content-header">
+    </section> --}}
+@stop
 
 @section('content')
 
@@ -26,23 +30,16 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Nama Santri</th>
-                  <th>Jenis Kelamin</th>
-                  <th>No HP</th>
-                  <th>Nama Ibu</th>
-                  <th>Sekolah Asal</th>
-                  <th>Alamat Sekolah</th>
-                  <th>Aksi</th>
+                  <th>Kelas</th>
+                  <th>Wali Kelas</th>
+                  <th>Tahun Ajaran</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Andini Sri Wahyuni</td>                  
-                  <td>Perempuan</td>
-                  <td>083162945201</td>
-                  <td>Marpuah</td>
-                  <td>SDN Bongas Wetan II</td>
-                  <td>Kampung Munjul</td>
+                  <td>Kls I</td>
+                  <td>Dina Nuraeni</td>
+                  <td>2021/2022</td>
                   <td >                                        
                     <form method="post" action="/produk/ " class="form-inline">
                         <a href="/produk/ " class="btn btn-sm btn-success" ><i class="fas fa-file"></i></a>
@@ -74,15 +71,6 @@
                 </td>
                 </tr>
                 </tbody>
-                {{-- <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </tfoot> --}}
               </table>
             </div>
             <!-- /.card-body -->
@@ -106,6 +94,6 @@
 
 @section('js')
     <script> console.log('Hi!'); </script>
-
+    @section('plugins.Datatables', true)
 
 @stop

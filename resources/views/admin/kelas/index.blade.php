@@ -2,6 +2,7 @@
 
 @section('title', 'Santri')
 
+@section('plugins.Datatables', true)
 @section('content')
 
 <section class="content">
@@ -35,11 +36,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Andini Sri Wahyuni</td>
-                  {{-- <td>0139484821</td>
-                  <td>3210174509130001</td>
-                  <td>Majalengka</td>
-                  <td>5 Sept 2013</td> --}}
+                  <td>Andini Sri Wahyuni</td>                  
                   <td>Perempuan</td>
                   <td>083162945201</td>
                   <td>Marpuah</td>
@@ -108,6 +105,6 @@
 
 @section('js')
     <script> console.log('Hi!'); </script>
-@section('plugins.Datatables', true)
+
 
 @stop

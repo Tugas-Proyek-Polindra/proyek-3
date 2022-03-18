@@ -248,15 +248,29 @@ return [
         // Sidebar items:
         [
             'text'        => 'Dashboard',
-            'url'         => 'dashboard',
+            'url'         => 'home',
             'icon'        => 'nav-icon fas fa-tachometer-alt',
         ],
         
         ['header' => 'FEATURE'],
         [
-            'text' => 'Rekap Nilai',
-            'url'  => 'nilai',
-            'icon' => 'fas fa-fw fa-user',
+            'text'    => 'Nilai',
+            'icon'    => 'fas fa-fw fa-book',
+            'submenu' => [
+                [
+                    'text' => 'Rekap Nilai',
+                    'url'  => 'nilai',
+                ],
+                [
+                    'text' => 'Pengembanan Diri',
+                    'url'  => 'nilai',
+                ],
+                [
+                    'text' => 'Kepribadian',
+                    'url'  => 'nilai',
+                ],
+                
+            ],
         ],
         [
             'text' => 'Santri',
@@ -292,12 +306,12 @@ return [
 
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text' => 'Profile Sekolah',
             'url'  => 'profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Setting',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],

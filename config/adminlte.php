@@ -71,6 +71,15 @@ return [
     'usermenu_desc' => true,
     'usermenu_profile_url' => true,
 
+    // Fitur
+    'usermenu_rekap_nilai_url' => true,
+    'usermenu_santri_url' => true,
+    'usermenu_kelas_url' => true,
+    'usermenu_pelajaran_url' => true,
+    'usermenu_guru_url' => true,
+    'usermenu_pengembangai_diri_url' => true,
+    'usermenu_kepribadian_url' => true,
+
     /*
     |--------------------------------------------------------------------------
     | Layout
@@ -225,16 +234,62 @@ return [
     */
 
     'menu' => [
+        // Navbar items:
         [
-            'text'   => 'search',
-            'search' => true,
-            'topnav' => true,
+            'type'         => 'navbar-search',
+            'text'         => 'search',
+            'topnav_right' => true,
         ],
         [
-            'text' => 'Dashboard',
-            'url'  => '/home',
-            'icon' => 'fas fa-fw fa-home',
+            'type'         => 'fullscreen-widget',
+            'topnav_right' => true,
         ],
+
+        // Sidebar items:
+        [
+            'text'        => 'Dashboard',
+            'url'         => 'dashboard',
+            'icon'        => 'nav-icon fas fa-tachometer-alt',
+        ],
+        
+        ['header' => 'FEATURE'],
+        [
+            'text' => 'Rekap Nilai',
+            'url'  => 'nilai',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Santri',
+            'url'  => 'santri',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Kelas',
+            'url'  => 'kelas',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        
+        [
+            'text' => 'Pelajaran',
+            'url'  => 'pelajaran',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Guru',
+            'url'  => 'guru',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Pengembangan Diri',
+            'url'  => 'pengembangan_diri',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Kepribadian',
+            'url'  => 'kepribadian',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
@@ -243,41 +298,10 @@ return [
         ],
         [
             'text' => 'change_password',
-            'url'  => 'change-password',
+            'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        'FEATURES',
-        [
-            'text' => 'Santri',
-            'url'  => 'santri',
-            'icon' => 'fas fa-fw fa-users',
-        ],
-        [
-            'text' => 'Kelas',
-            'url'  => 'kelas',
-            'icon' => 'fas fa-fw fa-university',
-        ],
-        [
-            'text' => 'Pelajaran',
-            'url'  => 'pelajaran',
-            'icon' => 'fas fa-fw fa-book',
-        ],
-        [
-            'text' => 'Guru',
-            'url'  => 'guru',
-            'icon' => 'fas fa-fw fa-user-secret',
-        ],
-        [
-            'text' => 'Laporan',
-            'url'  => 'laporan',
-            'icon' => 'fas fa-fw fa-newspaper',
-        ],
-        [
-            'text' => 'Nilai Raport',
-            'url'  => 'nilai-raport',
-            'icon' => 'fas fa-fw fa-sticky-note',
-        ],
-
+        
     ],
 
     /*
@@ -316,22 +340,22 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js',
+                    'asset' => true,
+                    'location' => '/vendor/datatables/js/jquery.dataTables.min.js',
                 ],
                 [
                     'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js',
+                    'asset' => true,
+                    'location' => '/vendor/datatables/js/dataTables.bootstrap4.min.js',
                 ],
                 [
                     'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css',
+                    'asset' => true,
+                    'location' => '/vendor/datatables/css/dataTables.bootstrap4.min.css',
                 ],
             ],
         ],

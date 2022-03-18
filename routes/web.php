@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SantriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,11 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
+// Route::get('/santri', [SantriController::class, 'index'])->name('santri');
+Route::resource('/santri', SantriController::class);
+
+
+
+
 Auth::routes();
 
-Route::resource('/santri', SantriController::class);

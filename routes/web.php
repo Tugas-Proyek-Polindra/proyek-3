@@ -27,6 +27,7 @@ Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
 // Route::get('/santri', [SantriController::class, 'index'])->name('santri');
 Route::resource('/santri', SantriController::class);
+Route::resource('/kelas', KelasController::class);
 
 
 

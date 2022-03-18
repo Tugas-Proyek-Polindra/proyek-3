@@ -3,6 +3,7 @@
 @section('title', 'Santri')
 
 @section('plugins.Datatables', true)
+
 @section('content')
 
 <section class="content">

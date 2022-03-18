@@ -275,33 +275,23 @@ return [
         [
             'text' => 'Santri',
             'url'  => 'santri',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-user-graduate',
         ],
         [
             'text' => 'Kelas',
             'url'  => 'kelas',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-th',
         ],
         
         [
             'text' => 'Pelajaran',
             'url'  => 'pelajaran',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-copy',
         ],
         [
             'text' => 'Guru',
             'url'  => 'guru',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Pengembangan Diri',
-            'url'  => 'pengembangan_diri',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Kepribadian',
-            'url'  => 'kepribadian',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-users',
         ],
 
         ['header' => 'account_settings'],

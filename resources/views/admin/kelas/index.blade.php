@@ -1,10 +1,23 @@
 @extends('adminlte::page')
 
-@section('title', 'Kelas')
+@section('title', 'Santri')
 
 @section('content_header')
     <!-- Content Header (Page header) -->
     {{-- <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>DataTables</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">DataTables</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
     </section> --}}
 @stop
 
@@ -15,24 +28,42 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
+          @if (session('pesan'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismis="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i>Success:</h4>
+                {{session('pesan')}}
+            </div>     
+          @endif
 
+        <!-- /.card -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Tabel @yield('title')</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active">Kelas</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
           <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Tabel Kelas</h3>
-            </div>
-            <div class="card-header">
-              <a href="/produk/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
-
-            </div>
-
-            <!-- /.card-header -->
             <div class="card-body">
+              <div class="mb-3">
+                <a href="/kelas/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+              </div>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>Kelas</th>
                   <th>Wali Kelas</th>
                   <th>Tahun Ajaran</th>
+                  <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -73,17 +104,11 @@
                 </tbody>
               </table>
             </div>
-            <!-- /.card-body -->
           </div>
-          <!-- /.card -->
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </div>
-    <!-- /.container-fluid -->
 </section>
-<!-- /.content -->
 @stop
 
 

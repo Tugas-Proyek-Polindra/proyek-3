@@ -36,7 +36,7 @@
             </div>     
           @endif
 
-          <!-- /.card -->
+        <!-- /.card -->
         <section class="content-header">
           <div class="container-fluid">
             <div class="row mb-2">
@@ -50,12 +50,9 @@
                 </ol>
               </div>
             </div>
-          </div><!-- /.container-fluid -->
+          </div>
         </section>
-
           <div class="card">
-
-            <!-- /.card-header -->
             <div class="card-body">
               <div class="mb-3">
                 <a href="/santri/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
@@ -72,7 +69,7 @@
                   <th>No HP</th>
                   <th>Nama Ibu</th>
                   <th>Sekolah Asal</th>
-                  <th>Alamat Sekolah</th>
+                  {{-- <th>Alamat Sekolah</th> --}}
                   <th>Aksi</th>
                 </tr>
                 </thead>
@@ -80,19 +77,23 @@
                   @foreach ($santris as $santri)
                 <tr>
                   <td>{{$santri->nama_santri}}</td>
-                  {{-- <td>{{$santri->}}</td>
-                  <td>{{$santri->}}</td>
-                  <td>{{$santri->}}</td>
-                  <td>{{$santri->}}</td> --}}
-                  <td>{{$santri->jenis_kelamin}}</td>
+                  {{-- <td>{{$santri->nisn}}</td>
+                  <td>{{$santri->nik}}</td>
+                  <td>{{$santri->tempat_lahir}}</td>
+                  <td>{{$santri->tgl_lahir}}</td> --}}
+                    @if ($santri->jenis_kelamin == 'L' )
+                      <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="L">Laki-Laki</td>
+                    @elseif($santri->jenis_kelamin == 'P' )
+                      <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</td>      
+                    @endif
                   <td>{{$santri->no_hp}}</td>
                   <td>{{$santri->nama_ibu}}</td>
-                  <td>{{$santri->sekolah_asal}}</td>
+                  {{-- <td>{{$santri->sekolah_asal}}</td> --}}
                   <td>{{$santri->alamat_sekolah}}</td>
                   <td >                                        
-                    <form method="post" action="/santri/ " class="form-inline">
-                        <a href="/santri/ " class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                        <a href="/santri/ /edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/santri/{{$santri->id}}" class="form-inline">
+                        <a href="/santri/{{$santri->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                        <a href="/santri/{{$santri->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
@@ -113,9 +114,7 @@
                             <button type="button" class="btn btn-outline pull-right">Yes</button>
                           </div>
                         </div>
-                        <!-- /.modal-content -->
                         </div>
-                        <!-- /.modal-dialog -->
                     </div>
                 </td>
                 </tr>
@@ -132,17 +131,11 @@
                 </tfoot> --}}
               </table>
             </div>
-            <!-- /.card-body -->
           </div>
-          <!-- /.card -->
         </div>
-        <!-- /.col -->
       </div>
-      <!-- /.row -->
     </div>
-    <!-- /.container-fluid -->
 </section>
-<!-- /.content -->
 @stop
 
 

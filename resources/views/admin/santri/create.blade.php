@@ -10,7 +10,6 @@
 @section('content')
 
 <section class="content p-3">
-    <!-- Input addon -->
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Tambah @yield('title')</h3>
@@ -71,8 +70,8 @@
                         <div class="form-group">
                             <label for="jenis_kelamin">Jenis Kelamin</label>
                             <select name="jenis_kelamin" class="form-control">
-                                <option value="Laki-laki" >Laki-Laki</option>
-                                <option value="Perempuan" >Perempuan</option>
+                                <option value="L" >Laki-Laki</option>
+                                <option value="P" >Perempuan</option>
                             </select>                 
                         </div>
                         <div class="form-group">

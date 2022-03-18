@@ -28,6 +28,13 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
+          @if (session('pesan'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismis="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i>Success:</h4>
+                {{session('pesan')}}
+            </div>     
+          @endif
           {{-- <div class="card">
             <div class="card-header">
               <h3 class="card-title">DataTable with minimal features & hover style</h3>
@@ -415,7 +422,7 @@
               <h3 class="card-title">Tabel Santri</h3>
             </div>
             <div class="card-header">
-              <a href="/produk/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+              <a href="/santri/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
 
             </div>
 
@@ -438,21 +445,22 @@
                 </tr>
                 </thead>
                 <tbody>
+                  @foreach ($santris as $santri)
                 <tr>
-                  <td>Andini Sri Wahyuni</td>
-                  {{-- <td>0139484821</td>
-                  <td>3210174509130001</td>
-                  <td>Majalengka</td>
-                  <td>5 Sept 2013</td> --}}
-                  <td>Perempuan</td>
-                  <td>083162945201</td>
-                  <td>Marpuah</td>
-                  <td>SDN Bongas Wetan II</td>
-                  <td>Kampung Munjul</td>
+                  <td>{{$santri->nama_santri}}</td>
+                  {{-- <td>{{$santri->}}</td>
+                  <td>{{$santri->}}</td>
+                  <td>{{$santri->}}</td>
+                  <td>{{$santri->}}</td> --}}
+                  <td>{{$santri->jenis_kelamin}}</td>
+                  <td>{{$santri->no_hp}}</td>
+                  <td>{{$santri->nama_ibu}}</td>
+                  <td>{{$santri->sekolah_asal}}</td>
+                  <td>{{$santri->alamat_sekolah}}</td>
                   <td >                                        
-                    <form method="post" action="/produk/ " class="form-inline">
-                        <a href="/produk/ " class="btn btn-sm btn-success" ><i class="fas fa-file"></i></a>
-                        <a href="/produk/ /edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/santri/ " class="form-inline">
+                        <a href="/santri/ " class="btn btn-sm btn-success" ><i class="fas fa-file"></i></a>
+                        <a href="/santri/ /edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-times"></i></button>    
@@ -479,6 +487,7 @@
                     </div>
                 </td>
                 </tr>
+                @endforeach
                 </tbody>
                 {{-- <tfoot>
                 <tr>

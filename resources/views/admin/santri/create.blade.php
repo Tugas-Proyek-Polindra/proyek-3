@@ -1,0 +1,140 @@
+@extends('adminlte::page')
+
+@section('title', 'Santri')
+
+@section('content_header')
+    <!-- Content Header (Page header) -->
+    {{-- <section class="content-header">
+    </section> --}}
+@stop
+
+@section('content')
+
+<section class="content p-3">
+
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-7">
+        <!-- general form elements -->
+        <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"> Tambah @yield('title')</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form action="/santri" method="POST" enctype="multipart/form-data" >
+            @csrf
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="nama_santri">Nama Santri</label>
+                    <input name="nama_santri" class="form-control" value="{{old('nama_santri')}}"
+                    >
+                    <div class="text-danger">
+                        @error('nama_santri')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nisn">NISN</label>
+                    <input name="nisn" class="form-control" value="{{old('nisn')}}">
+                    <div class="text-danger">
+                        @error('nisn')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nik">NIK</label>
+                    <input name="nik" class="form-control" value="{{old('nik')}}">
+                    <div class="text-danger">
+                        @error('nik')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tempat_lahir">Tempat Lahir</label>
+                    <input name="tempat_lahir" class="form-control" value="{{old('tempat_lahir')}}">
+                    <div class="text-danger">
+                        @error('tempat_lahir')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="tgl_lahir">Tanggal Lahir</label>
+                    <input type="date" name="tgl_lahir" class="form-control" value="{{old('tgl_lahir')}}">
+                    <div class="text-danger">
+                        @error('tgl_lahir')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="jenis_kelamin">Jenis Kelamin</label>
+                    <select name="jenis_kelamin" class="form-control">
+                        <option value="Laki-laki" >Laki-Laki</option>
+                        <option value="Perempuan" >Perempuan</option>
+                    </select>                 
+                </div>
+                <div class="form-group">
+                    <label for="no_hp">No Hp</label>
+                    <input name="no_hp" class="form-control" value="{{old('no_hp')}}">
+                    <div class="text-danger">
+                        @error('no_hp')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="nama_ibu">Nama Ibu</label>
+                    <input name="nama_ibu" class="form-control" value="{{old('nama_ibu')}}">
+                    <div class="text-danger">
+                        @error('nama_ibu')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sekolah_asal">Sekolah Asal</label>
+                    <input name="sekolah_asal" class="form-control" value="{{old('sekolah_asal')}}">
+                    <div class="text-danger">
+                        @error('sekolah_asal')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="alamat_sekolah">Alamat Sekolah</label>
+                    <input name="alamat_sekolah" class="form-control" value="{{old('alamat_sekolah')}}">
+                    <div class="text-danger">
+                        @error('alamat_sekolah')
+                        {{$message}}
+                        @enderror
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+            <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+        </form>
+        </div>
+        <!-- /.box -->
+    </div>
+</section>
+<!-- /.content -->
+@stop
+
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+    @section('plugins.Datatables', true)
+
+@stop

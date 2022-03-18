@@ -9,8 +9,7 @@ class Santri extends Model
 {
     use HasFactory;
 
-    public function usermenu_santri_url()
-    {
-        return 'santri';
-    }
+    protected $guarded = ['id'];
+
+    
 }

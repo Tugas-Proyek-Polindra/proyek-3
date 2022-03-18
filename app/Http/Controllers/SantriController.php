@@ -20,7 +20,9 @@ class SantriController extends Controller
 
     public function index()
     {
-        return view('admin.santri.index');
+        return view('admin.santri.index',[
+            "santris" => Santri::all(),
+        ]);
     }
 
     /**
@@ -30,7 +32,9 @@ class SantriController extends Controller
      */
     public function create()
     {
-        
+        return view('admin.santri.create', [
+            "santri" => Santri::all(),
+        ]);
     }
 
     /**
@@ -41,7 +45,28 @@ class SantriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'nama_santri' => 'required',
+                'nisn' => 'required',
+                'nik' => 'required',
+                'tempat_lahir' => 'required',
+                'tgl_lahir' => 'required|date|date_format:Y-m-d',
+                'jenis_kelamin' => 'required',
+                // 'img' => 'required|mimes:jpg,jpeg,bmp,png|max:2048kb',
+                'no_hp' => 'required',
+                'nama_ibu' => 'required',
+                'sekolah_asal' => 'required',
+                'alamat_sekolah' => 'required',
+            ]
+        );
+
+
+        // $validatedData['img'] = $request->file('img')->store('produk-images');
+
+        Santri::create($validatedData);
+
+        return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**

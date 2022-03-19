@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-19T05:12:30.631Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36 Edg/99.0.1150.39" etag="IbenNnsKiYU0rdo6u6bj" version="17.1.3" type="github" pages="14">
+<mxfile host="app.diagrams.net" modified="2022-03-19T05:16:09.269Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36 Edg/99.0.1150.39" etag="R_TAWRKZMGR4XiAsZm_K" version="17.1.3" type="github" pages="14">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="Flowchart Admin">
     <mxGraphModel dx="782" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -38,7 +38,7 @@
           <mxGeometry x="210" y="550" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="an0ANok2B0Cd9WMYrcY8-8" value="Kelola Data&amp;nbsp; Kepribadian" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="350" y="575" width="100" height="60" as="geometry" />
+          <mxGeometry x="359" y="575" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1LlhtynBCK85CpFQ7kyY-7" value="Santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="60" y="690" width="100" height="100" as="geometry" />
@@ -56,7 +56,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="1LlhtynBCK85CpFQ7kyY-42" value="Data Santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="350" y="710" width="100" height="60" as="geometry" />
+          <mxGeometry x="350" y="710" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="an0ANok2B0Cd9WMYrcY8-21" value="Kelola santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="207" y="690" width="100" height="100" as="geometry" />
@@ -85,8 +85,8 @@
             <mxPoint x="340" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1LlhtynBCK85CpFQ7kyY-40" value="Kelola Data Rekap Nilai" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="362" y="290" width="100" height="60" as="geometry" />
+        <mxCell id="1LlhtynBCK85CpFQ7kyY-40" value="Kelola Data &lt;br&gt;Rekap Nilai" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
+          <mxGeometry x="362" y="290" width="108" height="60" as="geometry" />
         </mxCell>
         <mxCell id="1LlhtynBCK85CpFQ7kyY-41" value="Kelola Data pengembangan diri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="370" y="430" width="100" height="60" as="geometry" />
@@ -103,17 +103,17 @@
             <mxPoint x="270.0000000000002" y="420" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="an0ANok2B0Cd9WMYrcY8-19" value="Data pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
+        <mxCell id="an0ANok2B0Cd9WMYrcY8-19" value="Data &lt;br&gt;Pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="362.5" y="1070" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="an0ANok2B0Cd9WMYrcY8-26" value="Data Guru" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="356.75" y="1220" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iEgTZBCxLitt1ai6TGcZ-14" value="" style="line;strokeWidth=2;direction=west;html=1;fillColor=#FFFFFF;fontColor=none;flipV=1;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="450" y="548" width="139" height="384" as="geometry" />
+          <mxGeometry x="460" y="548" width="129" height="384" as="geometry" />
         </mxCell>
         <mxCell id="iEgTZBCxLitt1ai6TGcZ-17" value="" style="line;strokeWidth=2;direction=west;html=1;fillColor=#FFFFFF;fontColor=none;flipV=1;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="451" y="595" width="139" height="10" as="geometry" />
+          <mxGeometry x="470" y="595" width="120" height="10" as="geometry" />
         </mxCell>
         <mxCell id="iEgTZBCxLitt1ai6TGcZ-18" value="" style="line;strokeWidth=2;direction=west;html=1;fillColor=#FFFFFF;fontColor=none;flipV=1;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="470" y="455" width="120" height="10" as="geometry" />
@@ -164,10 +164,10 @@
           <mxGeometry x="208.5" y="872" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="hLacBjq_ObdUYx9k5cTR-10" value="Data Kelas" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="352.5" y="890" width="100" height="60" as="geometry" />
+          <mxGeometry x="352.5" y="890" width="107.5" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hLacBjq_ObdUYx9k5cTR-11" value="" style="line;strokeWidth=2;direction=west;html=1;fillColor=#FFFFFF;fontColor=none;flipV=1;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="451" y="728" width="139" height="384" as="geometry" />
+          <mxGeometry x="460" y="728" width="130" height="384" as="geometry" />
         </mxCell>
         <mxCell id="an0ANok2B0Cd9WMYrcY8-28" value="Kelola Guru" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="204.75" y="1200" width="100" height="100" as="geometry" />
@@ -253,7 +253,7 @@
         <mxCell id="ja-xJRTJWLcANvvqTXy5-11" value="Kelola santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" parent="ja-xJRTJWLcANvvqTXy5-0" vertex="1">
           <mxGeometry x="208" y="690" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="ja-xJRTJWLcANvvqTXy5-12" value="Data santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="ja-xJRTJWLcANvvqTXy5-0" vertex="1">
+        <mxCell id="ja-xJRTJWLcANvvqTXy5-12" value="Data &lt;br&gt;Santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="ja-xJRTJWLcANvvqTXy5-0" vertex="1">
           <mxGeometry x="362" y="715" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ja-xJRTJWLcANvvqTXy5-18" value="" style="endArrow=classic;html=1;" parent="ja-xJRTJWLcANvvqTXy5-0" edge="1">
@@ -280,7 +280,7 @@
             <mxPoint x="340" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ja-xJRTJWLcANvvqTXy5-23" value="Kelola data rekap nilai" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="ja-xJRTJWLcANvvqTXy5-0" vertex="1">
+        <mxCell id="ja-xJRTJWLcANvvqTXy5-23" value="Kelola data &lt;br&gt;rekap nilai" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="ja-xJRTJWLcANvvqTXy5-0" vertex="1">
           <mxGeometry x="362" y="290" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hLacBjq_ObdUYx9k5cTR-15" value="Santri" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" parent="ja-xJRTJWLcANvvqTXy5-0" vertex="1">

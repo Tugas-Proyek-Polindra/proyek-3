@@ -20,7 +20,7 @@ use App\Http\Controllers\GuruController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingpage');
 });
 
 Auth::routes();

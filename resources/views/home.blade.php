@@ -19,7 +19,7 @@
             <p>Santri</p>
           </div>
           <div class="icon">
-            <i class="ion ion-bag"></i>
+            <i class="fas fa-fw fa-user-graduate"></i>
           </div>
           <a href="/produk" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -34,7 +34,7 @@
             <p>Kelas</p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="ion fas fa-fw fa-th"></i>
           </div>
           <a href="/bukti-bayar" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -48,7 +48,7 @@
             <p>Guru</p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="fas fa-fw fa-users"></i>
           </div>
           <a href="/invoice-pesanan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
@@ -63,7 +63,7 @@
             <p>Pelajaran</p>
           </div>
           <div class="icon">
-            <i class="ion ion-ios-people-outline"></i>
+            <i class="fas fa-fw fa-copy"></i>
           </div>
           <a href="/kelola_akun" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>

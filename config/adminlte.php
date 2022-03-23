@@ -270,11 +270,13 @@ return [
                 ],
                 [
                     'text' => 'Nilai Pelajaran',
-                    'url'  => ['nilai/pelajaran', 'nilai/pelajaran*']
+                    'url'  => 'nilai/pelajaran',
+                    'active'  => ['nilai/pelajaran', 'nilai/pelajaran*']
                 ],
                 [
                     'text' => 'Nilai Sikap',
-                    'url'  => ['nilai/sikap', 'nilai/sikap*']
+                    'url'  => 'nilai/sikap',
+                    'active'  => ['nilai/sikap', 'nilai/sikap*']
                 ],
                 
             ],

@@ -75,11 +75,12 @@ return [
     // Fitur
     'usermenu_rekap_nilai_url' => true,
     'usermenu_santri_url' => true,
+    'usermenu_nilai_pelajaran_url' => true,
+    'usermenu_nilai_sikap_url' => true,
     'usermenu_kelas_url' => true,
     'usermenu_pelajaran_url' => true,
     'usermenu_guru_url' => true,
-    'usermenu_pengembangai_diri_url' => true,
-    'usermenu_kepribadian_url' => true,
+    'usermenu_riwayat_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -299,10 +300,12 @@ return [
                 [
                     'text' => 'Biodata Guru',
                     'url'  => 'guru',
+                    'active'  => ['guru', 'guru*'],
                 ],
                 [
                     'text' => 'Riwayat Keaktifan',
                     'url'  => 'keaktifan',
+                    'active'  => ['keaktifan', 'keaktifan*'],                    
                 ],
                 // [
                 //     'text' => 'Data Bank',

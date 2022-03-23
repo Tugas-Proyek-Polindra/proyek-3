@@ -7,6 +7,7 @@ use App\Models;
 use App\Models\User;
 use App\Models\Santri;
 use App\Models\Kelas;
+use App\Models\Pelajaran;
 
 
 class DatabaseSeeder extends Seeder
@@ -43,5 +44,11 @@ class DatabaseSeeder extends Seeder
             'wali_kelas' => 'Dina Nuraeni',
             'tahun_ajaran' => '2021/2022'
         ]);
+
+        Pelajaran::create([
+            'nama_pelajaran' => "Al-Qur'an Hadist",
+            'nilai_kkm' => '75',
+        ]);
+        
     }
 }

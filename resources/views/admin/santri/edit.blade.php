@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tgl_lahir">Tanggal Lahir</label>
-                            <input type="date" name="tgl_lahir" class="form-control" value="{{old('tgl_lahir', $santri->tgl_lahir)}}">
+                            <input type="text" name="tgl_lahir" class="form-control" value="{{old('tgl_lahir', Carbon\Carbon::parse($santri->tgl_lahir)->format('Y-m-d'))}}">
                             <div class="text-danger">
                                 @error('tgl_lahir')
                                 {{$message}}

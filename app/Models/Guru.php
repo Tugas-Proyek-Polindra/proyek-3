@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Guru extends Model
 {
     use HasFactory;
+
+    // protected $guarded = ['id'];
+    
+    // public function usermenu_guru_url()
+    // {
+    //     return 'guru';
+    // }
 }

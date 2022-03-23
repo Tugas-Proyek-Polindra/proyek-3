@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SantriController;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\PelajaranController;
+use App\Http\Controllers\GuruController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/santri', SantriController::class);
     Route::resource('/kelas', KelasController::class);
     Route::resource('/pelajaran', PelajaranController::class);
+    Route::resource('/guru', GuruController::class);
 });
 
 

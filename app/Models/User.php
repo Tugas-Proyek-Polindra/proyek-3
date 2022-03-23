@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return 'profile';
     }
+
+    public function usermenu_guru_url()
+    {
+        return 'guru';
+    }
 }

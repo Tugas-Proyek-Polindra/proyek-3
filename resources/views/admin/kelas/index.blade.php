@@ -68,16 +68,19 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Kls I</td>
-                  <td>Dina Nuraeni</td>
-                  <td>2021/2022</td>
+                  @foreach ($classes as $kelas)
+
+                  
+                  <td>{{$kelas->kelas}}</td>
+                  <td>{{$kelas->wali_kelas}}</td>
+                  <td>{{$kelas->tahun_ajaran}}</td>
                   <td >                                        
-                    <form method="post" action="/produk/ " class="form-inline">
-                        <a href="/produk/ " class="btn btn-sm btn-success" ><i class="fas fa-file"></i></a>
-                        <a href="/produk/ /edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/kelas/{{$kelas->id}}" class="form-inline">
+                        <a href="/kelas/{{$kelas->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                        <a href="/kelas/{{$kelas->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
-                        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-times"></i></button>    
+                        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
                     </form>           
                       <div class="modal modal-danger fade" id="delete ">
                         <div class="modal-dialog modal-sm">
@@ -95,12 +98,11 @@
                             <button type="button" class="btn btn-outline pull-right">Yes</button>
                           </div>
                         </div>
-                        <!-- /.modal-content -->
                         </div>
-                        <!-- /.modal-dialog -->
                     </div>
-                </td>
+                  </td>
                 </tr>
+                @endforeach
                 </tbody>
               </table>
             </div>

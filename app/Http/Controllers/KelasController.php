@@ -20,7 +20,9 @@ class KelasController extends Controller
 
     public function index()
     {
-        return view('admin.kelas.index');
+        return view('admin.kelas.index',[
+            "classes" => Kelas::all(),
+        ]);
     }
 
     /**
@@ -30,7 +32,9 @@ class KelasController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.kelas.create',[
+            "kelas" => Kelas::all(),
+        ]);
     }
 
     /**
@@ -41,7 +45,17 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'kelas' => 'required',
+                'wali_kelas' => 'required',
+                'tahun_ajaran' => 'required',
+            ]
+        );
+
+        Kelas::create($validatedData);
+
+        return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**

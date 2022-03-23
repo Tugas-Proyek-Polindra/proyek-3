@@ -291,17 +291,20 @@ return [
         ],
         [
             'text' => 'Guru',
-            'url'  => 'guru',
             'icon' => 'fas fa-fw fa-users',
             'submenu' => [
+                [
+                    'text' => 'Biodata Guru',
+                    'url'  => 'guru',
+                ],
                 [
                     'text' => 'Riwayat Keaktifan',
                     'url'  => 'keaktifan',
                 ],
-                [
-                    'text' => 'Data Bank',
-                    'url'  => 'bank',
-                ],                
+                // [
+                //     'text' => 'Data Bank',
+                //     'url'  => 'bank',
+                // ],                
             ],
         ],
 

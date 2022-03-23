@@ -78,6 +78,14 @@
     </div>
     <!-- /.row (main row) -->
 
+    <div class="row m-4">
+      <div class="col-lg">
+        <div  class="text-center"> 
+          <img src="{{asset('img/madrasah.png')}}" class="img-fluid" alt="Madrasah" style="height:320px;">
+      </div>
+      </div>
+    </div>
+
   </section>
 @stop
 

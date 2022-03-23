@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Santri')
+@section('title', 'Kelas')
 
 @section('content_header')
     <!-- Content Header (Page header) -->

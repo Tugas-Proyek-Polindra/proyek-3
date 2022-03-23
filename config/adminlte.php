@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Madrasah Al Barokah',
     'title_prefix' => '',
     'title_postfix' => '',
 

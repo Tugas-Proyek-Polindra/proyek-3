@@ -50,7 +50,7 @@ class User extends Authenticatable
 
     public function adminlte_desc()
     {
-        return 'That\'s a nice guy';
+        return 'That\'s a nice person';
     }
 
     public function adminlte_profile_url()

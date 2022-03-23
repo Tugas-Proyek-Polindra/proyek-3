@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Pelajaran extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+    
+    public function usermenu_pelajaran_url()
+    {
+        return 'pelajaran';
+    }
 }

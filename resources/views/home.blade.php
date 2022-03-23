@@ -21,7 +21,7 @@
           <div class="icon">
             <i class="fas fa-fw fa-user-graduate"></i>
           </div>
-          <a href="/produk" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/santri" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -36,7 +36,7 @@
           <div class="icon">
             <i class="ion fas fa-fw fa-th"></i>
           </div>
-          <a href="/bukti-bayar" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/kelas" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -50,7 +50,7 @@
           <div class="icon">
             <i class="fas fa-fw fa-users"></i>
           </div>
-          <a href="/invoice-pesanan" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/guru" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -65,7 +65,7 @@
           <div class="icon">
             <i class="fas fa-fw fa-copy"></i>
           </div>
-          <a href="/kelola_akun" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="/pelajaran" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->

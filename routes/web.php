@@ -18,7 +18,7 @@ use App\Http\Controllers\KelasController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingpage');
 });
 
 Auth::routes();

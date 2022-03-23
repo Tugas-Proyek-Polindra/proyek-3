@@ -266,14 +266,15 @@ return [
                 [
                     'text' => 'Biodata Santri',
                     'url'  => 'santri',
+                    'active'  => ['santri', 'santri*'],
                 ],
                 [
                     'text' => 'Nilai Pelajaran',
-                    'url'  => 'nilai/pelajaran',
+                    'url'  => ['nilai/pelajaran', 'nilai/pelajaran*']
                 ],
                 [
                     'text' => 'Nilai Sikap',
-                    'url'  => 'nilai/sikap',
+                    'url'  => ['nilai/sikap', 'nilai/sikap*']
                 ],
                 
             ],

@@ -14,7 +14,7 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>10</h3>
+            <h3>96</h3>
 
             <p>Santri</p>
           </div>
@@ -29,8 +29,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3>80<sup style="font-size: 20px">%</sup></h3>
-
+            <h3>4</h3>
             <p>Kelas</p>
           </div>
           <div class="icon">
@@ -44,7 +43,7 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
           <div class="inner">
-            <h3>15</h3>
+            <h3>5</h3>
             <p>Guru</p>
           </div>
           <div class="icon">
@@ -58,8 +57,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
-            <h3>3</h3>
-
+            <h3>8</h3>
             <p>Pelajaran</p>
           </div>
           <div class="icon">

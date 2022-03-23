@@ -255,28 +255,28 @@ return [
         
         ['header' => 'FEATURE'],
         [
-            'text'    => 'Nilai',
+            'text'    => 'Rekap Nilai',
+            'url'     => 'nilai',
             'icon'    => 'fas fa-fw fa-book',
-            'submenu' => [
-                [
-                    'text' => 'Rekap Nilai',
-                    'url'  => 'nilai',
-                ],
-                [
-                    'text' => 'Pengembanan Diri',
-                    'url'  => 'nilai',
-                ],
-                [
-                    'text' => 'Kepribadian',
-                    'url'  => 'nilai',
-                ],
-                
-            ],
         ],
         [
             'text' => 'Santri',
-            'url'  => 'santri',
             'icon' => 'fas fa-fw fa-user-graduate',
+            'submenu' => [
+                [
+                    'text' => 'Biodata Santri',
+                    'url'  => 'santri',
+                ],
+                [
+                    'text' => 'Nilai Pelajaran',
+                    'url'  => 'nilai/pelajaran',
+                ],
+                [
+                    'text' => 'Nilai Sikap',
+                    'url'  => 'nilai/sikap',
+                ],
+                
+            ],
         ],
         [
             'text' => 'Kelas',
@@ -293,6 +293,16 @@ return [
             'text' => 'Guru',
             'url'  => 'guru',
             'icon' => 'fas fa-fw fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Riwayat Keaktifan',
+                    'url'  => 'keaktifan',
+                ],
+                [
+                    'text' => 'Data Bank',
+                    'url'  => 'bank',
+                ],                
+            ],
         ],
 
         ['header' => 'account_settings'],
@@ -301,12 +311,6 @@ return [
             'url'  => 'profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'Setting',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        
     ],
 
     /*

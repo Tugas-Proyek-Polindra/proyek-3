@@ -12,6 +12,7 @@ use App\Models\Pelajaran;
 use App\Models\NilaiPelajaran;
 use App\Models\NilaiSikap;
 use App\Models\RiwayatKeaktifan;
+use App\Models\RekapNilai;
 
 
 class DatabaseSeeder extends Seeder
@@ -99,6 +100,18 @@ class DatabaseSeeder extends Seeder
             'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
             'status_penugasan' => 'Tetap',
             'tugas_utama' => 'Lainnya',
+        ]);
+
+        RekapNilai::create([
+            'user_id' => 2,
+            'santri_id' => 1,
+            'pelajaran_id' => 1,
+            'nilai_pelajaran_id' => 1,
+            'nilai_sikap_id' => 1,
+            'kelas_id' => 1,
+            'jumlah' => 599,
+            'rata_rata' => 74.88,
+            'rangking' => 4,
         ]);
 
 

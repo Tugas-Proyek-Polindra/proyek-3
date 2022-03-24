@@ -54,7 +54,7 @@
             <div class="card">
             <div class="card-body">
                 <div class="mb-3">
-                <a href="/nilai/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                <a href="/mapel/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                 </div>
                 <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -72,20 +72,20 @@
                 </thead>
                 <tbody>
                 <tr>
-                    @foreach ($nilai_pelajaran as $nilai)
-                    <td>{{$nilai->santri->nama_santri}}</td>
-                    <td>{{$nilai->al_quran_hadist}}</td>
-                    <td>{{$nilai->al_hadist}}</td>
-                    <td>{{$nilai->aqidah}}</td>
-                    <td>{{$nilai->akhlaq}}</td>
-                    <td>{{$nilai->fiqih}}</td>
-                    <td>{{$nilai->tarikh}}</td>
-                    <td>{{$nilai->b_arab}}</td>
-                    <td>{{$nilai->praktikum}}</td>
+                    @foreach ($nilai_pelajaran as $mapel)
+                    <td>{{$mapel->santri->nama_santri}}</td>
+                    <td>{{$mapel->al_quran_hadist}}</td>
+                    <td>{{$mapel->al_hadist}}</td>
+                    <td>{{$mapel->aqidah}}</td>
+                    <td>{{$mapel->akhlaq}}</td>
+                    <td>{{$mapel->fiqih}}</td>
+                    <td>{{$mapel->tarikh}}</td>
+                    <td>{{$mapel->b_arab}}</td>
+                    <td>{{$mapel->praktikum}}</td>
                     <td >                                        
-                    <form method="post" action="/nilai/{{$nilai->id}}" class="form-inline">
-                        <a href="/nilai/{{$nilai->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                        <a href="/nilai/{{$nilai->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/mapel/{{$mapel->id}}" class="form-inline">
+                        <a href="/mapel/{{$mapel->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                        <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    

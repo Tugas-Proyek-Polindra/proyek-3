@@ -62,4 +62,9 @@ class User extends Authenticatable
     {
         return 'guru';
     }
+
+    public function guru()
+    {
+        return $this->hasMany(User::class);
+    }
 }

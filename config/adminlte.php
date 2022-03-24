@@ -80,7 +80,7 @@ return [
     'usermenu_kelas_url' => true,
     'usermenu_pelajaran_url' => true,
     'usermenu_guru_url' => true,
-    'usermenu_riwayat_url' => true,
+    'usermenu_keaktifan_url' => true,
 
     /*
     |--------------------------------------------------------------------------

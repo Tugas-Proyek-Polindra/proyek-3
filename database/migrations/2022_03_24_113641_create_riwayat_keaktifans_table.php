@@ -15,7 +15,7 @@ class CreateRiwayatKeaktifansTable extends Migration
     {
         Schema::create('riwayat_keaktifans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('guru_id');
+            $table->foreignId('user_id');
             $table->string('status_keaktifan');
             $table->string('tgl_mulai_bertugas');
             $table->string('status_penugasan');

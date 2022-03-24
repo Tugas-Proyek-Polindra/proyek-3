@@ -94,7 +94,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         RiwayatKeaktifan::create([
-            'guru_id' => '1',
+            'user_id' => '2',
             'status_keaktifan' => 'Aktif',
             'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
             'status_penugasan' => 'Tetap',

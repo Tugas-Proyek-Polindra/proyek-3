@@ -11,6 +11,7 @@ use App\Models\Kelas;
 use App\Models\Pelajaran;
 use App\Models\NilaiPelajaran;
 use App\Models\NilaiSikap;
+use App\Models\RiwayatKeaktifan;
 
 
 class DatabaseSeeder extends Seeder
@@ -92,6 +93,13 @@ class DatabaseSeeder extends Seeder
             'keterangan' => 'Murid Teladan',
         ]);
 
+        RiwayatKeaktifan::create([
+            'guru_id' => '1',
+            'status_keaktifan' => 'Aktif',
+            'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
+            'status_penugasan' => 'Tetap',
+            'tugas_utama' => 'Lainnya',
+        ]);
 
 
     }

@@ -314,12 +314,12 @@ return [
             ],
         ],
 
-        ['header' => 'account_settings'],
-        [
-            'text' => 'Profile Sekolah',
-            'url'  => 'profile',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+        // ['header' => 'account_settings'],
+        // [
+        //     'text' => 'Profile Sekolah',
+        //     'url'  => 'profile',
+        //     'icon' => 'fas fa-fw fa-user',
+        // ],
     ],
 
     /*

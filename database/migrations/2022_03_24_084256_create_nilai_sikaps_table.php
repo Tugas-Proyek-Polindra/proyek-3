@@ -21,6 +21,7 @@ class CreateNilaiSikapsTable extends Migration
             $table->string('disiplin')->nullable();
             $table->string('bersih')->nullable();
             $table->string('sopan')->nullable();
+            $table->string('keterangan')->nullable();
             $table->timestamps();
         });
     }

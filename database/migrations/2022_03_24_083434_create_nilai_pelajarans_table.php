@@ -16,14 +16,14 @@ class CreateNilaiPelajaransTable extends Migration
         Schema::create('nilai_pelajarans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('santri_id');
-            $table->string('al_quran_hadist')->nullable();
-            $table->string('al_hadist')->nullable();
-            $table->string('aqidah')->nullable();
-            $table->string('akhlaq')->nullable();
-            $table->string('fiqih')->nullable();
-            $table->string('tarikh')->nullable();
-            $table->string('b_arab')->nullable();
-            $table->string('praktikum')->nullable();
+            $table->integer('al_quran_hadist')->nullable();
+            $table->integer('al_hadist')->nullable();
+            $table->integer('aqidah')->nullable();
+            $table->integer('akhlaq')->nullable();
+            $table->integer('fiqih')->nullable();
+            $table->integer('tarikh')->nullable();
+            $table->integer('b_arab')->nullable();
+            $table->integer('praktikum')->nullable();
             $table->timestamps();
         });
     }

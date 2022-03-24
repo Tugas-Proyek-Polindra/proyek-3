@@ -9,6 +9,8 @@ use App\Models\User;
 use App\Models\Santri;
 use App\Models\Kelas;
 use App\Models\Pelajaran;
+use App\Models\NilaiPelajaran;
+use App\Models\NilaiSikap;
 
 
 class DatabaseSeeder extends Seeder
@@ -67,6 +69,30 @@ class DatabaseSeeder extends Seeder
             'nama_pelajaran' => "Al-Qur'an Hadist",
             'nilai_kkm' => '75',
         ]);
+
+        NilaiPelajaran::create([
+            'santri_id' => 1,
+            'al_quran_hadist' => '80',
+            'al_hadist' => '90',
+            'aqidah' => '84',
+            'akhlaq' => '87',
+            'fiqih' => '83',
+            'tarikh' => '93',
+            'b_arab' => '90',
+            'praktikum' => '89',
+        ]);
+
+        NilaiSikap::create([
+            'santri_id' => 1,
+            'mengaji' => 'A',
+            'hafalan' => 'B',
+            'disiplin' => 'B',
+            'bersih' => 'A',
+            'sopan' => 'A',
+            'keterangan' => 'Murid Teladan',
+        ]);
+
+
 
     }
 }

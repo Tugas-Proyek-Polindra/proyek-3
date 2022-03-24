@@ -20,4 +20,9 @@ class NilaiPelajaran extends Model
     {
         return $this->belongsTo(Santri::class);
     }
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
+    }
 }

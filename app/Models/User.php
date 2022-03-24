@@ -67,4 +67,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(User::class);
     }
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
+    }
 }

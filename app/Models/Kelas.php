@@ -10,4 +10,9 @@ class Kelas extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
+    }
 }

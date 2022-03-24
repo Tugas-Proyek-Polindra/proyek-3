@@ -19,4 +19,9 @@ class Santri extends Model
     {
         return $this->hasMany(NilaiSikap::class);
     }
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
+    }
 }

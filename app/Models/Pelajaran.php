@@ -15,4 +15,9 @@ class Pelajaran extends Model
     {
         return 'pelajaran';
     }
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
+    }
 }

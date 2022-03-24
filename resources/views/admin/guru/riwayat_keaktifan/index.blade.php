@@ -54,35 +54,31 @@
             <div class="card">
             <div class="card-body">
                 <div class="mb-3">
-                <a href="/sikap/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                <a href="/keaktifan/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                 </div>
                 <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Nama Santri</th>
-                    <th>Mengaji</th>
-                    <th>Hafalan</th>
-                    <th>Disiplin</th>
-                    <th>Bersih</th>
-                    <th>Sopan</th>
-                    <th>Keterangan</th>
+                    <th>Nama Guru</th>
+                    <th>Status Keaktifan</th>
+                    <th>Mulai Bertugas</th>
+                    <th>Status Penugasan</th>
+                    <th>Tugas Utama</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    @foreach ($nilai_sikap as $sikap)
-                    <td>{{$sikap->santri->nama_santri}}</td>
-                    <td>{{$sikap->mengaji}}</td>
-                    <td>{{$sikap->hafalan}}</td>
-                    <td>{{$sikap->disiplin}}</td>
-                    <td>{{$sikap->bersih}}</td>
-                    <td>{{$sikap->sopan}}</td>
-                    <td>{{$sikap->keterangan}}</td>
+                    @foreach ($riwayat_keaktifan as $keaktifan)
+                    <td>{{$keaktifan->guru->name}}</td>
+                    <td>{{$keaktifan->status_keaktifan}}</td>
+                    <td>{{$keaktifan->tgl_mulai_bertugas}}</td>
+                    <td>{{$keaktifan->status_penugasan}}</td>
+                    <td>{{$keaktifan->tugas_utama}}</td>
                     <td >                                        
-                    <form method="post" action="/sikap/{{$sikap->id}}" class="form-inline">
-                        <a href="/sikap/{{$sikap->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                        <a href="/sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/keaktifan/{{$keaktifan->id}}" class="form-inline">
+                        <a href="/keaktifan/{{$keaktifan->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                        <a href="/keaktifan/{{$keaktifan->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    

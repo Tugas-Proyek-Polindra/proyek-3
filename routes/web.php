@@ -8,6 +8,7 @@ use App\Http\Controllers\KelasController;
 use App\Http\Controllers\PelajaranController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\NilaiPelajaranController;
+use App\Http\Controllers\NilaiSikapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/pelajaran', PelajaranController::class);
     Route::resource('/guru', GuruController::class);
     Route::resource('/nilai/pelajaran', NilaiPelajaranController::class);
+    Route::resource('/nilai/sikap', NilaiSikapController::class);
 });
 
 

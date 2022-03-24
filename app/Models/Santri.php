@@ -11,5 +11,12 @@ class Santri extends Model
 
     protected $guarded = ['id'];
 
-    
+    public function nilai_pelajaran()
+    {
+        return $this->hasMany(NilaiPemesanan::class);
+    }
+    public function nilai_sikap()
+    {
+        return $this->hasMany(NilaiSikap::class);
+    }
 }

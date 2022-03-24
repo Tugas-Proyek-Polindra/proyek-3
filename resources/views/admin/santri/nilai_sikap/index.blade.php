@@ -54,7 +54,7 @@
             <div class="card">
             <div class="card-body">
                 <div class="mb-3">
-                <a href="/kelas/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                <a href="/praktikum/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                 </div>
                 <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -68,15 +68,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{-- <tr>
-                    @foreach ($nilai_pelajaran as $kelas)
-                    <td>{{$kelas->kelas}}</td>
-                    <td>{{$kelas->wali_kelas}}</td>
-                    <td>{{$kelas->tahun_ajaran}}</td>
+                <tr>
+                    @foreach ($nilai_sikap as $sikap)
+                    <td>{{$praktikum->santri->nama_santri}}</td>
+                    <td>{{$praktikum->mengaji}}</td>
+                    <td>{{$praktikum->hafalan}}</td>
+                    <td>{{$praktikum->disiplin}}</td>
+                    <td>{{$praktikum->bersih}}</td>
+                    <td>{{$praktikum->sopan}}</td>
+                    <td>{{$praktikum->keterangan}}</td>
                     <td >                                        
-                    <form method="post" action="/kelas/{{$kelas->id}}" class="form-inline">
-                        <a href="/kelas/{{$kelas->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                        <a href="/kelas/{{$kelas->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/praktikum/{{$praktikum->id}}" class="form-inline">
+                        <a href="/praktikum/{{$praktikum->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                        <a href="/praktikum/{{$praktikum->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
@@ -100,7 +104,7 @@
                         </div>
                     </div>
                     </td>
-                </tr> --}}
+                </tr>
                 @endforeach
                 </tbody>
                 </table>

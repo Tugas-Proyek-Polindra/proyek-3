@@ -65,16 +65,23 @@
                     <th>Aqidah</th>
                     <th>Akhlaq</th>
                     <th>Fiqih</th>
-                    <th>Tarikh I</th>
+                    <th>Tarikh</th>
                     <th>B.Arab</th>
-                    <th>Praktikum I</th>
+                    <th>Praktikum</th>
                 </tr>
                 </thead>
                 <tbody>
-                {{-- <tr>
+                <tr>
                     @foreach ($nilai_pelajaran as $nilai)
                     <td>{{$nilai->santri->nama_santri}}</td>
-                    <td>{{$nilai->pelajaran->nama_pelajaran}}</td>
+                    <td>{{$nilai->al_quran_hadist}}</td>
+                    <td>{{$nilai->al_hadist}}</td>
+                    <td>{{$nilai->aqidah}}</td>
+                    <td>{{$nilai->akhlaq}}</td>
+                    <td>{{$nilai->fiqih}}</td>
+                    <td>{{$nilai->tarikh}}</td>
+                    <td>{{$nilai->b_arab}}</td>
+                    <td>{{$nilai->praktikum}}</td>
                     <td >                                        
                     <form method="post" action="/nilai/{{$nilai->id}}" class="form-inline">
                         <a href="/nilai/{{$nilai->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
@@ -103,7 +110,7 @@
                     </div>
                     </td>
                 </tr>
-                @endforeach --}}
+                @endforeach
                 </tbody>
                 </table>
             </div>

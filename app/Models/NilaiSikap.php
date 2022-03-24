@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class NilaiSikap extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+    
+    public function usermenu_nilai_sikap_url()
+    {
+        return 'nilai/sikap';
+    }
+
+    public function santri()
+    {
+        return $this->belongsTo(Santri::class);
+    }
 }

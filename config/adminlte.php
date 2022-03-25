@@ -280,6 +280,11 @@ return [
                     'url'  => 'nilai/sikap',
                     'active'  => ['nilai/sikap', 'nilai/sikap*']
                 ],
+                [
+                    'text' => 'Absensi',
+                    'url'  => 'absensi',
+                    'active'  => ['absensi', 'absensi*']
+                ],
                 
             ],
         ],
@@ -313,11 +318,6 @@ return [
                 //     'url'  => 'bank',
                 // ],                
             ],
-        ],
-        [
-            'text' => 'Absensi',
-            'url'  => 'absen',
-            'icon' => 'fas fa-fw fa-th',
         ],
 
         // ['header' => 'account_settings'],

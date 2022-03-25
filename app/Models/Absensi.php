@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Absensi extends Model
 {
     use HasFactory;
+
+    protected $guarded = ['id'];
+    
+    public function usermenu_absensi_url()
+    {
+        return 'absensi';
+    }
 }

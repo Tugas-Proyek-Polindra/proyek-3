@@ -50,11 +50,26 @@ class User extends Authenticatable
 
     public function adminlte_desc()
     {
-        return 'That\'s a nice guy';
+        return 'That\'s a nice person';
     }
 
     public function adminlte_profile_url()
     {
         return 'profile';
+    }
+
+    public function usermenu_guru_url()
+    {
+        return 'guru';
+    }
+
+    public function guru()
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
     }
 }

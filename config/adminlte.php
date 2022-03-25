@@ -81,6 +81,7 @@ return [
     'usermenu_pelajaran_url' => true,
     'usermenu_guru_url' => true,
     'usermenu_keaktifan_url' => true,
+    'usermenu_absensi_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -312,6 +313,11 @@ return [
                 //     'url'  => 'bank',
                 // ],                
             ],
+        ],
+        [
+            'text' => 'Absensi',
+            'url'  => 'absen',
+            'icon' => 'fas fa-fw fa-th',
         ],
 
         // ['header' => 'account_settings'],

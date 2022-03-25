@@ -13,6 +13,7 @@ use App\Models\NilaiPelajaran;
 use App\Models\NilaiSikap;
 use App\Models\RiwayatKeaktifan;
 use App\Models\RekapNilai;
+use App\Models\Absensi;
 
 
 class DatabaseSeeder extends Seeder
@@ -112,6 +113,13 @@ class DatabaseSeeder extends Seeder
             'jumlah' => 599,
             'rata_rata' => 74.88,
             'rangking' => 4,
+        ]);
+
+        Absensi::create([
+            'santri_id' => 1,
+            'sakit' => 4,
+            'izin' => 1,
+            'alpha' => 2,         
         ]);
 
 

@@ -2,8 +2,6 @@
 
 <html lang="en">
 
-
-
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -20,7 +18,7 @@
 
 
 
-    <title>E-Rapot Nihh Boss, Keplak dongg</title>
+    <title>E-Rapot</title>
 
 
 
@@ -138,19 +136,24 @@
 
                     <li class="scroll"><a href="#services">Services</a></li>
 
-                    <li class="scroll"><a href="#price">Price</a></li>
+                    <!-- <li class="scroll"><a href="#price">Price</a></li> -->
 
-                    <li class="scroll"><a href="#team">Team</a></li>
+                    <!-- <li class="scroll"><a href="#team">Team</a></li> -->
 
-                    <li class="scroll"><a href="#clients">Clients</a></li>
+                    <!-- <li class="scroll"><a href="#clients">Clients</a></li> -->
 
-                    <li class="scroll"><a href="#contact">Contact</a></li>
+                    <!-- <li class="scroll"><a href="#contact">Contact</a></li> -->
 
-                    <li class="button-holder">
+                    <!-- <li><a href="{{ route('login') }}" class="btn btn-blue popup-youtube">Sign In</a></li> -->
+                    <li>
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                    </li>
+
+
+                    <!-- <li class="button-holder">
 
                         <button type="button" class="btn btn-blue navbar-btn" data-toggle="modal" data-target="#SignIn">Sign in</button>
-
-                    </li>
+                    </li> -->
 
                 </ul>
 
@@ -178,9 +181,9 @@
 
                 <div class="col-md-6 caption">
 
-                    <h1>Welcome To Vortex</h1>
+                    <!-- <h1>Welcome To Vortex</h1> -->
 
-                    <h2>
+                    <!-- <h2>
 
                            I am 
 
@@ -188,23 +191,22 @@
 
                             <span class="typed-cursor"></span>
 
-                        </h2>
+                        </h2> -->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quibusdam. Sit, quas tempora quia officia!</p>
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quibusdam. Sit, quas tempora quia officia!</p> -->
 
-                    <a href="#" class="btn btn-transparent">Get Started</a>
+                    
 
-                    <a class="btn btn-blue popup-youtube" href="https://www.youtube.com/watch?v=Q8TXgCzxEnw">
+                    <!-- <a class="btn btn-blue popup-youtube" href="https://www.youtube.com/watch?v=Q8TXgCzxEnw"> -->
 
-                        <i class="material-icons">play_circle_filled</i>Watch Video
-
-                    </a>
+                       <!-- <i class="material-icons">play_circle_filled</i>Watch Video
+                     </a> -->
 
                 </div>
 
                 <!-- Sign Up -->
 
-                <div class="col-md-5 col-md-offset-1">
+               <!-- <div class="col-md-5 col-md-offset-1">
 
                     <form class="signup-form">
 
@@ -246,7 +248,7 @@
 
                 </div>
 
-            </div>
+            </div>-->
 
         </div>
 
@@ -576,13 +578,7 @@
 
 
 
-    <!--======================================== 
-
-           Price
-
-    ========================================-->
-
-
+    <!--   Price
 
     <section id="price" class="section-padding">
 
@@ -594,13 +590,13 @@
 
             <div class="row">
 
-                <!-- Pricing Start Here -->
+                Pricing Start Here
 
                 <div class="pricing-container">
 
                     <div class="col-md-4">
 
-                        <!--== SINGLE USER: Plan ==-->
+                        SINGLE USER: Plan
 
                         <div class="plan">
 
@@ -652,7 +648,7 @@
 
                     <div class="col-md-4">
 
-                        <!--== MULTIPLE USER: Plan ==-->
+                        == MULTIPLE USER: Plan ==
 
                         <div class="plan active">
 
@@ -701,10 +697,12 @@
                         </div>
 
                     </div>
+                    
+    
 
                     <div class="col-md-4">
 
-                        <!--== Developer: Plan ==-->
+                        Developer: Plan
 
                         <div class="plan">
 
@@ -760,18 +758,11 @@
 
         </div>
 
-    </section>
+    </section>-->
 
 
-
-    <!--======================================== 
-
+    <!--
            Team
-
-    ========================================-->
-
-
-
     <section id="team" class="section-padding">
 
         <div class="container">
@@ -784,7 +775,7 @@
 
                 <div class="col-md-6 col-lg-3">
 
-                    <!--**Team-Member**-->
+                    **Team-Member**
 
                     <div class="thumbnail team-member">
 
@@ -824,7 +815,7 @@
 
                 <div class="col-md-6 col-lg-3">
 
-                    <!--**Team-Member**-->
+                    **Team-Member**
 
                     <div class="thumbnail team-member">
 
@@ -864,7 +855,7 @@
 
                 <div class="col-md-6 col-lg-3">
 
-                    <!--**Team-Member**-->
+                    **Team-Member**
 
                     <div class="thumbnail team-member">
 
@@ -904,7 +895,7 @@
 
                 <div class="col-md-6 col-lg-3">
 
-                    <!--**Team-Member**-->
+                    **Team-Member**
 
                     <div class="thumbnail team-member">
 
@@ -948,15 +939,7 @@
 
     </section>
 
-
-
-    <!--======================================== 
-
-           Clients
-
-    ========================================-->
-
-
+          Clients
 
     <section id="clients" class="section-padding">
 
@@ -968,7 +951,7 @@
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, optio.</p>
 
-                <!--// Clients Images //-->
+                Clients Images
 
                 <div class="clients-images">
 
@@ -990,7 +973,7 @@
 
                 </div>
 
-                <!--// Clients Testimonials //-->
+                Clients Testimonials
 
                 <div id="owl-testimonials">
 
@@ -1030,7 +1013,7 @@
 
         </div>
 
-    </section>
+    </section> -->
 
 
 
@@ -1042,7 +1025,7 @@
 
 
 
-    <section id="newsletter">
+    <!-- <section id="newsletter"> 
 
         <div class="container">
 
@@ -1066,7 +1049,7 @@
 
         </div>
 
-    </section>
+    </section>-->
 
 
 
@@ -1078,7 +1061,7 @@
 
 
 
-    <section id="contact" class="section-padding">
+  <!--<section id="contact" class="section-padding">
 
         <div class="container">
 
@@ -1090,7 +1073,7 @@
 
         </div>
 
-        <!-- Contact Info -->
+        Contact Info
 
         <div class="container contact-info">
 
@@ -1146,13 +1129,13 @@
 
         </div>
 
-        <!-- Google Map -->
+         Google Map
 
         <div id="map"></div>
 
-        <!-- Contact Form -->
+         Contact Form
 
-        <div class="contact-forms">
+       <div class="contact-forms">
 
             <div class="container">
 
@@ -1194,7 +1177,7 @@
 
         </div>
 
-    </section>
+    </section>-->
 
 
 
@@ -1218,7 +1201,7 @@
 
                     <hr>
 
-                    <h5 class="pull-left">Vortex, &copy;2016 All rights reserved</h5>
+                    <h5 class="pull-left">Kelompok 4, &copy;2021 All rights reserved</h5>
 
                     <ul class="liste-unstyled pull-right">
 
@@ -1263,6 +1246,20 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
                     <h4 class="modal-title text-center" id="myModalLabel">Sign In</h4>
+                    @if (Route::has('login'))
+                
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+                          
 
                 </div>
 

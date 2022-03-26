@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-03-26T05:25:27.666Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.52" etag="ajk5PSggUDle54k3JSdr" version="17.2.2" type="github" pages="17">
+<mxfile host="app.diagrams.net" modified="2022-03-26T05:27:07.288Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36 Edg/99.0.1150.52" etag="aHo76crXaJT4r9Pvcd2Y" version="17.2.2" type="github" pages="17">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="Flowchart">
     <mxGraphModel dx="782" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -1630,16 +1630,16 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="2hCtPWzO3O6uAgmMMs1n-22" value="- id&#xa;- user_id&#xa;- status_keaktifan&#xa;- tgl_mulai_bertugas&#xa;- status_penugasan&#xa;- tugas_utama" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="2hCtPWzO3O6uAgmMMs1n-21">
-          <mxGeometry y="30" width="160" height="100" as="geometry" />
+          <mxGeometry y="30" width="160" height="110" as="geometry" />
         </mxCell>
         <mxCell id="2hCtPWzO3O6uAgmMMs1n-23" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=14;" vertex="1" parent="2hCtPWzO3O6uAgmMMs1n-21">
-          <mxGeometry y="130" width="160" height="8" as="geometry" />
+          <mxGeometry y="140" width="160" height="8" as="geometry" />
         </mxCell>
         <mxCell id="2hCtPWzO3O6uAgmMMs1n-25" value="+ show()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="2hCtPWzO3O6uAgmMMs1n-21">
-          <mxGeometry y="138" width="160" height="26" as="geometry" />
+          <mxGeometry y="148" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="2hCtPWzO3O6uAgmMMs1n-26" value="+ edit()&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;" vertex="1" parent="2hCtPWzO3O6uAgmMMs1n-21">
-          <mxGeometry y="164" width="160" height="26" as="geometry" />
+          <mxGeometry y="174" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="2hCtPWzO3O6uAgmMMs1n-35" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;fontSize=14;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="cpX1itVUNhOiBWcicVf9-1" target="2hCtPWzO3O6uAgmMMs1n-4">
           <mxGeometry x="-1" y="-35" relative="1" as="geometry">

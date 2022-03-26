@@ -15,4 +15,15 @@ class Absensi extends Model
     {
         return 'absensi';
     }
+
+    public function santri()
+    {
+        return $this->belongsTo(Santri::class);
+    }
+
+    public function rekap_nilai()
+    {
+        return $this->hasMany(RekapNilai::class);
+    }
+
 }

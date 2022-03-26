@@ -11,6 +11,7 @@ use App\Http\Controllers\NilaiPelajaranController;
 use App\Http\Controllers\NilaiSikapController;
 use App\Http\Controllers\RiwayatKeaktifanController;
 use App\Http\Controllers\RekapNilaiController;
+use App\Http\Controllers\AbsensiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/nilai/sikap', NilaiSikapController::class);
     Route::resource('/keaktifan', RiwayatKeaktifanController::class);
     Route::resource('/nilai', RekapNilaiController::class);
+    Route::resource('/absensi', AbsensiController::class);
 });
 
 

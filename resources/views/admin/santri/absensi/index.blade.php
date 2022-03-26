@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Nilai Sikap')
+@section('title', 'Nilai absen')
 
 @section('content_header')
     <!-- Content Header (Page header) -->
@@ -52,37 +52,31 @@
             </div>
         </section>
             <div class="card">
-            {{-- <div class="card-body">
+            <div class="card-body">
                 <div class="mb-3">
-                <a href="/sikap/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                <a href="/absensi/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                 </div>
                 <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th>Nama Santri</th>
-                    <th>Mengaji</th>
-                    <th>Hafalan</th>
-                    <th>Disiplin</th>
-                    <th>Bersih</th>
-                    <th>Sopan</th>
-                    <th>Keterangan</th>
+                    <th>Sakit</th>
+                    <th>Izin</th>
+                    <th>Alpha</th>
                     <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    @foreach ($nilai_sikap as $sikap)
-                    <td>{{$sikap->santri->nama_santri}}</td>
-                    <td>{{$sikap->mengaji}}</td>
-                    <td>{{$sikap->hafalan}}</td>
-                    <td>{{$sikap->disiplin}}</td>
-                    <td>{{$sikap->bersih}}</td>
-                    <td>{{$sikap->sopan}}</td>
-                    <td>{{$sikap->keterangan}}</td>
+                    @foreach ($absensi as $absen)
+                    <td>{{$absen->santri->nama_santri}}</td>
+                    <td>{{$absen->sakit}}</td>
+                    <td>{{$absen->izin}}</td>
+                    <td>{{$absen->alpha}}</td>
                     <td >                                        
-                    <form method="post" action="/sikap/{{$sikap->id}}" class="form-inline">
-                        <a href="/sikap/{{$sikap->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                        <a href="/sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <form method="post" action="/absen/{{$absen->id}}" class="form-inline">
+                        <a href="/absen/{{$absen->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                        <a href="/absen/{{$absen->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
@@ -110,7 +104,7 @@
                 @endforeach
                 </tbody>
                 </table>
-            </div> --}}
+            </div>
             </div>
         </div>
         </div>

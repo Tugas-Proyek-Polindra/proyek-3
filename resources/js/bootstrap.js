@@ -2,6 +2,9 @@ window._ = require('lodash');
 
 try {
     require('bootstrap');
+    require('@fortawesome/fontawesome-free');
+    require('icheck-bootstrap');
+    require('overlayscrollbars');
 } catch (e) {}
 
 /**

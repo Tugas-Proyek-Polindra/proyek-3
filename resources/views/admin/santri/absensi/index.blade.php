@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Nilai absen')
+@section('title', 'Absensi')
 
 @section('content_header')
     <!-- Content Header (Page header) -->
@@ -75,28 +75,8 @@
                     <td>{{$absen->alpha}}</td>
                     <td >                                        
                     <form method="post" action="/absen/{{$absen->id}}" class="form-inline">
-                        <a href="/absen/{{$absen->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                        <a href="/absen/{{$absen->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
-                        @csrf
-                        @method('delete')
-                        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
+                        <a href="/absen/{{$absen->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>    
                     </form>           
-                        <div class="modal modal-danger fade" id="delete ">
-                        <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title"></h4>
-                            </div>
-                            <div class="modal-body">
-                            <p>Apakah Anda Yakin Ingin Menghapus Data Ini....???</p>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
-                            <button type="button" class="btn btn-outline pull-right">Yes</button>
-                            </div>
-                        </div>
                         </div>
                     </div>
                     </td>

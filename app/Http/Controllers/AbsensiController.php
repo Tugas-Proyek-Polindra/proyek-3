@@ -47,8 +47,8 @@ class AbsensiController extends Controller
         $validatedData = $request->validate(
             [
                 'nama_santri' => 'required',
-                'sakit' => 'required',
                 'izin' => 'required',
+                'sakit' => 'required',
                 'alpha' => 'required',
             ]
         );

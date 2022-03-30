@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Santri;
+use App\Models\NilaiSikap;
+use App\Models\NilaiPelajaran;
+use App\Models\Absensi;
 use Illuminate\Http\Request;
 
 class SantriController extends Controller
@@ -45,7 +48,7 @@ class SantriController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate(
+        $request->validate(
             [
                 'nama_santri' => 'required',
                 'nisn' => 'required',
@@ -58,13 +61,51 @@ class SantriController extends Controller
                 'nama_ibu' => 'required',
                 'sekolah_asal' => 'required',
                 'alamat_sekolah' => 'required',
+
+                //Nilai Sikap
+                // 'mengaji' => '',
+                // 'hafalan' => '',
+                // 'disiplin' => '',
+                // 'bersih' => '',
+                // 'sopan' => '',
+                // 'keterangan' => '',
             ]
         );
 
+        // $validatedData['santri_id'] = $request->;
 
         // $validatedData['img'] = $request->file('img')->store('produk-images');
 
-        Santri::create($validatedData);
+        $santri = Santri::create([
+            'nama_santri' => $request->nama_santri,
+            'nisn' => $request->nisn,
+            'nik' => $request->nik,
+            'tempat_lahir' => $request->tempat_lahir,
+            'tgl_lahir' =>  $request->tgl_lahir,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            // 'img' => 'required|mimes:jpg,jpeg,bmp,png|max:2048kb',
+            'no_hp' => $request->no_hp,
+            'nama_ibu' => $request->nama_ibu,
+            'sekolah_asal' => $request->sekolah_asal,
+            'alamat_sekolah' => $request->alamat_sekolah,
+        ]);
+
+        NilaiSikap::create([
+            'santri_id' => $santri->id,  
+            // 'mengaji' => $request->mengaji,
+            // 'hafalan' => $request->hafalan,
+            // 'disiplin' => $request->disiplin,
+            // 'bersih' => $request->bersih,
+            // 'sopan' => $request->sopan,
+            // 'keterangan' => $request->keterangan,
+        ]);
+
+        NilaiPelajaran::create([
+            'santri_id' => $santri->id,  
+        ]);
+        Absensi::create([
+            'santri_id' => $santri->id,  
+        ]);
 
         return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');
     }

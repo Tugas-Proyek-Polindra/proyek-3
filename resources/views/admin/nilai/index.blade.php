@@ -55,14 +55,14 @@
         <div class="card">
             <div class="card-body">
             <div class="mb-3">
-                <a href="/nilai/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                <a href="/nilai/create" class="btn btn-success btn-sm me-5"><i class="fa fa-fw fa-print"></i> Print</a>
             </div>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>No</th>
                         <th>Nama Santri</th>
-                        <th>Al-Qur'an Hadis</th>
+                        <th>Al-Qur'an</th>
                         <th>Al-Hadist</th>
                         {{-- <th>Aqidah</th>
                         <th>Akhlaq</th>
@@ -71,14 +71,13 @@
                         <th>B.Arab</th>
                         <th>Praktikum</th> --}}
                         <th>Mengaji</th>
-                        {{-- <th>Hafalan</th> 
-                        <th>Disiplin</th>
-                        <th>Bersih</th> --}}
-                        <th>Sopan</th>
+                        <th>Hafalan</th> 
+                        {{-- <th>Disiplin</th>
+                        <th>Bersih</th>
+                        <th>Sopan</th> --}}
                         <th>Jumlah</th>
-                        <th>Sopan</th>
-                        <th>Sopan</th>
-                        <th>Aksi</th>
+                        <th>Rata-rata</th>
+                        <th>Rangking</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -86,14 +85,14 @@
                     @foreach ($rekap_nilai as $nilai)
                     <td> {{$loop->iteration}} </td>
                     <td>{{$nilai->santri->nama_santri}}</td>
-                    <td>{{$nilai->nilai_pelajaran->al_quran_hadist}}</td>
+                    <td>{{$nilai->nilai_pelajaran->al_quran}}</td>
                     <td>{{$nilai->nilai_pelajaran->al_hadist}}</td>
                     <td>{{$nilai->nilai_sikap->mengaji}}</td>
                     <td>{{$nilai->nilai_sikap->sopan}}</td>
                     <td>{{$nilai->jumlah}}</td>
                     <td>{{$nilai->rata_rata}}</td>
                     <td>{{$nilai->rangking}}</td>
-                    <td >                                        
+                    {{-- <td >                                        
                         <form method="post" action="/nilai/{{$nilai->id}}" class="form-inline">
                             <a href="/nilai/{{$nilai->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
                             <a href="/nilai/{{$nilai->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
@@ -119,7 +118,7 @@
                             </div>
                             </div>
                         </div>
-                    </td>
+                    </td> --}}
                 </tr>
                     @endforeach
                 </tbody>

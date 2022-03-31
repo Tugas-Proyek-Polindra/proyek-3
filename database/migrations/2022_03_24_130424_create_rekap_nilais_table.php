@@ -16,14 +16,13 @@ class CreateRekapNilaisTable extends Migration
         Schema::create('rekap_nilais', function (Blueprint $table) {
             $table->id();
             $table->foreignId('santri_id');
-            $table->foreignId('pelajaran_id');
-            $table->foreignId('kelas_id');
-            $table->foreignId('user_id');
+            // $table->foreignId('kelas_id');
+            // $table->foreignId('user_id');
             $table->foreignId('nilai_pelajaran_id');
             $table->foreignId('nilai_sikap_id');
-            $table->integer('jumlah');
-            $table->float('rata_rata');
-            $table->integer('rangking');
+            $table->integer('jumlah')->nullable();
+            $table->float('rata_rata')->nullable();
+            $table->integer('rangking')->nullable();
             $table->timestamps();
         });
     }

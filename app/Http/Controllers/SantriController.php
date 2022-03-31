@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Santri;
+use App\Models\RekapNilai;
 use App\Models\NilaiSikap;
 use App\Models\NilaiPelajaran;
 use App\Models\Absensi;
@@ -90,21 +91,23 @@ class SantriController extends Controller
             'alamat_sekolah' => $request->alamat_sekolah,
         ]);
 
-        NilaiSikap::create([
+        $nilai_sikap = NilaiSikap::create([
             'santri_id' => $santri->id,  
-            // 'mengaji' => $request->mengaji,
-            // 'hafalan' => $request->hafalan,
-            // 'disiplin' => $request->disiplin,
-            // 'bersih' => $request->bersih,
-            // 'sopan' => $request->sopan,
-            // 'keterangan' => $request->keterangan,
         ]);
 
-        NilaiPelajaran::create([
+        $nilai_pelajaran = NilaiPelajaran::create([
             'santri_id' => $santri->id,  
         ]);
-        Absensi::create([
+
+        $absensi = Absensi::create([
             'santri_id' => $santri->id,  
+        ]);
+
+        RekapNilai::create([
+            'santri_id' => $santri->id,
+            'nilai_pelajaran_id' => $nilai_pelajaran->id,
+            'nilai_sikap_id' => $nilai_sikap->id,
+            'absensi_id' => $absensi->id,
         ]);
 
         return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');

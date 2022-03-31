@@ -16,7 +16,7 @@ class CreateNilaiPelajaransTable extends Migration
         Schema::create('nilai_pelajarans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('santri_id');
-            $table->integer('al_quran_hadist')->nullable();
+            $table->integer('al_quran')->nullable();
             $table->integer('al_hadist')->nullable();
             $table->integer('aqidah')->nullable();
             $table->integer('akhlaq')->nullable();

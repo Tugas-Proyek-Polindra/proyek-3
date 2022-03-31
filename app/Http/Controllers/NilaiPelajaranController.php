@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\NilaiPelajaran;
+use App\Models\Santri;
 use Illuminate\Http\Request;
 
 class NilaiPelajaranController extends Controller
@@ -62,9 +63,9 @@ class NilaiPelajaranController extends Controller
      * @param  \App\Models\NilaiPelajaran  $nilaiPelajaran
      * @return \Illuminate\Http\Response
      */
-    public function edit(NilaiPelajaran $nilaiPelajaran)
+    public function edit($id)
     {
-        $nilai_sikap = NilaiSikap::where('id', $id)->first();
+        $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();
         return view('admin.santri.nilai_pelajaran.edit', [
             "nilai_pelajaran" => $nilai_pelajaran,
         ]);
@@ -77,9 +78,38 @@ class NilaiPelajaranController extends Controller
      * @param  \App\Models\NilaiPelajaran  $nilaiPelajaran
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NilaiPelajaran $nilaiPelajaran)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'al_quran' => 'required',
+                'al_hadist' => 'required',
+                'aqidah' => 'required',
+                'akhlaq' => 'required',
+                'fiqih' => 'required',
+                'tarikh' => 'required',
+                'b_arab' => 'required',
+                'tarikh' => 'required',
+                'praktikum' => 'required',
+            ]
+        );
+
+        $santri = Santri::where('id', $id)->first();
+        $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();        
+        $nilai_pelajaran->update([
+            'santri_id' => $id, 
+            'al_quran' => $request->al_quran,
+            'al_hadist' => $request->al_hadist,
+            'aqidah' => $request->aqidah,
+            'akhlaq' => $request->akhlaq,
+            'fiqih' => $request->fiqih,
+            'tarikh' => $request->tarikh,
+            'b_arab' => $request->b_arab,
+            'tarikh' => $request->tarikh,
+            'praktikum' => $request->praktikum,
+        ]);
+
+        return redirect('nilai/pelajaran')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**

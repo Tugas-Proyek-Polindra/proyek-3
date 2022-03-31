@@ -79,10 +79,11 @@
                     <td>{{$sikap->bersih}}</td>
                     <td>{{$sikap->sopan}}</td>
                     <td>{{$sikap->keterangan}}</td>
-                    <td >                                        
+                    <td >   
+                        <a href="sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                     {{-- <form method="post" action="sikap/{{$sikap->id}}" class="form-inline"> --}}
                         {{-- <a href="/sikap/{{$sikap->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a> --}}
-                        <a href="sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                        
                         {{-- @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>     --}}

@@ -60,7 +60,7 @@
                 <thead>
                 <tr>
                     <th>Nama Santri</th>
-                    <th>Al-Qur'an Hadis</th>
+                    <th>Al-Qur'an</th>
                     <th>Al-Hadist</th>
                     <th>Aqidah</th>
                     <th>Akhlaq</th>
@@ -74,7 +74,7 @@
                 <tr>
                     @foreach ($nilai_pelajaran as $mapel)
                     <td>{{$mapel->santri->nama_santri}}</td>
-                    <td>{{$mapel->al_quran_hadist}}</td>
+                    <td>{{$mapel->al_quran}}</td>
                     <td>{{$mapel->al_hadist}}</td>
                     <td>{{$mapel->aqidah}}</td>
                     <td>{{$mapel->akhlaq}}</td>
@@ -83,7 +83,7 @@
                     <td>{{$mapel->b_arab}}</td>
                     <td>{{$mapel->praktikum}}</td>
                     <td > 
-                        <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                        <a href="pelajaran/{{$mapel->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                     {{-- <form method="post" action="/mapel/{{$mapel->id}}" class="form-inline">
                         <a href="/mapel/{{$mapel->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
                         @csrf

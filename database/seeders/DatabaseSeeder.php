@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
 
         NilaiPelajaran::create([
             'santri_id' => 1,
-            'al_quran_hadist' => '80',
+            'al_quran' => '80',
             'al_hadist' => '90',
             'aqidah' => '84',
             'akhlaq' => '87',

@@ -79,8 +79,7 @@ class NilaiSikapController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        
+    {       
         $request->validate(
             [
                 'mengaji' => 'required',
@@ -92,21 +91,9 @@ class NilaiSikapController extends Controller
             ]
         );
 
-        // $validatedData = NilaiSikap::create([
-        //     // 'santri_id' => $santri, 
-        //     'santri_id' => $id, 
-        //     'mengaji' => $request->mengaji,
-        //     'hafalan' => $request->hafalan,
-        //     'disiplin' => $request->disiplin,
-        //     'bersih' => $request->bersih,
-        //     'sopan' => $request->sopan,
-        //     'keterangan' => $request->keterangan,
-        // ]);
-
         $santri = Santri::where('id', $id)->first();
         $nilai_sikap = NilaiSikap::where('id', $id)->first();        
         $nilai_sikap->update([
-            // 'santri_id' => $santri, 
             'santri_id' => $id, 
             'mengaji' => $request->mengaji,
             'hafalan' => $request->hafalan,
@@ -115,13 +102,6 @@ class NilaiSikapController extends Controller
             'sopan' => $request->sopan,
             'keterangan' => $request->keterangan,
         ]);
-
-        // $validatedData->update([
-        //     'quantity' => $product->quantity + 1
-        // ]);
-
-        // $nilai_sikap = NilaiSikap::find($request->id)
-        //     ->update([$validatedData]);
 
         return redirect('nilai/sikap')->with('pesan', 'Data Berhasil Di Update !');
     }

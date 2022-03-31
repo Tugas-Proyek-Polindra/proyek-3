@@ -63,24 +63,24 @@
                         <th>No</th>
                         <th>Nama Santri</th>
                         <th>Al-Qur'an</th>
-                        {{-- <th>Al-Hadist</th>
-                        <th>Aqidah</th>
+                        <th>Al-Hadist</th>
+                        {{-- <th>Aqidah</th>
                         <th>Akhlaq</th>
                         <th>Fiqih</th>
                         <th>Tarikh</th>
                         <th>B.Arab</th>
                         <th>Praktikum</th> --}}
                         <th>Mengaji</th>
-                        {{-- <th>Hafalan</th> 
-                        <th>Disiplin</th>
+                        <th>Hafalan</th> 
+                        {{-- <th>Disiplin</th>
                         <th>Bersih</th>
-                        <th>Sopan</th>--}}
+                        <th>Sopan</th> --}}
                         <th>Sakit</th>
                         <th>Izin</th>
                         <th>Alpha</th>
-                        <th>Jumlah</th>
+                        {{-- <th>Jumlah</th>
                         <th>Rata-rata</th>
-                        <th>Rangking</th>
+                        <th>Rangking</th> --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -89,13 +89,15 @@
                     <td> {{$loop->iteration}} </td>
                     <td>{{$nilai->santri->nama_santri}}</td>
                     <td>{{$nilai->nilai_pelajaran->al_quran}}</td>
+                    <td>{{$nilai->nilai_pelajaran->al_hadist}}</td>
                     <td>{{$nilai->nilai_sikap->mengaji}}</td>
+                    <td>{{$nilai->nilai_sikap->hafalan}}</td>
                     <td>{{$nilai->absensi->sakit}}</td>
                     <td>{{$nilai->absensi->izin}}</td>
                     <td>{{$nilai->absensi->alpha}}</td>
-                    <td>{{$nilai->jumlah}}</td>
+                    {{-- <td>{{$nilai->jumlah}}</td>
                     <td>{{$nilai->rata_rata}}</td>
-                    <td>{{$nilai->rangking}}</td>
+                    <td>{{$nilai->rangking}}</td> --}}
                     {{-- <td >                                        
                         <form method="post" action="/nilai/{{$nilai->id}}" class="form-inline">
                             <a href="/nilai/{{$nilai->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>

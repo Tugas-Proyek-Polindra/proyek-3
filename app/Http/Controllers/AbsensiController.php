@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Absensi;
+use App\Models\Santri;
 use Illuminate\Http\Request;
 
 class AbsensiController extends Controller
@@ -75,9 +76,12 @@ class AbsensiController extends Controller
      * @param  \App\Models\Absensi  $absensi
      * @return \Illuminate\Http\Response
      */
-    public function edit(Absensi $absensi)
+    public function edit($id)
     {
-        //
+        $absensi = Absensi::where('id', $id)->first();
+        return view('admin.santri.absensi.edit', [
+            "absensi" => $absensi,
+        ]);
     }
 
     /**
@@ -87,9 +91,26 @@ class AbsensiController extends Controller
      * @param  \App\Models\Absensi  $absensi
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Absensi $absensi)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'sakit' => 'required',
+                'izin' => 'required',
+                'alpha' => 'required',
+            ]
+        );
+
+        $santri = Santri::where('id', $id)->first();
+        $absensi = Absensi::where('id', $id)->first();        
+        $absensi->update([
+            'santri_id' => $id, 
+            'sakit' => $request->sakit,
+            'izin' => $request->izin,
+            'alpha' => $request->alpha,
+        ]);
+
+        return redirect('/absensi')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**

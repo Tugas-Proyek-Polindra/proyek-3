@@ -74,7 +74,7 @@
                     <td>{{$absen->izin}}</td>
                     <td>{{$absen->alpha}}</td>
                     <td >
-                        <a href="/absen/{{$absen->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>    
+                        <a href="/absensi/{{$absen->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>    
                     {{-- <form method="post" action="/absen/{{$absen->id}}" class="form-inline">
                     </form>            --}}
                         </div>

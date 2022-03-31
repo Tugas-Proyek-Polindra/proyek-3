@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\NilaiSikap;
+use App\Models\Santri;
 use Illuminate\Http\Request;
 
 class NilaiSikapController extends Controller
@@ -42,7 +43,7 @@ class NilaiSikapController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request;
     }
 
     /**
@@ -62,9 +63,12 @@ class NilaiSikapController extends Controller
      * @param  \App\Models\NilaiSikap  $nilaiSikap
      * @return \Illuminate\Http\Response
      */
-    public function edit(NilaiSikap $nilaiSikap)
+    public function edit($id)
     {
-        //
+        $nilai_sikap = NilaiSikap::where('id', $id)->first();
+        return view('admin.santri.nilai_sikap.edit', [
+            "nilai_sikap" => $nilai_sikap,
+        ]);
     }
 
     /**
@@ -74,9 +78,52 @@ class NilaiSikapController extends Controller
      * @param  \App\Models\NilaiSikap  $nilaiSikap
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NilaiSikap $nilaiSikap)
+    public function update(Request $request, $id)
     {
-        //
+        
+        $request->validate(
+            [
+                'mengaji' => 'required',
+                'hafalan' => 'required',
+                'disiplin' => 'required',
+                'bersih' => 'required',
+                'sopan' => 'required',
+                'keterangan' => 'required',
+            ]
+        );
+
+        // $validatedData = NilaiSikap::create([
+        //     // 'santri_id' => $santri, 
+        //     'santri_id' => $id, 
+        //     'mengaji' => $request->mengaji,
+        //     'hafalan' => $request->hafalan,
+        //     'disiplin' => $request->disiplin,
+        //     'bersih' => $request->bersih,
+        //     'sopan' => $request->sopan,
+        //     'keterangan' => $request->keterangan,
+        // ]);
+
+        $santri = Santri::where('id', $id)->first();
+        $nilai_sikap = NilaiSikap::where('id', $id)->first();        
+        $nilai_sikap->update([
+            // 'santri_id' => $santri, 
+            'santri_id' => $id, 
+            'mengaji' => $request->mengaji,
+            'hafalan' => $request->hafalan,
+            'disiplin' => $request->disiplin,
+            'bersih' => $request->bersih,
+            'sopan' => $request->sopan,
+            'keterangan' => $request->keterangan,
+        ]);
+
+        // $validatedData->update([
+        //     'quantity' => $product->quantity + 1
+        // ]);
+
+        // $nilai_sikap = NilaiSikap::find($request->id)
+        //     ->update([$validatedData]);
+
+        return redirect('nilai/sikap')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**

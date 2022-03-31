@@ -95,7 +95,8 @@ class NilaiPelajaranController extends Controller
         );
 
         $santri = Santri::where('id', $id)->first();
-        $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();        
+        $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();
+
         $nilai_pelajaran->update([
             'santri_id' => $id, 
             'al_quran' => $request->al_quran,
@@ -107,7 +108,10 @@ class NilaiPelajaranController extends Controller
             'b_arab' => $request->b_arab,
             'tarikh' => $request->tarikh,
             'praktikum' => $request->praktikum,
+            'jumlah' => $request->jumlah
         ]);
+
+        
 
         return redirect('nilai/pelajaran')->with('pesan', 'Data Berhasil Di Update !');
     }

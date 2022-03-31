@@ -24,6 +24,7 @@ class CreateNilaiPelajaransTable extends Migration
             $table->integer('tarikh')->nullable();
             $table->integer('b_arab')->nullable();
             $table->integer('praktikum')->nullable();
+            $table->integer('jumlah')->nullable();
             $table->timestamps();
         });
     }

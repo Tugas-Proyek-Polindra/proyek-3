@@ -140,5 +140,4 @@
 @section('js')
     <script> console.log('Hi!'); </script>
     @section('plugins.Datatables', true)
-
 @stop

@@ -82,15 +82,15 @@
                     <td>{{$mapel->tarikh}}</td>
                     <td>{{$mapel->b_arab}}</td>
                     <td>{{$mapel->praktikum}}</td>
-                    <td >                                        
-                    <form method="post" action="/mapel/{{$mapel->id}}" class="form-inline">
-                        <a href="/mapel/{{$mapel->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                    <td > 
                         <a href="/mapel/{{$mapel->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    {{-- <form method="post" action="/mapel/{{$mapel->id}}" class="form-inline">
+                        <a href="/mapel/{{$mapel->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
                     </form>           
-                        <div class="modal modal-danger fade" id="delete ">
+                    <div class="modal modal-danger fade" id="delete ">
                         <div class="modal-dialog modal-sm">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         </div>
-                    </div>
+                    </div> --}}
                     </td>
                 </tr>
                 @endforeach

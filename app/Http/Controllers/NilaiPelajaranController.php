@@ -64,7 +64,10 @@ class NilaiPelajaranController extends Controller
      */
     public function edit(NilaiPelajaran $nilaiPelajaran)
     {
-        //
+        $nilai_sikap = NilaiSikap::where('id', $id)->first();
+        return view('admin.santri.nilai_pelajaran.edit', [
+            "nilai_pelajaran" => $nilai_pelajaran,
+        ]);
     }
 
     /**

@@ -108,6 +108,7 @@ class DatabaseSeeder extends Seeder
             'santri_id' => 1,
             'nilai_pelajaran_id' => 1,
             'nilai_sikap_id' => 1,
+            'absensi_id' => 1,
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,

@@ -20,6 +20,7 @@ class CreateRekapNilaisTable extends Migration
             // $table->foreignId('user_id');
             $table->foreignId('nilai_pelajaran_id');
             $table->foreignId('nilai_sikap_id');
+            $table->foreignId('absensi_id');
             $table->integer('jumlah')->nullable();
             $table->float('rata_rata')->nullable();
             $table->integer('rangking')->nullable();

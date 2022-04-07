@@ -6,17 +6,7 @@
     <!-- Content Header (Page header) -->
     {{-- <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>DataTables</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
+        
       </div><!-- /.container-fluid -->
     </section> --}}
 @stop
@@ -75,32 +65,32 @@
                     <td>{{$keaktifan->tgl_mulai_bertugas}}</td>
                     <td>{{$keaktifan->status_penugasan}}</td>
                     <td>{{$keaktifan->tugas_utama}}</td>
-                    <td >                                        
-                    <form method="post" action="/keaktifan/{{$keaktifan->id}}" class="form-inline">
-                        <a href="/keaktifan/{{$keaktifan->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                    <td > 
                         <a href="/keaktifan/{{$keaktifan->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    {{-- <form method="post" action="/keaktifan/{{$keaktifan->id}}" class="form-inline">
+                        <a href="/keaktifan/{{$keaktifan->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
                     </form>           
                         <div class="modal modal-danger fade" id="delete ">
-                        <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title"></h4>
-                            </div>
-                            <div class="modal-body">
-                            <p>Apakah Anda Yakin Ingin Menghapus Data Ini....???</p>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
-                            <button type="button" class="btn btn-outline pull-right">Yes</button>
+                            <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                <p>Apakah Anda Yakin Ingin Menghapus Data Ini....???</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
+                                <button type="button" class="btn btn-outline pull-right">Yes</button>
+                                </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
+                    </div> --}}
                     </td>
                 </tr>
                 @endforeach

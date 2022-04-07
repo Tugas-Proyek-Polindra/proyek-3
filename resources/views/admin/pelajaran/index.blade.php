@@ -6,17 +6,6 @@
     <!-- Content Header (Page header) -->
     {{-- <section class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>DataTables</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-          </div>
-        </div>
       </div><!-- /.container-fluid -->
     </section> --}}
 @stop
@@ -54,9 +43,9 @@
         </section>
         <div class="card">
             <div class="card-body">
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <a href="/pelajaran/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
-            </div>
+            </div> --}}
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -72,10 +61,10 @@
                     <td> {{$loop->iteration}} </td>
                     <td>{{$pelajaran->nama_pelajaran}}</td>
                     <td>{{$pelajaran->nilai_kkm}}</td>
-                    <td >                                        
-                        <form method="post" action="/pelajaran/{{$pelajaran->id}}" class="form-inline">
-                            <a href="/pelajaran/{{$pelajaran->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                            <a href="/pelajaran/{{$pelajaran->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                    <td >   
+                        {{-- <a href="/pelajaran/{{$pelajaran->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a> --}}
+                            <a href="/pelajaran/{{$pelajaran->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>                                     
+                        {{-- <form method="post" action="/pelajaran/{{$pelajaran->id}}" class="form-inline">
                             @csrf
                             @method('delete')
                             <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
@@ -97,7 +86,7 @@
                             </div>
                             </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </td>
                 </tr>
                     @endforeach

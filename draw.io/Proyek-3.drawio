@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-07T10:10:48.574Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="I8J0RynhLOL3p10xkFr4" version="17.4.0" type="github" pages="29">
+<mxfile host="app.diagrams.net" modified="2022-04-07T10:11:40.267Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="36NQt-_C-BWjlUNSRQD6" version="17.4.0" type="github" pages="29">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="FC">
     <mxGraphModel dx="979" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -4814,12 +4814,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PoE85wyKFRoCX79u8t9F" name="ADS-Kelola Pelajaran">
-    <mxGraphModel dx="979" dy="2118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2079" dy="1268" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="uDN3-PHInSSidetnoKYh-1" value="Pelajaran" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;" parent="1" vertex="1">
-          <mxGeometry x="290" y="-1020" width="570" height="460" as="geometry" />
+          <mxGeometry x="-1090" y="-800" width="570" height="460" as="geometry" />
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -4828,13 +4828,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-3" value="Sistem" style="swimlane;startSize=20;" parent="1" vertex="1">
-          <mxGeometry x="460" y="-1000" width="200" height="440" as="geometry" />
+          <mxGeometry x="-920" y="-780" width="200" height="440" as="geometry" />
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-4" value="Manampilkan data rekap nilai" style="rounded=1;whiteSpace=wrap;html=1;" parent="uDN3-PHInSSidetnoKYh-3" vertex="1">
           <mxGeometry x="25" y="190" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-5" value="Staff" style="swimlane;startSize=20;" parent="1" vertex="1">
-          <mxGeometry x="290" y="-1000" width="170" height="440" as="geometry" />
+          <mxGeometry x="-1090" y="-780" width="170" height="440" as="geometry" />
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-6" value="Halaman dashbord" style="rounded=1;whiteSpace=wrap;html=1;" parent="uDN3-PHInSSidetnoKYh-5" vertex="1">
           <mxGeometry x="20" y="90" width="140" height="40" as="geometry" />
@@ -4860,7 +4860,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-12" value="Database" style="swimlane;startSize=20;" parent="1" vertex="1">
-          <mxGeometry x="660" y="-1000" width="200" height="440" as="geometry" />
+          <mxGeometry x="-720" y="-780" width="200" height="440" as="geometry" />
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-13" value="Menyimpan data rekap nilai" style="rounded=1;whiteSpace=wrap;html=1;" parent="uDN3-PHInSSidetnoKYh-12" vertex="1">
           <mxGeometry x="30" y="330" width="140" height="40" as="geometry" />
@@ -4876,20 +4876,20 @@
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uDN3-PHInSSidetnoKYh-9" target="uDN3-PHInSSidetnoKYh-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="-860" as="sourcePoint" />
-            <mxPoint x="390" y="-800" as="targetPoint" />
+            <mxPoint x="-990" y="-640" as="sourcePoint" />
+            <mxPoint x="-990" y="-580" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="uDN3-PHInSSidetnoKYh-4" target="uDN3-PHInSSidetnoKYh-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="-850" as="sourcePoint" />
-            <mxPoint x="400" y="-790" as="targetPoint" />
+            <mxPoint x="-980" y="-630" as="sourcePoint" />
+            <mxPoint x="-980" y="-570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="uDN3-PHInSSidetnoKYh-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uDN3-PHInSSidetnoKYh-10" target="uDN3-PHInSSidetnoKYh-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="-760" as="sourcePoint" />
-            <mxPoint x="660" y="-650" as="targetPoint" />
+            <mxPoint x="-810" y="-540" as="sourcePoint" />
+            <mxPoint x="-720" y="-430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>

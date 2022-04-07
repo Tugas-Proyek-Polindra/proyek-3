@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-07T04:14:54.870Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="3DRjrIKpw-_NRMF9n918" version="17.4.0" type="github" pages="22">
+<mxfile host="app.diagrams.net" modified="2022-04-07T04:23:34.236Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.79 Safari/537.36" etag="n5el7EPWCqH3PQT7e5VC" version="17.4.0" type="github" pages="22">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="Flowchart">
     <mxGraphModel dx="1022" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -338,7 +338,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Use Case Diagram" id="i8XapWyvkNRrELJzHctI">
-    <mxGraphModel dx="1022" dy="1282" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="800" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="1218" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="800" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1735,7 +1735,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="7vPxdgq4436c-iyXZGG1" name="Sequence Staf Login">
-    <mxGraphModel dx="1022" dy="482" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="418" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1845,7 +1845,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PYDeW4z6PYv_JxavT6uJ" name="Sequence Guru Login">
-    <mxGraphModel dx="1108" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="ne-8PbuIzjeHR3Lqf4SY-0" />
         <mxCell id="ne-8PbuIzjeHR3Lqf4SY-1" parent="ne-8PbuIzjeHR3Lqf4SY-0" />
@@ -1955,7 +1955,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="KwJu04WMVRLLvlw9YeCk" name="Sqc Pelayanan produk">
-    <mxGraphModel dx="1022" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="ay8Pl5RFijUXqw-SvbKg-0" />
         <mxCell id="ay8Pl5RFijUXqw-SvbKg-1" parent="ay8Pl5RFijUXqw-SvbKg-0" />
@@ -1974,7 +1974,7 @@
         <mxCell id="4v8DqdafyKfnI8dmCXrq-2" value="Dashboard" style="html=1;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="730" y="1090" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="4v8DqdafyKfnI8dmCXrq-3" value="Pelayanan&amp;nbsp;&lt;br&gt;Produk" style="html=1;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
+        <mxCell id="4v8DqdafyKfnI8dmCXrq-3" value="Halaman Pelajaran" style="html=1;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="900" y="1090" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="4v8DqdafyKfnI8dmCXrq-4" value="Halaman Tambah &lt;br&gt;Pelayanan&lt;br&gt;Produk" style="html=1;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
@@ -1983,7 +1983,7 @@
         <mxCell id="4v8DqdafyKfnI8dmCXrq-5" value="1. Login" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="660" y="1207.5" width="110" height="25" as="geometry" />
         </mxCell>
-        <mxCell id="4v8DqdafyKfnI8dmCXrq-6" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
+        <mxCell id="4v8DqdafyKfnI8dmCXrq-6" value="Guru" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="620" y="1070" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4v8DqdafyKfnI8dmCXrq-7" value="" style="endArrow=none;dashed=1;html=1;" parent="ay8Pl5RFijUXqw-SvbKg-1" edge="1">
@@ -2012,7 +2012,7 @@
         <mxCell id="4v8DqdafyKfnI8dmCXrq-11" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="770" y="1251" width="10" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4v8DqdafyKfnI8dmCXrq-12" value="2. Menampilkan Halaman Produk" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
+        <mxCell id="4v8DqdafyKfnI8dmCXrq-12" value="2. Menampilkan Halaman Pelajaran" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="790" y="1270" width="150" height="31" as="geometry" />
         </mxCell>
         <mxCell id="4v8DqdafyKfnI8dmCXrq-13" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
@@ -2267,8 +2267,8 @@
         <mxCell id="4v8DqdafyKfnI8dmCXrq-64" value="13. Update Data &lt;br&gt;ke Database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
           <mxGeometry x="1680" y="1863.5" width="179" height="31" as="geometry" />
         </mxCell>
-        <mxCell id="NRqnRDYC4jjMNGib0CqG-0" value="&lt;font color=&quot;#f0aa69&quot;&gt;&lt;span style=&quot;font-size: 17px&quot;&gt;Pelayanan Produk&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;strokeColor=#330000;fillColor=#33001A;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
-          <mxGeometry x="560" y="1010" width="190" height="20" as="geometry" />
+        <mxCell id="NRqnRDYC4jjMNGib0CqG-0" value="&lt;font color=&quot;#f0aa69&quot;&gt;&lt;span style=&quot;font-size: 17px&quot;&gt;Mengelola data rekap nilai&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#333333;strokeColor=#330000;fillColor=#33001A;" parent="ay8Pl5RFijUXqw-SvbKg-1" vertex="1">
+          <mxGeometry x="560" y="1010" width="260" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -2540,7 +2540,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="U06JWWXItgJgdWbfDZnA" name="sq kelola produk">
-    <mxGraphModel dx="1022" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1022" dy="418" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="cbmMgF6pY0ee_qPGi3kz-0" />
         <mxCell id="cbmMgF6pY0ee_qPGi3kz-1" parent="cbmMgF6pY0ee_qPGi3kz-0" />

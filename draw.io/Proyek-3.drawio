@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-08T02:18:26.179Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29" etag="jLDiC-LUr_1QdLAj3mq2" version="17.4.1" type="github" pages="29">
+<mxfile host="app.diagrams.net" modified="2022-04-08T02:19:36.018Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29" etag="-fVSjUryFWD2CveL7Xb1" version="17.4.1" type="github" pages="29">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="FC">
     <mxGraphModel dx="920" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -361,7 +361,7 @@
             <mxPoint x="100.5" y="404.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KcCwm_woVFDxwfjwVIii-17" value="Data Pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" vertex="1" parent="mSpxo83AfzKPzWcdPctY-1">
+        <mxCell id="KcCwm_woVFDxwfjwVIii-17" value="Data &lt;br&gt;Pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" vertex="1" parent="mSpxo83AfzKPzWcdPctY-1">
           <mxGeometry x="1430" y="1060" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="KcCwm_woVFDxwfjwVIii-18" value="Pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" vertex="1" parent="mSpxo83AfzKPzWcdPctY-1">

@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-08T02:14:05.196Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29" etag="W2ShEfLvXX9RodzWqpFQ" version="17.4.1" type="github" pages="29">
+<mxfile host="app.diagrams.net" modified="2022-04-08T02:14:23.395Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29" etag="qA4akRbPASQULvUut0yX" version="17.4.1" type="github" pages="29">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="FC">
     <mxGraphModel dx="920" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -154,14 +154,14 @@
         <mxCell id="an0ANok2B0Cd9WMYrcY8-4" value="Penilaian Pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
           <mxGeometry x="207.25" y="560" width="100" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="1LlhtynBCK85CpFQ7kyY-17" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1LlhtynBCK85CpFQ7kyY-0" source="an0ANok2B0Cd9WMYrcY8-4" target="1LlhtynBCK85CpFQ7kyY-41" edge="1">
+        <mxCell id="1LlhtynBCK85CpFQ7kyY-17" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1LlhtynBCK85CpFQ7kyY-0" source="an0ANok2B0Cd9WMYrcY8-4" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="281.25" y="625" as="sourcePoint" />
-            <mxPoint x="377.25" y="610" as="targetPoint" />
+            <mxPoint x="350" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="1LlhtynBCK85CpFQ7kyY-41" value="Data &lt;br&gt;Nilai Pelajaran" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" parent="1LlhtynBCK85CpFQ7kyY-0" vertex="1">
-          <mxGeometry x="367.25" y="580" width="100" height="60" as="geometry" />
+          <mxGeometry x="350" y="580" width="117.25" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iEgTZBCxLitt1ai6TGcZ-1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1LlhtynBCK85CpFQ7kyY-0" source="an0ANok2B0Cd9WMYrcY8-4" target="an0ANok2B0Cd9WMYrcY8-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">

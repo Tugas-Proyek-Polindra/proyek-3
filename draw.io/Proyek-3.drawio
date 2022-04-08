@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-04-08T02:14:23.395Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29" etag="qA4akRbPASQULvUut0yX" version="17.4.1" type="github" pages="29">
+<mxfile host="app.diagrams.net" modified="2022-04-08T02:18:26.179Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36 Edg/100.0.1185.29" etag="jLDiC-LUr_1QdLAj3mq2" version="17.4.1" type="github" pages="29">
   <diagram id="aQbcwNLAtntBmrh6W2RR" name="FC">
     <mxGraphModel dx="920" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -214,7 +214,7 @@
             <mxPoint x="-253.49999999999977" y="678" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WcKUU6D6t-VXUCNG7PHm-12" value="Kepribadian" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" vertex="1" parent="1LlhtynBCK85CpFQ7kyY-0">
+        <mxCell id="WcKUU6D6t-VXUCNG7PHm-12" value="Riwayat Keaktifan" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=#330000;" vertex="1" parent="1LlhtynBCK85CpFQ7kyY-0">
           <mxGeometry x="210" y="1468" width="93" height="100" as="geometry" />
         </mxCell>
         <mxCell id="WcKUU6D6t-VXUCNG7PHm-13" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.408;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1LlhtynBCK85CpFQ7kyY-0" source="WcKUU6D6t-VXUCNG7PHm-12" target="WcKUU6D6t-VXUCNG7PHm-14">
@@ -223,7 +223,7 @@
             <mxPoint x="-443" y="537.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WcKUU6D6t-VXUCNG7PHm-14" value="Kelola Data&amp;nbsp; Kepribadian" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" vertex="1" parent="1LlhtynBCK85CpFQ7kyY-0">
+        <mxCell id="WcKUU6D6t-VXUCNG7PHm-14" value="Data Riwayat Keaktifan" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.direct_data;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=none;" vertex="1" parent="1LlhtynBCK85CpFQ7kyY-0">
           <mxGeometry x="355.5" y="1493" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="WcKUU6D6t-VXUCNG7PHm-15" value="" style="line;strokeWidth=2;direction=west;html=1;fillColor=#FFFFFF;fontColor=none;flipV=1;" vertex="1" parent="1LlhtynBCK85CpFQ7kyY-0">

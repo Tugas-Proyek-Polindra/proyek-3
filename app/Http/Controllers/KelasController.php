@@ -45,6 +45,7 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         $validatedData = $request->validate(
             [
                 'kelas' => 'required',
@@ -55,7 +56,7 @@ class KelasController extends Controller
 
         Kelas::create($validatedData);
 
-        return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');
+        return redirect('/kelas')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**

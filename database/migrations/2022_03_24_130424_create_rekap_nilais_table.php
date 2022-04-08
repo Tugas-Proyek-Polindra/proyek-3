@@ -18,9 +18,9 @@ class CreateRekapNilaisTable extends Migration
             $table->foreignId('santri_id');
             // $table->foreignId('kelas_id');
             // $table->foreignId('user_id');
-            $table->foreignId('nilai_pelajaran_id');
-            $table->foreignId('nilai_sikap_id');
-            $table->foreignId('absensi_id');
+            $table->foreignId('nilai_pelajaran_id')->nullable();
+            $table->foreignId('nilai_sikap_id')->nullable();
+            $table->foreignId('absensi_id')->nullable();
             $table->integer('jumlah')->nullable();
             $table->float('rata_rata')->nullable();
             $table->integer('rangking')->nullable();

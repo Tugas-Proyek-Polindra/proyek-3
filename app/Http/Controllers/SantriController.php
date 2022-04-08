@@ -63,17 +63,8 @@ class SantriController extends Controller
                 'sekolah_asal' => 'required',
                 'alamat_sekolah' => 'required',
 
-                //Nilai Sikap
-                // 'mengaji' => '',
-                // 'hafalan' => '',
-                // 'disiplin' => '',
-                // 'bersih' => '',
-                // 'sopan' => '',
-                // 'keterangan' => '',
             ]
         );
-
-        // $validatedData['santri_id'] = $request->;
 
         // $validatedData['img'] = $request->file('img')->store('produk-images');
 

@@ -26,6 +26,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        $this->call(PelajaranSeeder::class);
+        
         User::create([
             'name' => 'Staff',
             'email' => 'admin@gmail.com',
@@ -68,10 +70,6 @@ class DatabaseSeeder extends Seeder
             'tahun_ajaran' => '2021/2022'
         ]);
 
-        Pelajaran::create([
-            'nama_pelajaran' => "Al-Qur'an Hadist",
-            'nilai_kkm' => '75',
-        ]);
 
         NilaiPelajaran::create([
             'santri_id' => 1,

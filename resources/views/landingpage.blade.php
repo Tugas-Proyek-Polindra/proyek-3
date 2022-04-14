@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -16,29 +14,27 @@
 
     <meta name="author" content="Made By GN DESIGNS">
 
-
-
     <title>E-Rapot</title>
 
 
 
     <!-- // PLUGINS (css files) // -->
 
-    <link href="assets/js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
 
-    <link href="assets/js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
 
     <!--// ICONS //-->
 
@@ -48,9 +44,9 @@
 
     <!--// BOOTSTRAP & Main //-->
 
-    <link href="assets/bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="{{asset('assets')}}/css/main.css" rel="stylesheet">
 
 </head>
 
@@ -66,7 +62,7 @@
 
     ========================================-->
 
-    <div class="page-preloader">
+    {{-- <div class="page-preloader">
 
         <div class="spinner">
 
@@ -82,7 +78,7 @@
 
         </div>
 
-    </div>
+    </div> --}}
 
 
 
@@ -114,7 +110,7 @@
 
                 <a class="navbar-brand" href="#brand">
 
-                    <img src="assets/img/logo.png" class="logo" alt="logo">
+                    <img src="{{asset('assets')}}/img/logo.png" class="logo" alt="logo">
 
                 </a>
 
@@ -566,7 +562,7 @@
 
                 <div class="col-md-6 col-md-push-2">
 
-                    <img src="assets/img/dashboard.png" class="img-responsive" alt="feature">
+                    <img src="{{asset('assets')}}/img/dashboard.png" class="img-responsive" alt="feature">
 
                 </div>
 
@@ -779,7 +775,7 @@
 
                     <div class="thumbnail team-member">
 
-                        <img src="assets/img/team-1.jpg" class="img-responsive img-circle" alt="team-1">
+                        <img src="{{asset('assets')}}/img/team-1.jpg" class="img-responsive img-circle" alt="team-1">
 
                         <div class="caption">
 
@@ -819,7 +815,7 @@
 
                     <div class="thumbnail team-member">
 
-                        <img src="assets/img/team-2.jpg" class="img-responsive img-circle" alt="team-2">
+                        <img src="{{asset('assets')}}/img/team-2.jpg" class="img-responsive img-circle" alt="team-2">
 
                         <div class="caption">
 
@@ -859,7 +855,7 @@
 
                     <div class="thumbnail team-member">
 
-                        <img src="assets/img/team-3.jpg" class="img-responsive img-circle" alt="team-3">
+                        <img src="{{asset('assets')}}/img/team-3.jpg" class="img-responsive img-circle" alt="team-3">
 
                         <div class="caption">
 
@@ -899,7 +895,7 @@
 
                     <div class="thumbnail team-member">
 
-                        <img src="assets/img/team-4.jpg" class="img-responsive img-circle" alt="team-4">
+                        <img src="{{asset('assets')}}/img/team-4.jpg" class="img-responsive img-circle" alt="team-4">
 
                         <div class="caption">
 
@@ -957,17 +953,17 @@
 
                     <div id="owl-clients">
 
-                        <div class="item"><img src="assets/img/clients/c_logo01.png" class="center-block" alt="client"></div>
+                        <div class="item"><img src="{{asset('assets')}}/img/clients/c_logo01.png" class="center-block" alt="client"></div>
 
-                        <div class="item"><img src="assets/img/clients/c_logo02.png" class="center-block" alt="client"></div>
+                        <div class="item"><img src="{{asset('assets')}}/img/clients/c_logo02.png" class="center-block" alt="client"></div>
 
-                        <div class="item"><img src="assets/img/clients/c_logo03.png" class="center-block" alt="client"></div>
+                        <div class="item"><img src="{{asset('assets')}}/img/clients/c_logo03.png" class="center-block" alt="client"></div>
 
-                        <div class="item"><img src="assets/img/clients/c_logo04.png" class="center-block" alt="client"></div>
+                        <div class="item"><img src="{{asset('assets')}}/img/clients/c_logo04.png" class="center-block" alt="client"></div>
 
-                        <div class="item"><img src="assets/img/clients/c_logo05.png" class="center-block" alt="client"></div>
+                        <div class="item"><img src="{{asset('assets')}}/img/clients/c_logo05.png" class="center-block" alt="client"></div>
 
-                        <div class="item"><img src="assets/img/clients/c_logo06.png" class="center-block" alt="client"></div>
+                        <div class="item"><img src="{{asset('assets')}}/img/clients/c_logo06.png" class="center-block" alt="client"></div>
 
                     </div>
 
@@ -1197,7 +1193,7 @@
 
                 <div class="footer-caption">
 
-                    <img src="assets/img/logo.png" class="img-responsive center-block" alt="logo">
+                    <img src="{{asset('assets')}}/img/logo.png" class="img-responsive center-block" alt="logo">
 
                     <hr>
 
@@ -1309,23 +1305,23 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-    <script src="assets/bootstrap-3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="{{asset('assets')}}/bootstrap-3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
-    <script src="assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{{asset('assets')}}/js/plugins/owl-carousel/owl.carousel.min.js"></script>
 
-    <script src="assets/js/plugins/bootsnav_files/js/bootsnav.js"></script>
+    <script src="{{asset('assets')}}/js/plugins/bootsnav_files/js/bootsnav.js"></script>
 
-    <script src="assets/js/plugins/typed.js-master/typed.js-master/dist/typed.min.js"></script>
+    <script src="{{asset('assets')}}/js/plugins/typed.js-master/typed.js-master/dist/typed.min.js"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
-    <script src="assets/js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+    <script src="{{asset('assets')}}/js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
 
-    <script src="assets/js/plugins/particles.js-master/particles.js-master/particles.min.js"></script>
+    <script src="{{asset('assets')}}/js/plugins/particles.js-master/particles.js-master/particles.min.js"></script>
 
-    <script src="assets/js/particales-script.js"></script>
+    <script src="{{asset('assets')}}/js/particales-script.js"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('assets')}}/js/main.js"></script>
 
 </body>
 

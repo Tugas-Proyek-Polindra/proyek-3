@@ -259,6 +259,7 @@ return [
         [
             'text'    => 'Rekap Nilai',
             'url'     => 'nilai',
+            // 'can'    => 'staff',
             'icon'    => 'fas fa-fw fa-book',
         ],
         [
@@ -268,17 +269,18 @@ return [
                 [
                     'text' => 'Biodata Santri',
                     'url'  => 'santri',
+                    'can'    => 'staff',
                     'active'  => ['santri', 'santri*'],
                 ],
                 [
                     'text' => 'Nilai Pelajaran',
-                    'url'  => 'nilai/pelajaran',
-                    'active'  => ['nilai/pelajaran', 'nilai/pelajaran*']
+                    'url'  => 'nilai-pelajaran',
+                    'active'  => ['nilai-pelajaran', 'nilai-pelajaran*']
                 ],
                 [
                     'text' => 'Nilai Sikap',
-                    'url'  => 'nilai/sikap',
-                    'active'  => ['nilai/sikap', 'nilai/sikap*']
+                    'url'  => 'nilai-sikap',
+                    'active'  => ['nilai-sikap', 'nilai-sikap*']
                 ],
                 [
                     'text' => 'Absensi',
@@ -291,6 +293,7 @@ return [
         [
             'text' => 'Kelas',
             'url'  => 'kelas',
+            'can'    => 'staff',
             'icon' => 'fas fa-fw fa-th',
         ],
         
@@ -301,6 +304,7 @@ return [
         ],
         [
             'text' => 'Guru',
+            'can'    => 'staff',
             'icon' => 'fas fa-fw fa-users',
             'submenu' => [
                 [

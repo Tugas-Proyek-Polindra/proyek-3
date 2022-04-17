@@ -24,7 +24,8 @@ class AddGuruTableToUsers extends Migration
             $table->string('nama_ibu')->nullable();
             $table->string('status_pegawai')->nullable();
             $table->string('pendidikan_terakhir')->nullable();
-            $table->string('role')->nullable();
+            // $table->string('role')->nullable();
+            $table->boolean('level')->default(false);
         });
     }
 

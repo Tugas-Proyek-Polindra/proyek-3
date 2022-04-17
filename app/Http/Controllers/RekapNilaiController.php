@@ -15,26 +15,34 @@ class RekapNilaiController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        
     }
 
-    public function jumlah(Request $request){
-        $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();
-        $nilai_pelajaran->$request->al_quran;
-        $nilai_pelajaran->$request->al_hadist;
-        $nilai_pelajaran->$request->aqidah;
-        $nilai_pelajaran->$request->akhlaq;
-        $nilai_pelajaran->$request->fiqih;
-        $nilai_pelajaran->$request->tarikh;
-        $nilai_pelajaran->$request->b_arab;
-        $nilai_pelajaran->$request->tarikh;
-        $nilai_pelajaran->$request->praktikum;
+    // public function jumlah(Request $request){
+    //     $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();
+    //     $nilai_pelajaran->$request->al_quran;
+    //     $nilai_pelajaran->$request->al_hadist;
+    //     $nilai_pelajaran->$request->aqidah;
+    //     $nilai_pelajaran->$request->akhlaq;
+    //     $nilai_pelajaran->$request->fiqih;
+    //     $nilai_pelajaran->$request->tarikh;
+    //     $nilai_pelajaran->$request->b_arab;
+    //     $nilai_pelajaran->$request->tarikh;
+    //     $nilai_pelajaran->$request->praktikum;
 
-        $jumlah = $al_quran + $al_hadist + $aqidah + $akhlaq + $fiqih + $tarikh + $b_arab + $tarikh + $praktikum;
-    }
+    //     $jumlah = $al_quran + $al_hadist + $aqidah + $akhlaq + $fiqih + $tarikh + $b_arab + $tarikh + $praktikum;
+    // }
 
     public function index()
     {
+        //pengecekan menggunakan middleware
+        // if(!auth()->check() || auth()->user()->name !== 'Staff'){
+        //     abort(403);
+        // }
+
+        $this->authorize('staff');
+
         return view('admin.nilai.index',[
             "rekap_nilai" => RekapNilai::all(),
         ]);

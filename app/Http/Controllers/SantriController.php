@@ -19,7 +19,8 @@ class SantriController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('staff');
+        // $this->authorize('staff');
     }
 
     public function index()

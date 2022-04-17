@@ -15,7 +15,7 @@ class RekapNilaiController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
         
     }
 
@@ -36,13 +36,7 @@ class RekapNilaiController extends Controller
 
     public function index()
     {
-        //pengecekan menggunakan middleware
-        // if(!auth()->check() || auth()->user()->name !== 'Staff'){
-        //     abort(403);
-        // }
-
-        $this->authorize('staff');
-
+        // $this->authorize('staff');
         return view('admin.nilai.index',[
             "rekap_nilai" => RekapNilai::all(),
         ]);

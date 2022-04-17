@@ -26,12 +26,11 @@ use App\Http\Controllers\AbsensiController;
 
 Auth::routes();
 
-// Route::get('/', function () {
-//     return view('landingpage');
-// });
+Route::get('/', function () {
+    return view('landingpage');
+});
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'dashboard']);
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
 // Route::get('/santri', [SantriController::class, 'index'])->name('santri');

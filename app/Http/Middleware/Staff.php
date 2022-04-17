@@ -16,10 +16,6 @@ class Staff
      */
     public function handle(Request $request, Closure $next)
     {
-        // if (auth()->user()->level == 0) {
-        //     return $next($request);
-        // }
-        // return redirect('/home');
         if(!auth()->check() || !auth()->user()->level){
             abort(403);
         }

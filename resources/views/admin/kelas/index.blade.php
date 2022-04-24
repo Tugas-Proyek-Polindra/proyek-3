@@ -69,8 +69,6 @@
                 <tbody>
                 <tr>
                   @foreach ($classes as $kelas)
-
-                  
                   <td>{{$kelas->kelas}}</td>
                   <td>{{$kelas->wali_kelas}}</td>
                   <td>{{$kelas->tahun_ajaran}}</td>

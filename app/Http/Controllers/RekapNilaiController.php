@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RekapNilai;
+use App\Models\Kelas;
 use App\Models\NilaiPelajaran;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,7 @@ class RekapNilaiController extends Controller
         // $this->authorize('staff');
         return view('admin.nilai.index',[
             "rekap_nilai" => RekapNilai::all(),
+            "kelas" => Kelas::all(),
         ]);
     }
 

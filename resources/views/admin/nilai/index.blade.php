@@ -5,19 +5,19 @@
 @section('content_header')
     <!-- Content Header (Page header) -->
     {{-- <section class="content-header">
-      <div class="container-fluid">
+        <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
+            <div class="col-sm-6">
             <h1>DataTables</h1>
-          </div>
-          <div class="col-sm-6">
+            </div>
+            <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">DataTables</li>
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">DataTables</li>
             </ol>
-          </div>
+            </div>
         </div>
-      </div><!-- /.container-fluid -->
+        </div><!-- /.container-fluid -->
     </section> --}}
 @stop
 
@@ -54,8 +54,22 @@
         </section>
         <div class="card">
             <div class="card-body">
-            <div class="mb-3">
-                <a href="/nilai/create" class="btn btn-success btn-sm me-5"><i class="fa fa-fw fa-print"></i> Print</a>
+            <div class="row mb-3">
+                <div class="col-sm">
+                    <a href="/nilai/create" class="btn btn-success btn-sm me-5"><i class="fa fa-fw fa-print"></i> Print</a>
+                </div>
+                <div class="col-sm-2 m-2">
+                    {{-- <label for="kelas_id">Nama kelas</label> --}}
+                    <select name="kelas_id" id="kelas" class="form-control">
+                        @foreach ($kelas as $s)
+                            @if (old('kelas_id') == $s->id)
+                                <option value="{{$s->id}}" selected>{{$s->kelas}}</option>
+                            @else
+                                <option value="{{$s->id}}">{{$s->kelas}}</option>
+                            @endif          
+                        @endforeach
+                    </select>
+                </div>
             </div>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>

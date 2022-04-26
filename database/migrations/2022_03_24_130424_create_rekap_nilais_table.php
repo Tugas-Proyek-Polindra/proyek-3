@@ -15,7 +15,7 @@ class CreateRekapNilaisTable extends Migration
     {
         Schema::create('rekap_nilais', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('santri_id');
+            $table->foreignId('santri_id')->nullable();
             // $table->foreignId('kelas_id');
             // $table->foreignId('user_id');
             $table->foreignId('nilai_pelajaran_id')->nullable();

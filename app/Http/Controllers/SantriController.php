@@ -19,7 +19,8 @@ class SantriController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('staff');
+        // $this->authorize('staff');
     }
 
     public function index()
@@ -82,23 +83,23 @@ class SantriController extends Controller
             'alamat_sekolah' => $request->alamat_sekolah,
         ]);
 
-        $nilai_sikap = NilaiSikap::create([
-            'santri_id' => $santri->id,  
-        ]);
+        // $nilai_sikap = NilaiSikap::create([
+        //     'santri_id' => $santri->id,  
+        // ]);
 
-        $nilai_pelajaran = NilaiPelajaran::create([
-            'santri_id' => $santri->id,  
-        ]);
+        // $nilai_pelajaran = NilaiPelajaran::create([
+        //     'santri_id' => $santri->id,  
+        // ]);
 
-        $absensi = Absensi::create([
-            'santri_id' => $santri->id,  
-        ]);
+        // $absensi = Absensi::create([
+        //     'santri_id' => $santri->id,  
+        // ]);
 
         RekapNilai::create([
             'santri_id' => $santri->id,
-            'nilai_pelajaran_id' => $nilai_pelajaran->id,
-            'nilai_sikap_id' => $nilai_sikap->id,
-            'absensi_id' => $absensi->id,
+            // 'nilai_pelajaran_id' => $nilai_pelajaran->id,
+            // 'nilai_sikap_id' => $nilai_sikap->id,
+            // 'absensi_id' => $absensi->id,
         ]);
 
         return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');

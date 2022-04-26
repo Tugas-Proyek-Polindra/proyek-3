@@ -13,7 +13,7 @@ class NilaiPelajaran extends Model
     
     public function usermenu_nilai_pelajaran_url()
     {
-        return 'nilai/pelajaran';
+        return 'nilai-pelajaran';
     }
 
     public function santri()

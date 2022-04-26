@@ -32,7 +32,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Staff',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('admin123'),
-            'role' => 'admin'
+            'level' => true
+            // 'role' => 'admin'
         ]);
 
         User::create([
@@ -47,7 +48,8 @@ class DatabaseSeeder extends Seeder
             'nama_ibu' => "Suni'ah",
             'status_pegawai' => 'Non-PNS',
             'pendidikan_terakhir' => 'SMA',
-            'role' => 'guru'
+            'level' => false
+            // 'role' => 'guru'
         ]);
 
         Santri::create([

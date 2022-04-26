@@ -21,6 +21,7 @@ class AbsensiController extends Controller
     public function index()
     {
         return view('admin.santri.absensi.index',[
+            
             "absensi" => Absensi::all(),
         ]);
     }
@@ -33,7 +34,7 @@ class AbsensiController extends Controller
     public function create()
     {
         return view('admin.santri.absensi.create',[
-            "absensi" => Absensi::all(),
+            "santri" => Santri::all(),
         ]);
     }
 
@@ -47,7 +48,7 @@ class AbsensiController extends Controller
     {
         $validatedData = $request->validate(
             [
-                'nama_santri' => 'required',
+                'santri_id' => 'required',
                 'izin' => 'required',
                 'sakit' => 'required',
                 'alpha' => 'required',

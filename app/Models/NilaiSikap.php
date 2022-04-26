@@ -13,7 +13,7 @@ class NilaiSikap extends Model
     
     public function usermenu_nilai_sikap_url()
     {
-        return 'nilai/sikap';
+        return 'nilai-sikap';
     }
 
     public function santri()

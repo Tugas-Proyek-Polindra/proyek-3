@@ -24,26 +24,31 @@ use App\Http\Controllers\AbsensiController;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage');
-});
-
 Auth::routes();
 
+// Route::get('/', function () {
+//     return view('landingpage');
+// });
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'dashboard']);
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 
 // Route::get('/santri', [SantriController::class, 'index'])->name('santri');
+// Route::get('/pelajaran', [PelajaranController::class, 'index']);
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'staff'], function () {
     Route::resource('/santri', SantriController::class);
     Route::resource('/kelas', KelasController::class);
-    Route::resource('/pelajaran', PelajaranController::class);
     Route::resource('/guru', GuruController::class);
-    Route::resource('/nilai/pelajaran', NilaiPelajaranController::class);
-    Route::resource('/nilai/sikap', NilaiSikapController::class);
     Route::resource('/keaktifan', RiwayatKeaktifanController::class);
+});
+
+Route::group(['middleware' => 'auth'], function () {
     Route::resource('/nilai', RekapNilaiController::class);
+    Route::resource('/pelajaran', PelajaranController::class);
+    Route::resource('/nilai-pelajaran', NilaiPelajaranController::class);
+    Route::resource('/nilai-sikap', NilaiSikapController::class);
     Route::resource('/absensi', AbsensiController::class);
 });
 
@@ -51,5 +56,4 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
-Auth::routes();
 

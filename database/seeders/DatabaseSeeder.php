@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(PelajaranSeeder::class);
-        
+
         User::create([
             'name' => 'Staff',
             'email' => 'admin@gmail.com',
@@ -66,11 +66,7 @@ class DatabaseSeeder extends Seeder
             'alamat_sekolah' => 'Kampung Munjul'
         ]);
 
-        Kelas::create([
-            'kelas' => 'Kls I',
-            'wali_kelas' => 'Dina Nuraeni',
-            'tahun_ajaran' => '2021/2022'
-        ]);
+        
 
 
         NilaiPelajaran::create([
@@ -119,7 +115,7 @@ class DatabaseSeeder extends Seeder
             'santri_id' => 1,
             'sakit' => 4,
             'izin' => 1,
-            'alpha' => 2,         
+            'alpha' => 2,
         ]);
 
 

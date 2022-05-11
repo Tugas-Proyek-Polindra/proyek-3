@@ -15,26 +15,26 @@ class KelasSeeder extends Seeder
     public function run()
     {
         Kelas::create([
-            'kelas' => 'Kls I',
+            'kelas' => 'Kelas I',
             'wali_kelas' => 'Dina Nuraeni',
             'tahun_ajaran' => '2021/2022'
         ]);
 
         Kelas::create([
-            'kelas' => 'Kls 2',
-            'wali_kelas' => 'Dina Nuraeni',
+            'kelas' => 'Kelas II',
+            'wali_kelas' => 'Ucu Cahyati, S.T',
             'tahun_ajaran' => '2021/2022'
         ]);
 
         Kelas::create([
-            'kelas' => 'Kls 3',
-            'wali_kelas' => 'Dina Nuraeni',
+            'kelas' => 'Kelas III',
+            'wali_kelas' => 'Mita Paujiah',
             'tahun_ajaran' => '2021/2022'
         ]);
 
         Kelas::create([
-            'kelas' => 'Kls 4',
-            'wali_kelas' => 'Dina Nuraeni',
+            'kelas' => 'Kelas IV',
+            'wali_kelas' => 'Unung Husnul Khotimah, S.Pd',
             'tahun_ajaran' => '2021/2022'
         ]);
     }

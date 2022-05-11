@@ -76,9 +76,12 @@ class KelasController extends Controller
      * @param  \App\Models\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function edit(kelas $kelas)
+    public function edit($id)
     {
-        //
+        $kelas = Kelas::where('id', $id)->first();
+        return view('admin.kelas.edit', [
+            "classes" => $kelas,
+        ]);
     }
 
     /**
@@ -88,9 +91,19 @@ class KelasController extends Controller
      * @param  \App\Models\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, kelas $kelas)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            
+            'kelas' => 'required',
+            'wali_kelas' => 'required',
+            'tahun_ajaran' => 'required',
+        ]);
+
+        $kelas = Kelas::find($id)
+            ->update($validatedData);
+
+        return redirect('/kelas')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**
@@ -99,8 +112,10 @@ class KelasController extends Controller
      * @param  \App\Models\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(kelas $kelas)
+    public function destroy($id)
     {
-        //
+        $kelas = Kelas::find($id);
+        $kelas->delete();
+        return redirect('/kelas')->with('pesan', 'Data Berhasil Dihapus !');
     }
 }

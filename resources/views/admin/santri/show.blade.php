@@ -48,6 +48,7 @@
                     <ul class="ml-4 mb-0 fa-ul text-muted">
                     <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: {{$santri->tempat_lahir}}</li>
                     <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: {{$santri->no_hp}}</li>
+                    <li class="small"><span class="fa-li"><i class="fas fa-lg fa-user"></i></span> Nama Ibu : {{$santri->nama_ibu}}</li>
                     </ul>
                 </div>
                 <div class="col-3 text-center">

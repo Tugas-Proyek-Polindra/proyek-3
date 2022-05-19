@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+    <title>E-Rapot</title>
+    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +15,6 @@
     <meta name="keywords" content="landing,startup,flat">
 
     <meta name="author" content="Made By GN DESIGNS">
-
-    <title>E-Rapot</title>
 
 
 
@@ -271,7 +271,7 @@
 
             <h2>Madrasah Al-Barokah</h2>
 
-            <p>Madrasah yang terletak di Majalengka, Jawa Barat </p>
+            <p>Madrasah yang diperuntukkan untuk anak-anak usia 5-12 Tahun.</p>
 
             <div class="row">
 
@@ -279,25 +279,11 @@
 
                     <div class="icon-box">
 
-                        <i class="material-icons">thumb_up</i>
+                        <i class="material-icons">apartment</i>
 
-                        <h4>Great Quality</h4>
+                        <h4>Mudah Diakses</h4>
 
-                        <p>Quality ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="icon-box">
-
-                        <i class="material-icons">euro_symbol</i>
-
-                        <h4>Best Price</h4>
-
-                        <p>Price ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                        <p>Terletak diwilayah yang mudah diakses.</p>
 
                     </div>
 
@@ -307,11 +293,11 @@
 
                     <div class="icon-box">
 
-                        <i class="material-icons">forum</i>
+                        <i class="material-icons">school</i>
 
-                        <h4>24/7 Support</h4>
+                        <h4>Berafiliasi dengan Kementrian Agama</h4>
 
-                        <p>Support ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                        <p>Memiliki keterkaitan dengan Kementrian Agama.</p>
 
                     </div>
 
@@ -321,11 +307,25 @@
 
                     <div class="icon-box">
 
-                        <i class="material-icons">view_carousel</i>
+                        <i class="material-icons">mosque</i>
 
-                        <h4>UX/UI Design</h4>
+                        <h4>Memiliki fasilitas yang lengkap.</h4>
 
-                        <p>Quality ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                        <p>Banyak fasilitas yang tersedia untuk menunjang kebutuhan madrasah.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="icon-box">
+
+                        <i class="material-icons">books</i>
+
+                        <h4>Materi pelajaran yang menarik.</h4>
+
+                        <p>Materi pelajaran disesuaikan dengan kebutuhan sosial masyarakat..</p>
 
                     </div>
 

@@ -128,7 +128,7 @@
 
                     <li class="active scroll"><a href="#home">Home</a></li>
                     
-                    <li class="scroll"><a href="#services">Services</a></li>
+                    <li class="scroll"><a href="#services">Fasilitas</a></li>
     
                     <li>
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>

@@ -76,9 +76,9 @@
                                     <option value="P" >Perempuan</option>
                                 @elseif(old('jenis_kelamin', $santri->jenis_kelamin == 'P' ))
                                     <option value="L" >Laki-Laki</option>
-                                    <option {{$santri->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</option>      
+                                    <option {{$santri->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</option>
                                 @endif
-                            </select> 
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="no_hp">No Hp</label>
@@ -121,7 +121,7 @@
                 <div class="box-footer">
                 <button type="submit" class="btn btn-primary float-right floa">Simpan</button>
                 </div>
-            </form>        
+            </form>
         </div>
     </div>
 </section>

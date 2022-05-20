@@ -1,4 +1,5 @@
 @extends('adminlte::page')
+
 @section('title', 'Riwayat Keaktifan')
 @section('content_header')
 <div class="row mb-2">
@@ -54,7 +55,7 @@
                         @csrf
                         @method('delete')
                         <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
-                    </form>           
+                        </form>           
                         <div class="modal modal-danger fade" id="delete ">
                             <div class="modal-dialog modal-sm">
                             <div class="modal-content">

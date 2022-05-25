@@ -23,12 +23,12 @@
                 <button type="button" class="close" data-dismis="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-check"></i>Success:</h4>
                 {{session('pesan')}}
-            </div>     
+            </div>
             @endif
 
             <div class="card">
                 <div class="card-body">
-                    <a href="/keaktifan/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    <a href="/guru/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                         <tr>
@@ -45,7 +45,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach ($gurus->skip(1) as $guru)
+                        @foreach ($guru->skip(1) as $guru)
                         <tr>
                             <td> {{$loop->iteration}} </td>
                             <td>{{$guru->name}}</td>
@@ -56,15 +56,15 @@
                             <td>{{$guru->no_hp}}</td>
                             {{-- <td>{{$guru->nama_ibu}}</td>
                             <td>{{$guru->status_pegawai}}</td>
-                            <td>{{$guru->pendidikan_terakhir}}</td> --}}   
-                            <td widht= "5%">                                  
+                            <td>{{$guru->pendidikan_terakhir}}</td> --}}
+                            <td widht= "5%">
                         <form method="post" action="/guru/{{$guru->id}}" class="form-inline">
                             <a href="/guru/{{$guru->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
                             <a href="/guru/{{$guru->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                             @csrf
                             @method('delete')
-                            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
-                        </form>           
+                            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>
+                        </form>
                         <div class="modal modal-danger fade" id="delete ">
                             <div class="modal-dialog modal-sm">
                             <div class="modal-content">

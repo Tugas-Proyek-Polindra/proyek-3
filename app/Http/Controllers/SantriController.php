@@ -84,15 +84,15 @@ class SantriController extends Controller
         ]);
 
         // $nilai_sikap = NilaiSikap::create([
-        //     'santri_id' => $santri->id,  
+        //     'santri_id' => $santri->id,
         // ]);
 
         // $nilai_pelajaran = NilaiPelajaran::create([
-        //     'santri_id' => $santri->id,  
+        //     'santri_id' => $santri->id,
         // ]);
 
         // $absensi = Absensi::create([
-        //     'santri_id' => $santri->id,  
+        //     'santri_id' => $santri->id,
         // ]);
 
         RekapNilai::create([

@@ -21,7 +21,7 @@ class GuruController extends Controller
     public function index()
     {
         return view('admin.guru.index',[
-            "gurus" => User::all(),
+            "guru" => User::all(),
         ]);
     }
 
@@ -32,7 +32,9 @@ class GuruController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.guru.create', [
+            "guru" => User::all(),
+        ]);
     }
 
     /**
@@ -43,7 +45,28 @@ class GuruController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request;
+        $validatedData = $request->validate(
+           [
+                'name' => 'required',
+                'email' => 'required',
+                'password' => 'required',
+                'username' => 'required',
+                'nik' => 'required',
+                'tempat_lahir' => 'required',
+                'tgl_lahir' => 'required',
+                'jenis_kelamin' => 'required',
+                'no_hp' => 'required',
+                'nama_ibu' => 'required',
+                // 'status_pegawai' => 'required',
+                // 'pendidikan_terakhir' => 'required',
+                // 'riwayat_keaktifan_id' => 'required',
+             ]
+         );
+
+        User::create($validatedData);
+
+         return redirect('/guru')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**

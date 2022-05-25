@@ -70,6 +70,18 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="col-sm-2 m-2">
+                    {{-- <label for="kelas_id">Nama kelas</label> --}}
+                    <select name="kelas_id" id="kelas" class="form-control">
+                        @foreach ($kelas as $s)
+                            @if (old('kelas_id') == $s->id)
+                                <option value="{{$s->id}}" selected>{{$s->tahun_ajaran}}</option>
+                            @else
+                                <option value="{{$s->id}}">{{$s->tahun_ajaran}}</option>
+                            @endif          
+                        @endforeach
+                    </select>
+                </div>
             </div>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>

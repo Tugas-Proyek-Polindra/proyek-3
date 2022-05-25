@@ -52,9 +52,12 @@ class GuruController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        //
+        $guru = User::where('id', $id)->first();
+        return view('admin.guru.show', [
+            "guru" => $guru,
+        ]);
     }
 
     /**

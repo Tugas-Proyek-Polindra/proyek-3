@@ -22,7 +22,7 @@
                 <button type="button" class="close" data-dismis="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-check"></i>Success:</h4>
                 {{session('pesan')}}
-            </div>     
+            </div>
             @endif
 
             <div class="card">

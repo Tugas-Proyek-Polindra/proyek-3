@@ -32,7 +32,9 @@ class NilaiSikapController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.santri.nilai_sikap.create',[
+            "santri" => Santri::all(),
+        ]);
     }
 
     /**
@@ -43,7 +45,20 @@ class NilaiSikapController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+        $validatedData = $request->validate(
+            [
+                'santri_id' => 'required',
+                'mengaji' => 'required',
+                'hafalan' => 'required',
+                'disiplin' => 'required',
+                'bersih' => 'required',
+                'sopan' => 'required',
+                'keterangan' => 'required',
+            ]
+        );
+        NilaiSikap::create($validatedData);
+
+        return redirect('/nilai-sikap')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**
@@ -103,7 +118,7 @@ class NilaiSikapController extends Controller
             'keterangan' => $request->keterangan,
         ]);
 
-        return redirect('nilai/sikap')->with('pesan', 'Data Berhasil Di Update !');
+        return redirect('nilai-sikap')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**

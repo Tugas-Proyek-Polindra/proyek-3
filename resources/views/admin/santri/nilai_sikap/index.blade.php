@@ -54,7 +54,7 @@
             <div class="card">
             <div class="card-body">
                 <div class="mb-3">
-                <a href="/sikap/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                <a href="/nilai-sikap/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                 </div>
                 <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -80,31 +80,7 @@
                     <td>{{$sikap->sopan}}</td>
                     <td>{{$sikap->keterangan}}</td>
                     <td >   
-                        <a href="sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
-                    {{-- <form method="post" action="sikap/{{$sikap->id}}" class="form-inline"> --}}
-                        {{-- <a href="/sikap/{{$sikap->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a> --}}
-                        
-                        {{-- @csrf
-                        @method('delete')
-                        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>     --}}
-                    {{-- </form>            --}}
-                        {{-- <div class="modal modal-danger fade" id="delete ">
-                        <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title"></h4>
-                            </div>
-                            <div class="modal-body">
-                            <p>Apakah Anda Yakin Ingin Menghapus Data Ini....???</p>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
-                            <button type="button" class="btn btn-outline pull-right">Yes</button>
-                            </div>
-                        </div>
-                        </div> --}}
+                        <a href="nilai-sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                     </div>
                     </td>
                 </tr>

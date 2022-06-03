@@ -9,30 +9,32 @@
 
 @section('content')
 
-<section class="content p-3 col-lg-8">
-    <div class="card card-primary">
+<section class="content p-3">
+<div class="col-lg-6">
+    <div class="card card-primary mt-4">
         <div class="card-header">
-            <h3 class="card-title">Edit @yield('title')</h3>
+            <h3 class="card-title">Tambah @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/nilai-sikap/{{$nilai_sikap->id}}" method="POST" enctype="multipart/form-data" >
-                @method('put')
+            <form action="/nilai-sikap" method="POST" enctype="multipart/form-data" >
                 @csrf
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg">
                         <div class="form-group">
                             <label for="santri_id">Nama Santri</label>
-                            <input name="santri_id" class="form-control" value="{{old('santri_id', $nilai_sikap->santri->nama_santri)}}" disabled
-                            >
-                            <div class="text-danger">
-                                @error('santri_id')
-                                {{$message}}
-                                @enderror
-                            </div>
+                            <select name="santri_id" id="absensi" class="form-control">
+                                @foreach ($santri as $s)
+                                    @if (old('santri_id') == $s->id)
+                                        <option value="{{$s->id}}" selected>{{$s->nama_santri}}</option>
+                                    @else
+                                        <option value="{{$s->id}}">{{$s->nama_santri}}</option>
+                                    @endif          
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="mengaji">Mengaji</label>
-                            <input name="mengaji" class="form-control" value="{{old('mengaji', $nilai_sikap->mengaji)}}">
+                            <input name="mengaji" class="form-control" value="{{old('mengaji')}}">
                             <div class="text-danger">
                                 @error('mengaji')
                                 {{$message}}
@@ -41,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="hafalan">Hafalan</label>
-                            <input name="hafalan" class="form-control" value="{{old('hafalan', $nilai_sikap->hafalan)}}">
+                            <input name="hafalan" class="form-control" value="{{old('hafalan')}}">
                             <div class="text-danger">
                                 @error('hafalan')
                                 {{$message}}
@@ -50,7 +52,7 @@
                         </div>
                         <div class="form-group">
                             <label for="disiplin">Disiplin</label>
-                            <input name="disiplin" class="form-control" value="{{old('disiplin', $nilai_sikap->disiplin)}}">
+                            <input name="disiplin" class="form-control" value="{{old('disiplin')}}">
                             <div class="text-danger">
                                 @error('disiplin')
                                 {{$message}}
@@ -59,16 +61,16 @@
                         </div>
                         <div class="form-group">
                             <label for="bersih">Bersih</label>
-                            <input name="bersih" class="form-control" value="{{old('bersih', $nilai_sikap->bersih)}}">
+                            <input name="bersih" class="form-control" value="{{old('bersih')}}">
                             <div class="text-danger">
                                 @error('bersih')
                                 {{$message}}
                                 @enderror
                             </div>
-                        </div> 
+                        </div>
                         <div class="form-group">
                             <label for="sopan">Sopan</label>
-                            <input name="sopan" class="form-control" value="{{old('sopan', $nilai_sikap->sopan)}}">
+                            <input name="sopan" class="form-control" value="{{old('sopan')}}">
                             <div class="text-danger">
                                 @error('sopan')
                                 {{$message}}
@@ -77,21 +79,22 @@
                         </div>
                         <div class="form-group">
                             <label for="keterangan">Keterangan</label>
-                            <input name="keterangan" class="form-control" value="{{old('keterangan', $nilai_sikap->keterangan)}}">
+                            <input name="keterangan" class="form-control" value="{{old('keterangan')}}">
                             <div class="text-danger">
                                 @error('keterangan')
                                 {{$message}}
                                 @enderror
                             </div>
-                        </div>                        
+                        </div>
                     </div>
-                </div>
+                </div>                   
                 <div class="box-footer">
                 <button type="submit" class="btn btn-primary float-right floa">Simpan</button>
                 </div>
             </form>        
         </div>
     </div>
+</div>
 </section>
 
 @stop

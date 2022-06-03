@@ -15,7 +15,7 @@
             <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/nilai/pelajaran/{{$nilai_pelajaran->id}}" method="POST" enctype="multipart/form-data" >
+            <form action="/nilai-pelajaran/{{$nilai_pelajaran->id}}" method="POST" enctype="multipart/form-data" >
                 @method('put')
                 @csrf
                 <div class="row">

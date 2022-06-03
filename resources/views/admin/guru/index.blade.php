@@ -39,6 +39,7 @@
                             <th>Tgl Lahir</th>
                             <th>Jenis Kelamin</th>
                             <th>No.HP</th>
+                            <th>Aksi</th>
                             {{-- <th>Nama Ibu</th>
                             <th>Status Pegawai</th>
                             <th>Pendidikan Terakhir</th> --}}

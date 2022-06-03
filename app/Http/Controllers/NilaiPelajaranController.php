@@ -32,7 +32,9 @@ class NilaiPelajaranController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.santri.nilai_pelajaran.create',[
+            "santri" => Santri::all(),
+        ]);
     }
 
     /**
@@ -43,7 +45,25 @@ class NilaiPelajaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return request();
+        $validatedData = $request->validate(
+            [
+                'santri_id' => 'required',
+                'al_quran' => 'required',
+                'al_hadist' => 'required',
+                'aqidah' => 'required',
+                'akhlaq' => 'required',
+                'fiqih' => 'required',
+                'tarikh' => 'required',
+                'b_arab' => 'required',
+                'praktikum' => 'required',
+                'jumlah' => 'required',
+            ]
+        );
+
+        NilaiPelajaran::create($validatedData);
+
+        return redirect('/nilai-pelajaran')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**
@@ -113,7 +133,7 @@ class NilaiPelajaranController extends Controller
 
         
 
-        return redirect('nilai/pelajaran')->with('pesan', 'Data Berhasil Di Update !');
+        return redirect('nilai-pelajaran')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**

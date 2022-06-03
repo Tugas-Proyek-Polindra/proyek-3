@@ -56,7 +56,7 @@
                             <td>{{$mapel->b_arab}}</td>
                             <td>{{$mapel->praktikum}}</td>
                             <td >
-                                <a href="pelajaran/{{$mapel->id}}/edit" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
+                                <a href="nilai-pelajaran/{{$mapel->id}}/edit" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach

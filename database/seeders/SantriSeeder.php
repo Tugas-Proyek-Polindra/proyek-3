@@ -106,6 +106,45 @@ class SantriSeeder extends Seeder
             'sekolah_asal' => 'SDN Bongas Wetan II',
             'alamat_sekolah' => 'Kampung Munjul'
         ]);
+        Santri::create([
+            'nama_santri' => 'Reno Saputra Pratama',
+            'nisn' => '3136110551',
+            'nik' => '3210172502130001',
+            'tempat_lahir' => 'Majalengka',
+            // 'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '2013-09-05')->toDateTimeImmutable()->format('d-m-Y'),
+            'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '2013-02-25')->format('Y-m-d'),
+            'jenis_kelamin' => 'L',
+            'no_hp' => '083824354260',
+            'nama_ibu' => 'Mintarsih',
+            'sekolah_asal' => 'SDN Bongas Wetan II',
+            'alamat_sekolah' => 'Kampung Munjul'
+        ]);
+        Santri::create([
+            'nama_santri' => 'Adzana Karisma',
+            'nisn' => '3136110551',
+            'nik' => '3210176711120000',
+            'tempat_lahir' => 'Majalengka',
+            // 'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '2013-09-05')->toDateTimeImmutable()->format('d-m-Y'),
+            'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '2013-11-27')->format('Y-m-d'),
+            'jenis_kelamin' => 'P',
+            'no_hp' => '083143085426',
+            'nama_ibu' => 'Unasih',
+            'sekolah_asal' => 'SDN Bongas Wetan II',
+            'alamat_sekolah' => 'Kampung Munjul'
+        ]);
+        Santri::create([
+            'nama_santri' => 'Arrohman',
+            'nisn' => '0124746482',
+            'nik' => '3210170709120000',
+            'tempat_lahir' => 'Majalengka',
+            // 'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '2013-09-05')->toDateTimeImmutable()->format('d-m-Y'),
+            'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '2013-09-07')->format('Y-m-d'),
+            'jenis_kelamin' => 'L',
+            'no_hp' => '087745615809',
+            'nama_ibu' => 'Eri Sunaeri',
+            'sekolah_asal' => 'SDN Cidenok II',
+            'alamat_sekolah' => 'Jalan Desa'
+        ]);
 
 
 

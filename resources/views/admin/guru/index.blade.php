@@ -86,6 +86,7 @@
     <script>
         $('#example2').DataTable({
             "responsive": true,
+            "searching": false,
         });
         function notificationBeforeDelete(event, el) {
             event.preventDefault();

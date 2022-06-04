@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\NilaiPelajaran;
 use App\Models\Santri;
+use App\Models\RekapNilai;
+
 use Illuminate\Http\Request;
 
 class NilaiPelajaranController extends Controller
@@ -46,7 +48,7 @@ class NilaiPelajaranController extends Controller
     public function store(Request $request)
     {
         // return request();
-        $validatedData = $request->validate(
+        $request->validate(
             [
                 'santri_id' => 'required',
                 'al_quran' => 'required',
@@ -58,10 +60,30 @@ class NilaiPelajaranController extends Controller
                 'b_arab' => 'required',
                 'praktikum' => 'required',
                 'jumlah' => 'required',
+
             ]
         );
+        
+        $nilai_pelajaran = NilaiPelajaran::create([
+            'santri_id' => $request->santri_id,
+            'al_quran' => $request->al_quran,
+            'al_hadist' => $request->al_hadist,
+            'aqidah' => $request->aqidah,
+            'akhlaq' =>  $request->akhlaq,
+            'fiqih' => $request->fiqih,
+            'tarikh' => $request->tarikh,
+            'b_arab' => $request->b_arab,
+            'praktikum' => $request->praktikum,
+            'jumlah' => $request->jumlah,
+        ]);
 
-        NilaiPelajaran::create($validatedData);
+        // RekapNilai::create([
+        //     // 'santri_id' => $santri->id,
+        //     'santri_id' => $request->santri_id,
+        //     'nilai_pelajaran_id' => $nilai_pelajaran->id,
+        //     // 'nilai_sikap_id' => $nilai_sikap->id,
+        //     // 'absensi_id' => $absensi->id,
+        // ]);
 
         return redirect('/nilai-pelajaran')->with('pesan', 'Data Berhasil Ditambahkan !');
     }

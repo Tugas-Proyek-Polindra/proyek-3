@@ -41,11 +41,6 @@ class RekapNilai extends Model
         return $this->belongsTo(NilaiSikap::class);
     }
 
-    public function pelajaran()
-    {
-        return $this->belongsTo(Pelajaran::class);
-    }
-
     public function absensi()
     {
         return $this->belongsTo(Absensi::class);

@@ -114,14 +114,55 @@
                 <tr>
                     @foreach ($rekap_nilai as $nilai)
                     <td> {{$loop->iteration}} </td>
-                    <td>{{$nilai->santri->nama_santri}}</td>
-                    <td>{{$nilai->nilai_pelajaran->al_quran}}</td>
-                    <td>{{$nilai->nilai_pelajaran->al_hadist}}</td>
+                        @if(!empty($nilai->santri->nama_santri))
+                            <td>{{$nilai->santri->nama_santri}}
+                        @else 
+                            <td>Empty</td>
+                        @endif
+                        @if(!empty($nilai->nilai_pelajaran->al_quran))
+                            <td>{{$nilai->nilai_pelajaran->al_quran}}
+                        @else 
+                            <td>0</td>
+                        @endif
+                        @if(!empty($nilai->nilai_pelajaran->al_hadist))
+                            <td>{{$nilai->nilai_pelajaran->al_hadist}}
+                        @else 
+                            <td>0</td>
+                        @endif
+                        @if(!empty($nilai->nilai_sikap->mengaji))
+                            <td>{{$nilai->nilai_sikap->mengaji}}
+                        @else 
+                            <td>0</td>
+                        @endif
+                        @if(!empty($nilai->nilai_sikap->hafalan))
+                            <td>{{$nilai->nilai_sikap->hafalan}}
+                        @else 
+                            <td>0</td>
+                        @endif
+                        @if(!empty($nilai->absensi->sakit))
+                            <td>{{$nilai->absensi->sakit}}
+                        @else 
+                            <td>0</td>
+                        @endif
+                        @if(!empty($nilai->absensi->izin))
+                            <td>{{$nilai->absensi->izin}}
+                        @else 
+                            <td>0</td>
+                        @endif
+                        @if(!empty($nilai->absensi->alpha))
+                            <td>{{$nilai->absensi->alpha}}
+                        @else 
+                            <td>0</td>
+                        @endif
+
+
+                    {{-- </td>
+                    </td>
                     <td>{{$nilai->nilai_sikap->mengaji}}</td>
                     <td>{{$nilai->nilai_sikap->hafalan}}</td>
                     <td>{{$nilai->absensi->sakit}}</td>
                     <td>{{$nilai->absensi->izin}}</td>
-                    <td>{{$nilai->absensi->alpha}}</td>
+                    <td>{{$nilai->absensi->alpha}}</td> --}}
                     {{-- <td>{{$nilai->jumlah}}</td>
                     <td>{{$nilai->rata_rata}}</td>
                     <td>{{$nilai->rangking}}</td> --}}

@@ -112,6 +112,11 @@
     </form>
     <script>
         $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": true,
+            "searching": false,
+            "info": true,
+            "autoWidth": false,
             "responsive": true,
         });
         function notificationBeforeDelete(event, el) {

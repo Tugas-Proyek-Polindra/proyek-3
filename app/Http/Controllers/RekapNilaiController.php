@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Absensi;
 use App\Models\RekapNilai;
 use App\Models\Kelas;
 use App\Models\NilaiPelajaran;
+use App\Models\NilaiSikap;
 use Illuminate\Http\Request;
 
 class RekapNilaiController extends Controller
@@ -23,9 +25,18 @@ class RekapNilaiController extends Controller
     public function index()
     {
         // $this->authorize('staff');
+        // RekapNilai::create([
+        //     'santri_id' => $request->santri_id,
+        //     'nilai_pelajaran_id' => $request->nilai_pelajaran_id,
+        //     'nilai_sikap_id' => $request->nilai_sikap_id,
+        //     'absensi_id' => $request->absensi_id,
+        // ]);
         return view('admin.nilai.index',[
             "rekap_nilai" => RekapNilai::all(),
             "kelas" => Kelas::all(),
+            "nilai_pelajaran" => NilaiPelajaran::all(),
+            "nilai_sikap" => NilaiSikap::all(),
+            "absensi" => Absensi::all(),
         ]);
     }
 

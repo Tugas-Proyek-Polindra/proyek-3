@@ -28,7 +28,7 @@
                                         <option value="{{$s->id}}" selected>{{$s->nama_santri}}</option>
                                     @else
                                         <option value="{{$s->id}}">{{$s->nama_santri}}</option>
-                                    @endif          
+                                    @endif
                                 @endforeach
                             </select>
                         </div>
@@ -87,11 +87,11 @@
                             </div>
                         </div>
                     </div>
-                </div>                   
+                </div>
                 <div class="box-footer">
                 <button type="submit" class="btn btn-primary float-right floa">Simpan</button>
                 </div>
-            </form>        
+            </form>
         </div>
     </div>
 </div>

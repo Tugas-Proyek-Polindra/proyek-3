@@ -31,6 +31,7 @@
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Nama Santri</th>
                                 {{-- <th>NISN</th>
                                 <th>NIK</th>
@@ -47,27 +48,28 @@
                         <tbody>
                             @foreach ($santris as $santri)
                             <tr>
-                              <td>{{$santri->nama_santri}}</td>
-                              {{-- <td>{{$santri->nisn}}</td>
-                              <td>{{$santri->nik}}</td>
-                              <td>{{$santri->tempat_lahir}}</td>
-                              <td>{{$santri->tgl_lahir}}</td> --}}
-                                @if ($santri->jenis_kelamin == 'L' )
-                                  <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="L">Laki-Laki</td>
-                                @elseif($santri->jenis_kelamin == 'P' )
-                                  <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</td>
-                                @endif
-                              <td>{{$santri->no_hp}}</td>
-                              <td>{{$santri->nama_ibu}}</td>
-                              {{-- <td>{{$santri->sekolah_asal}}</td> --}}
-                              <td>{{$santri->alamat_sekolah}}</td>
-                              <td width="5%">
-                                <div class="btn btn-group">
-                                    <a href="/santri/{{$santri->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                                    <a href="/santri/{{$santri->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
-                                <a href="{{route('santri.destroy', $santri)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
-                                </div>
-                            </td>
+                                <td> {{$loop->iteration}} </td>
+                                <td>{{$santri->nama_santri}}</td>
+                                {{-- <td>{{$santri->nisn}}</td>
+                                <td>{{$santri->nik}}</td>
+                                <td>{{$santri->tempat_lahir}}</td>
+                                <td>{{$santri->tgl_lahir}}</td> --}}
+                                    @if ($santri->jenis_kelamin == 'L' )
+                                    <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="L">Laki-Laki</td>
+                                    @elseif($santri->jenis_kelamin == 'P' )
+                                    <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</td>
+                                    @endif
+                                <td>{{$santri->no_hp}}</td>
+                                <td>{{$santri->nama_ibu}}</td>
+                                {{-- <td>{{$santri->sekolah_asal}}</td> --}}
+                                <td>{{$santri->alamat_sekolah}}</td>
+                                <td width="5%">
+                                    <div class="btn btn-group">
+                                        <a href="/santri/{{$santri->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                                        <a href="/santri/{{$santri->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                                    <a href="{{route('santri.destroy', $santri)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </td>
                               {{-- <td >
                                   <form method="post" action="/santri/{{$santri->id}}" class="form-inline">
                                     @csrf

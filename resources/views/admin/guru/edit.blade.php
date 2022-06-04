@@ -15,7 +15,8 @@
             <h3 class="card-title">Tambah @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/guru" method="POST" enctype="multipart/form-data" >
+            <form action="/guru/{{$guru->id}}" method="POST" enctype="multipart/form-data" >
+                @method('put')
                 @csrf
                 <div class="row">
                     <div class="col-lg-6">

@@ -109,9 +109,33 @@ class GuruController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'password' => 'required|min:5|max:255',
+                'nik' => 'required',
+                'tempat_lahir' => 'required',
+                'tgl_lahir' => 'required',
+                'jenis_kelamin' => 'required',
+                'no_hp' => 'required',
+                'nama_ibu' => 'required',
+                'status_pegawai' => 'required',
+                'pendidikan_terakhir' => 'required',
+                // 'username' => 'required',
+                // 'riwayat_keaktifan_id' => 'required',
+                ]
+            );
+
+
+        $validatedData['password'] = Hash::make($validatedData['password']);
+
+        $profile = User::find($id)
+            ->update($validatedData);
+
+        return redirect('/guru')->with('pesan', 'Data Berhasil Diupdate !');
     }
 
     /**

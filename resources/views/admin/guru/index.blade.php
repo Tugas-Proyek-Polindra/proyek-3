@@ -53,7 +53,13 @@
                             <td>{{$guru->nik}}</td>
                             <td>{{$guru->tempat_lahir}}</td>
                             <td>{{$guru->tgl_lahir}}</td>
-                            <td>{{$guru->jenis_kelamin}}</td>
+                            <td>
+                                @if ($guru->jenis_kelamin == 'L' )
+                                  <td {{$guru->jenis_kelamin ? 'selected' : '' }} value="L">Laki-Laki</td>
+                                @elseif($guru->jenis_kelamin == 'P' )
+                                  <td {{$guru->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</td>
+                                @endif
+                            </td>
                             <td>{{$guru->no_hp}}</td>
                             {{-- <td>{{$guru->nama_ibu}}</td>
                             <td>{{$guru->status_pegawai}}</td>

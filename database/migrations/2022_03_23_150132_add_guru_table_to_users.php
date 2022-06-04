@@ -14,9 +14,9 @@ class AddGuruTableToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('riwayat_keaktifan_id')->nullable();
-            $table->string('username')->nullable();
-            $table->string('nik')->unique()->nullable();
+            // $table->foreignId('riwayat_keaktifan_id')->nullable();
+            // $table->string('username')->nullable();
+            $table->string('nik')->nullable();
             $table->string('tempat_lahir')->nullable();
             $table->date('tgl_lahir')->nullable();
             $table->string('jenis_kelamin')->nullable();
@@ -32,12 +32,12 @@ class AddGuruTableToUsers extends Migration
     /**
      * Reverse the migrations.
      *
-     * @return void
+     * @return void`
      */
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            Schema::dropIfExists('users');
         });
     }
 }

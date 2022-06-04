@@ -19,7 +19,6 @@
         <div class="card-body">
             <form action="/kelas" method="POST" enctype="multipart/form-data" >
                 @csrf
-                
                         <div class="form-group">
                             <label for="kelas">Kelas</label>
                             <input name="kelas" class="form-control" value="{{old('kelas')}}"

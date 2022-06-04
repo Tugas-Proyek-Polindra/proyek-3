@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class GuruController extends Controller
 {
@@ -22,7 +23,7 @@ class GuruController extends Controller
     {
         return view('admin.guru.index',[
             "guru" => User::all(),
-        ]);
+        ]);   
     }
 
     /**
@@ -45,28 +46,32 @@ class GuruController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         // return $request;
         $validatedData = $request->validate(
-           [
-                'name' => 'required',
-                'email' => 'required',
-                'password' => 'required',
-                'username' => 'required',
+            [
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'password' => 'required|min:5|max:255',
                 'nik' => 'required',
                 'tempat_lahir' => 'required',
                 'tgl_lahir' => 'required',
                 'jenis_kelamin' => 'required',
                 'no_hp' => 'required',
                 'nama_ibu' => 'required',
-                // 'status_pegawai' => 'required',
-                // 'pendidikan_terakhir' => 'required',
+                'status_pegawai' => 'required',
+                'pendidikan_terakhir' => 'required',
+                // 'username' => 'required',
                 // 'riwayat_keaktifan_id' => 'required',
-             ]
-         );
+                ]
+            );
+
+
+        $validatedData['password'] = Hash::make($validatedData['password']);
 
         User::create($validatedData);
 
-         return redirect('/guru')->with('pesan', 'Data Berhasil Ditambahkan !');
+        return redirect('/guru')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
 
     /**
@@ -89,9 +94,12 @@ class GuruController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        //
+        $guru = User::where('id', $id)->first();
+        return view('admin.guru.edit', [
+            "guru" => $guru,
+        ]);
     }
 
     /**
@@ -112,8 +120,10 @@ class GuruController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        $guru = User::find($id);
+        $guru->delete();
+        return redirect('/guru')->with('pesan', 'Data Berhasil Dihapus !');
     }
 }

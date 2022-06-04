@@ -22,7 +22,7 @@ class GuruSeeder extends Seeder
             'nik' => '3210176804980001',
             'tempat_lahir' => 'Majalengka',
             'tgl_lahir' => Carbon::createFromFormat('Y-m-d', '1998-04-28')->format('Y-m-d'),
-            'jenis_kelamin' => 'Perempuan',
+            'jenis_kelamin' => 'P',
             'no_hp' => '082213395696',
             'nama_ibu' => "Suni'ah",
             'status_pegawai' => 'Non-PNS',

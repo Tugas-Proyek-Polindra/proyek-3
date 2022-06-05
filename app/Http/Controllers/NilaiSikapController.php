@@ -45,6 +45,7 @@ class NilaiSikapController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $validatedData = $request->validate(
             [
                 'santri_id' => 'required',

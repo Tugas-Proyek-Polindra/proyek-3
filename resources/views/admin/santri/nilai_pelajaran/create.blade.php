@@ -16,8 +16,10 @@
             <h3 class="card-title">Tambah @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/nilai-pelajaran" method="POST" enctype="multipart/form-data" >
-                @csrf
+            {{-- <form action="/nilai-pelajaran" method="POST" enctype="multipart/form-data" > --}}
+            <form id="form">
+                {{-- @csrf --}}
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -34,7 +36,7 @@
                         </div>
                         <div class="form-group">
                             <label for="al_quran">Al-Qur'an</label>
-                            <input type="number" name="al_quran" class="form-control" value="{{old('al_quran')}}">
+                            <input type="number" name="al_quran" onkeyup = "sum();" class="form-control" value="{{old('al_quran')}}">
                             <div class="text-danger">
                                 @error('al_quran')
                                 {{$message}}
@@ -43,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label for="al_hadist">Al-Hadist</label>
-                            <input type="number" name="al_hadist" class="form-control" value="{{old('al_hadist')}}">
+                            <input type="number" name="al_hadist" onkeyup = "sum();" class="form-control" value="{{old('al_hadist')}}">
                             <div class="text-danger">
                                 @error('al_hadist')
                                 {{$message}}
@@ -52,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <label for="aqidah">Aqidah</label>
-                            <input type="number" name="aqidah" class="form-control" value="{{old('aqidah')}}">
+                            <input type="number" name="aqidah" onkeyup = "sum();" class="form-control" value="{{old('aqidah')}}">
                             <div class="text-danger">
                                 @error('aqidah')
                                 {{$message}}
@@ -61,7 +63,7 @@
                         </div>
                         <div class="form-group">
                             <label for="akhlaq">Akhlaq</label>
-                            <input type="number" name="akhlaq" class="form-control" value="{{old('akhlaq')}}">
+                            <input type="number" name="akhlaq" onkeyup = "sum();" class="form-control" value="{{old('akhlaq')}}">
                             <div class="text-danger">
                                 @error('akhlaq')
                                 {{$message}}
@@ -72,7 +74,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="fiqih">Fiqih</label>
-                            <input type="number" name="fiqih" class="form-control" value="{{old('fiqih')}}">
+                            <input type="number" name="fiqih" onkeyup = "sum();" class="form-control" value="{{old('fiqih')}}">
                             <div class="text-danger">
                                 @error('fiqih')
                                 {{$message}}
@@ -81,7 +83,7 @@
                         </div>
                         <div class="form-group">
                             <label for="tarikh">Tarikh</label>
-                            <input type="number" name="tarikh" class="form-control" value="{{old('tarikh')}}">
+                            <input type="number" name="tarikh" onkeyup = "sum();" class="form-control" value="{{old('tarikh')}}">
                             <div class="text-danger">
                                 @error('tarikh')
                                 {{$message}}
@@ -90,7 +92,7 @@
                         </div>
                         <div class="form-group">
                             <label for="b_arab">Bahasa Arab</label>
-                            <input type="number" name="b_arab" class="form-control" value="{{old('b_arab')}}">
+                            <input type="number" name="b_arab" onkeyup = "sum();" class="form-control" value="{{old('b_arab')}}">
                             <div class="text-danger">
                                 @error('b_arab')
                                 {{$message}}
@@ -99,7 +101,7 @@
                         </div>
                         <div class="form-group">
                             <label for="praktikum">Praktikum</label>
-                            <input type="number" name="praktikum" class="form-control" value="{{old('praktikum')}}">
+                            <input type="number" name="praktikum" onkeyup = "sum();" class="form-control" value="{{old('praktikum')}}">
                             <div class="text-danger">
                                 @error('praktikum')
                                 {{$message}}
@@ -108,17 +110,27 @@
                         </div>
                         <div class="form-group">
                             <label for="jumlah">Jumlah</label>
-                            <input type="number" name="jumlah" class="form-control" value="{{old('jumlah')}}">
+                            {{-- <input type="number" name="jumlah" onkeyup = "sum();" class="form-control" value="{{old('jumlah')}}"> --}}
+                            <input name="jumlah" id="jumlah"  onkeyup = "sum();"  class="form-control" value="{{old('jumlah')}}">
                             <div class="text-danger">
                                 @error('jumlah')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
+                        {{-- <div class="form-group">
+                            <label for="rata_rata">Rata-Rata</label>
+                            <input type="number" name="rata_rata" class="form-control" value="{{old('rata_rata')}}">
+                            <div class="text-danger">
+                                @error('rata_rata')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </div> --}}
                     </div>
                 </div>                
                 <div class="box-footer">
-                <button type="submit" class="btn btn-primary float-right floa">Simpan</button>
+                <button type="submit" class="btn btn-primary float-right float">Simpan</button>
                 </div>
             </form>        
         </div>
@@ -129,13 +141,48 @@
 @stop
 
 
-@section('css')
+{{-- @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
+@stop --}}
 
 @section('js')
-    <script> console.log('Hi!'); </script>
-    @section('plugins.Datatables', true)
+    <script>
 
+    function sum(){
+        const al_quran = document.getElementById('al_quran').value;
+        const al_hadist = document.getElementById('al_hadist').value;
+        const aqidah = document.getElementById('aqidah').value;
+        const akhlaq = document.getElementById('akhlaq').value;
+        const fiqih = document.getElementById('fiqih').value;
+        const tarikh = document.getElementById('tarikh').value;
+        const b_arab = document.getElementById('b_arab').value;
+        const praktikum = document.getElementById('praktikum').value;
+        
+        var jumlah = parseInt(al_quran) + parseInt(al_hadist) + parseInt(aqidah) + parseInt(akhlaq) + parseInt(fiqih) + parseInt(tarikh) + parseInt(b_arab) + parseInt(tarikh) + parseInt(praktikum);
+        document.getElementById('jumlah').value = jumlah;
+    }
+        
+        $("#form").on('submit', function(event){
+            event.preventDefault()
+            submitFormNilaiPelajaran()
+        })
+
+        function submitFormNilaiPelajaran(){
+            let form = $("#form");
+            const url = "{{url('nilai-pelajaran')}}";
+            $.ajax({
+                url,
+                method:"POST",
+                data:form.serialize(),
+                success:function(response){
+                    window.location.replace("{{url('nilai-pelajaran')}}");
+                },
+                error:function(err){
+                    console.log(err)
+                    alert("Ada Kesalahan")
+                }
+            })
+        }
+
+    </script>
 @stop

@@ -15,9 +15,11 @@
             <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/nilai-pelajaran/{{$nilai_pelajaran->id}}" method="POST" enctype="multipart/form-data" >
-                @method('put')
-                @csrf
+            {{-- <form action="/nilai-pelajaran/{{$nilai_pelajaran->id}}" method="POST" enctype="multipart/form-data" > --}}
+            <form id="form" >
+                {{-- @method('put')
+                @csrf --}}
+                {{ csrf_field() }}
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -104,8 +106,11 @@
                                 @enderror
                             </div>
                         </div> 
-                        <input name="jumlah" id="jumlah"  onkeyup = "sum();"  class="form-control" value="{{old('jumlah', $nilai_pelajaran->jumlah)}}" disabled>
-                        <input name="rata_rata" id="rata_rata" class="form-control" value="{{old('rata_rata', $nilai_pelajaran->jumlah)}}" hidden >
+                        <div class="form-group">
+                            <label for="jumlah">Jumlah</label>
+                            <input name="jumlah" id="jumlah"  onkeyup = "sum();"  class="form-control" value="{{old('jumlah', $nilai_pelajaran->jumlah)}}" disabled>
+                            <input name="rata_rata" id="rata_rata" class="form-control" value="{{old('rata_rata', $nilai_pelajaran->jumlah)}}" hidden >
+                        </div>
 
                         {{-- Footer --}}
                         <div class="box-footer">
@@ -134,7 +139,30 @@
         const praktikum = document.getElementById('praktikum').value;
         
         var jumlah = parseInt(al_quran) + parseInt(al_hadist) + parseInt(aqidah) + parseInt(akhlaq) + parseInt(fiqih) + parseInt(tarikh) + parseInt(b_arab) + parseInt(tarikh) + parseInt(praktikum);
+        
         document.getElementById('jumlah').value = jumlah;
+        }
+
+        $("#form").on('submit', function(event){
+            event.preventDefault()
+            submitFormNilaiPelajaran()
+        })
+
+        function submitFormNilaiPelajaran(){
+            let form = $("#form");
+            const url = "{{ route('nilai.update', $nilai_pelajaran->id) }}";
+            $.ajax({
+                url,
+                method:"PUT",
+                data:form.serialize(),
+                success:function(response){
+                    window.location.replace("{{url('nilai-pelajaran')}}");
+                },
+                error:function(err){
+                    console.log(err)
+                    alert("Ada Kesalahan")
+                }
+            })
         }
 
     // function mean(){

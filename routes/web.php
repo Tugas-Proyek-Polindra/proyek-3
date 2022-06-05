@@ -24,7 +24,6 @@ use App\Http\Controllers\AbsensiController;
 |
 */
 
-Auth::routes();
 
 Route::get('/', function () {
     return view('landingpage');
@@ -49,6 +48,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/nilai-pelajaran', NilaiPelajaranController::class);
     Route::resource('/nilai-sikap', NilaiSikapController::class);
     Route::resource('/absensi', AbsensiController::class);
+
+    Route::post('/nilai_insert', [NilaiPelajaranController::class, 'insertNilaiPelajaran']);
 });
 
 

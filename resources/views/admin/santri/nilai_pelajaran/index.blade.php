@@ -25,10 +25,10 @@
             </div>
             @endif
 
-            <div class="card">
+            <div class="card" >
                 <div class="card-body">
                     <a href="/nilai-pelajaran/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
-                    <table class="table table-hover table-bordered table-stripped" id="example2">
+                    <table class="table table-hover table-bordered table-stripped" id="table-nilai-pelajaran">
                         <thead>
                             <tr>
                                 <th>Nama Santri</th>
@@ -74,7 +74,7 @@
         @csrf
     </form>
     <script>
-        $('#example2').DataTable({
+        $('#table-nilai-pelajaran').DataTable({
             "responsive": true,
         });
         function notificationBeforeDelete(event, el) {

@@ -45,9 +45,13 @@ class NilaiPelajaranController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function insertNilaiPelajaran()
+    {
+        dd(request()->all());
+    }
     public function store(Request $request)
     {
-        // return request();
         $request->validate(
             [
                 'santri_id' => 'required',
@@ -133,6 +137,7 @@ class NilaiPelajaranController extends Controller
                 'b_arab' => 'required',
                 'tarikh' => 'required',
                 'praktikum' => 'required',
+                'jumlah' => 'required',
             ]
         );
 

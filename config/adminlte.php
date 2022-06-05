@@ -82,6 +82,7 @@ return [
     'usermenu_guru_url' => true,
     'usermenu_keaktifan_url' => true,
     'usermenu_absensi_url' => true,
+    'usermenu_cetak_rekap_nilai_url' => true,
 
     /*
     |--------------------------------------------------------------------------

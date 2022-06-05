@@ -42,14 +42,6 @@
             <div class="row mb-2">
             <div class="col-sm-6">
                 <h1>Tabel @yield('title')</h1>
-            </div>
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active">@yield('title')</li>
-                </ol>
-            </div>
-            </div>
         </div>
         </section>
         
@@ -59,30 +51,6 @@
                 <div class="col-sm">
                     <a href="/nilai-cetak" class="btn btn-success btn-sm me-5"><i class="fa fa-fw fa-print"></i> Print</a>
                 </div>
-                <div class="col-sm-2 m-2">
-                    {{-- <label for="kelas_id">Nama kelas</label> --}}
-                    <select name="kelas_id" id="kelas" class="form-control">
-                        @foreach ($kelas as $s)
-                            @if (old('kelas_id') == $s->id)
-                                <option value="{{$s->id}}" selected>{{$s->kelas}}</option>
-                            @else
-                                <option value="{{$s->id}}">{{$s->kelas}}</option>
-                            @endif          
-                        @endforeach
-                    </select>
-                </div>
-                <div class="col-sm-2 m-2">
-                    {{-- <label for="kelas_id">Nama kelas</label> --}}
-                    <select name="kelas_id" id="kelas" class="form-control">
-                        @foreach ($kelas as $s)
-                            @if (old('kelas_id') == $s->id)
-                                <option value="{{$s->id}}" selected>{{$s->tahun_ajaran}}</option>
-                            @else
-                                <option value="{{$s->id}}">{{$s->tahun_ajaran}}</option>
-                            @endif          
-                        @endforeach
-                    </select>
-                </div>
             </div>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -91,17 +59,17 @@
                         <th>Nama Santri</th>
                         <th>Al-Qur'an</th>
                         <th>Al-Hadist</th>
-                        {{-- <th>Aqidah</th>
+                        <th>Aqidah</th>
                         <th>Akhlaq</th>
                         <th>Fiqih</th>
                         <th>Tarikh</th>
                         <th>B.Arab</th>
-                        <th>Praktikum</th> --}}
+                        <th>Praktikum</th>
                         <th>Mengaji</th>
                         <th>Hafalan</th> 
-                        {{-- <th>Disiplin</th>
+                        <th>Disiplin</th>
                         <th>Bersih</th>
-                        <th>Sopan</th> --}}
+                        <th>Sopan</th>
                         <th>Sakit</th>
                         <th>Izin</th>
                         <th>Alpha</th>
@@ -155,14 +123,11 @@
                             <td>0</td>
                         @endif
 
-
-                    {{-- </td>
-                    </td>
                     <td>{{$nilai->nilai_sikap->mengaji}}</td>
                     <td>{{$nilai->nilai_sikap->hafalan}}</td>
                     <td>{{$nilai->absensi->sakit}}</td>
                     <td>{{$nilai->absensi->izin}}</td>
-                    <td>{{$nilai->absensi->alpha}}</td> --}}
+                    <td>{{$nilai->absensi->alpha}}</td>
                     {{-- <td>{{$nilai->jumlah}}</td>
                     <td>{{$nilai->rata_rata}}</td>
                     <td>{{$nilai->rangking}}</td> --}}
@@ -205,10 +170,6 @@
 </section>
 @stop
 
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
 
 
 @section('js')

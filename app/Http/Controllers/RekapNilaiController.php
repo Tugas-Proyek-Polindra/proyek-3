@@ -40,6 +40,17 @@ class RekapNilaiController extends Controller
         ]);
     }
 
+    public function nilaiCetak()
+    {
+        return view('admin.nilai.cetak_nilai',[
+            "rekap_nilai" => RekapNilai::all(),
+            "kelas" => Kelas::all(),
+            "nilai_pelajaran" => NilaiPelajaran::all(),
+            "nilai_sikap" => NilaiSikap::all(),
+            "absensi" => Absensi::all(),
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

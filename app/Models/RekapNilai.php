@@ -16,6 +16,11 @@ class RekapNilai extends Model
         return 'nilai';
     }
 
+    public function usermenu_cetak_rekap_nilai_url()
+    {
+        return 'nilai-cetak';
+    }
+
     public function santri()
     {
         return $this->belongsTo(Santri::class);

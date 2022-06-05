@@ -24,10 +24,11 @@ use App\Http\Controllers\AbsensiController;
 |
 */
 
-
 Route::get('/', function () {
     return view('landingpage');
 });
+
+Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
@@ -49,7 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/nilai-sikap', NilaiSikapController::class);
     Route::resource('/absensi', AbsensiController::class);
 
-    Route::post('/nilai_insert', [NilaiPelajaranController::class, 'insertNilaiPelajaran']);
+    Route::get('/nilai-cetak', [RekapNilaiController::class, 'nilaiCetak']);
 });
 
 

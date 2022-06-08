@@ -73,9 +73,9 @@
                         <th>Sakit</th>
                         <th>Izin</th>
                         <th>Alpha</th>
-                        {{-- <th>Jumlah</th>
+                        <th>Jumlah</th>
                         <th>Rata-rata</th>
-                        <th>Rangking</th> --}}
+                        <th>Rangking</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -125,12 +125,16 @@
 
                     <td>{{$nilai->nilai_sikap->mengaji}}</td>
                     <td>{{$nilai->nilai_sikap->hafalan}}</td>
+                    <td>{{$nilai->nilai_sikap->disiplin}}</td>
+                    <td>{{$nilai->nilai_sikap->hafalan}}</td>
+                    <td>{{$nilai->nilai_sikap->bersih}}</td>
+                    <td>{{$nilai->nilai_sikap->sopan}}</td>
                     <td>{{$nilai->absensi->sakit}}</td>
                     <td>{{$nilai->absensi->izin}}</td>
                     <td>{{$nilai->absensi->alpha}}</td>
-                    {{-- <td>{{$nilai->jumlah}}</td>
+                    <td>{{$nilai->jumlah}}</td>
                     <td>{{$nilai->rata_rata}}</td>
-                    <td>{{$nilai->rangking}}</td> --}}
+                    <td>{{$nilai->rangking}}</td>
                     {{-- <td >                                        
                         <form method="post" action="/nilai/{{$nilai->id}}" class="form-inline">
                             <a href="/nilai/{{$nilai->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>

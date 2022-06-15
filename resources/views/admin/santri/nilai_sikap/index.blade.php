@@ -52,7 +52,7 @@
                             <td>{{$sikap->sopan}}</td>
                             <td>{{$sikap->keterangan}}</td>
                             <td >
-                                <a href="sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                                <a href="/nilai-sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach

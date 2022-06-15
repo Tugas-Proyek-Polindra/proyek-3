@@ -57,7 +57,7 @@
             <div class="card-body">
             <div class="row mb-3">
                 <div class="col-sm">
-                    <a href="/nilai-cetak" class="btn btn-success btn-sm me-5"><i class="fa fa-fw fa-print"></i> Print</a>
+                    <a href="/nilai-cetak" class="btn btn-success btn-sm me-5" target="_blank"><i class="fa fa-fw fa-print" ></i> Print</a>
                 </div>
                 <div class="col-sm-2 m-2">
                     {{-- <label for="kelas_id">Nama kelas</label> --}}
@@ -205,13 +205,3 @@
 </section>
 @stop
 
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-    @section('plugins.Datatables', true)
-@stop

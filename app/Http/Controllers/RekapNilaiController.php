@@ -7,6 +7,7 @@ use App\Models\RekapNilai;
 use App\Models\Kelas;
 use App\Models\NilaiPelajaran;
 use App\Models\NilaiSikap;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class RekapNilaiController extends Controller
@@ -19,18 +20,11 @@ class RekapNilaiController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        
     }
 
     public function index()
     {
         // $this->authorize('staff');
-        // RekapNilai::create([
-        //     'santri_id' => $request->santri_id,
-        //     'nilai_pelajaran_id' => $request->nilai_pelajaran_id,
-        //     'nilai_sikap_id' => $request->nilai_sikap_id,
-        //     'absensi_id' => $request->absensi_id,
-        // ]);
         return view('admin.nilai.index',[
             "rekap_nilai" => RekapNilai::all(),
             "kelas" => Kelas::all(),
@@ -44,11 +38,15 @@ class RekapNilaiController extends Controller
     {
         return view('admin.nilai.cetak_nilai',[
             "rekap_nilai" => RekapNilai::all(),
-            "kelas" => Kelas::all(),
-            "nilai_pelajaran" => NilaiPelajaran::all(),
-            "nilai_sikap" => NilaiSikap::all(),
-            "absensi" => Absensi::all(),
         ]);
+
+        // $rekap_nilai = RekapNilai::all();
+
+        // // $pdf = PDF::loadView('admin.nilai.cetak_nilai', ['rekap_nilai'=> $rekap_nilai]);
+        // $pdf = PDF::loadView('admin.nilai.cetak_nilai');
+        // $pdf->setPaper('a4', 'landscape');
+        // return $pdf->download('rekap-nilai.pdf');
+        // return $pdf->stream();
     }
 
     /**

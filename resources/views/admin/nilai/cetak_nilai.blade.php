@@ -1,182 +1,168 @@
-@extends('adminlte::page')
 
-@section('title', 'Rekap Nilai')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AdminLTE 3 | Rekap Nilai</title>
 
-@section('content_header')
-    <!-- Content Header (Page header) -->
-    {{-- <section class="content-header">
-        <div class="container-fluid">
-        <div class="row mb-2">
-            <div class="col-sm-6">
-            <h1>DataTables</h1>
-            </div>
-            <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">DataTables</li>
-            </ol>
-            </div>
-        </div>
-        </div><!-- /.container-fluid -->
-    </section> --}}
-@stop
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="{{asset('vendor')}}/fontawesome-free/css/all.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="{{asset('vendor')}}/adminlte/dist/css/adminlte.min.css">
+    </head>
+    <body>
+        <section class="content">
 
-@section('content')
-
-<section class="content">
-
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-        @if (session('pesan'))
-            <div class="alert alert-success alert-dismissible">
-                <button type="button" class="close" data-dismis="alert" aria-hidden="true">&times;</button>
-                <h4><i class="icon fa fa-check"></i>Success:</h4>
-                {{session('pesan')}}
-            </div>     
-        @endif
-
-        <!-- /.card -->
-        <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-            <div class="col-sm-6">
-                <h1>Tabel @yield('title')</h1>
-        </div>
-        </section>
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
         
-        <div class="card">
-            <div class="card-body">
-            <div class="row mb-3">
-                <div class="col-sm">
-                    <a href="/nilai-cetak" class="btn btn-success btn-sm me-5"><i class="fa fa-fw fa-print"></i> Print</a>
+                <!-- /.card -->
+                <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Tabel Rekap Nilai</h1>
+                </div>
+                </section>
+                    <div class="card">
+                        <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Santri</th>
+                                    <th>Al-Qur'an</th>
+                                    <th>Al-Hadist</th>
+                                    <th>Aqidah</th>
+                                    <th>Akhlaq</th>
+                                    <th>Fiqih</th>
+                                    <th>Tarikh</th>
+                                    <th>B.Arab</th>
+                                    <th>Praktikum</th>
+                                    <th>Mengaji</th>
+                                    <th>Hafalan</th> 
+                                    <th>Disiplin</th>
+                                    <th>Bersih</th>
+                                    <th>Sopan</th>
+                                    <th>Sakit</th>
+                                    <th>Izin</th>
+                                    <th>Alpha</th>
+                                    <th>Jumlah</th>
+                                    <th>Rata-rata</th>
+                                    <th>Rangking</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($rekap_nilai as $nilai)
+                                <tr>
+                                    <td> {{$loop->iteration}} </td>
+                                        @if(!empty($nilai->santri->nama_santri))
+                                            <td>{{$nilai->santri->nama_santri}}
+                                        @else 
+                                            <td>Empty</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->al_quran))
+                                            <td>{{$nilai->nilai_pelajaran->al_quran}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->al_hadist))
+                                            <td>{{$nilai->nilai_pelajaran->al_hadist}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->aqidah))
+                                            <td>{{$nilai->nilai_pelajaran->aqidah}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->akhlaq))
+                                            <td>{{$nilai->nilai_pelajaran->akhlaq}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->fiqih))
+                                            <td>{{$nilai->nilai_pelajaran->fiqih}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->tarikh))
+                                            <td>{{$nilai->nilai_pelajaran->tarikh}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->b_arab))
+                                            <td>{{$nilai->nilai_pelajaran->b_arab}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_pelajaran->praktikum))
+                                            <td>{{$nilai->nilai_pelajaran->praktikum}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_sikap->mengaji))
+                                            <td>{{$nilai->nilai_sikap->mengaji}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_sikap->hafalan))
+                                            <td>{{$nilai->nilai_sikap->hafalan}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_sikap->disiplin))
+                                        <td>{{$nilai->nilai_sikap->disiplin}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_sikap->bersih))
+                                        <td>{{$nilai->nilai_sikap->bersih}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->nilai_sikap->sopan))
+                                        <td>{{$nilai->nilai_sikap->sopan}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+
+                                        @if(!empty($nilai->absensi->sakit))
+                                            <td>{{$nilai->absensi->sakit}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->absensi->izin))
+                                            <td>{{$nilai->absensi->izin}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        @if(!empty($nilai->absensi->alpha))
+                                            <td>{{$nilai->absensi->alpha}}
+                                        @else 
+                                            <td>0</td>
+                                        @endif
+                                        
+                                        <td>{{$nilai->jumlah}}</td>
+                                        <td>{{$nilai->rata_rata}}</td>
+                                        <td>{{$nilai->rangking}}</td>
+                                    
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Santri</th>
-                        <th>Al-Qur'an</th>
-                        <th>Al-Hadist</th>
-                        <th>Aqidah</th>
-                        <th>Akhlaq</th>
-                        <th>Fiqih</th>
-                        <th>Tarikh</th>
-                        <th>B.Arab</th>
-                        <th>Praktikum</th>
-                        <th>Mengaji</th>
-                        <th>Hafalan</th> 
-                        <th>Disiplin</th>
-                        <th>Bersih</th>
-                        <th>Sopan</th>
-                        <th>Sakit</th>
-                        <th>Izin</th>
-                        <th>Alpha</th>
-                        <th>Jumlah</th>
-                        <th>Rata-rata</th>
-                        <th>Rangking</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    @foreach ($rekap_nilai as $nilai)
-                    <td> {{$loop->iteration}} </td>
-                        @if(!empty($nilai->santri->nama_santri))
-                            <td>{{$nilai->santri->nama_santri}}
-                        @else 
-                            <td>Empty</td>
-                        @endif
-                        @if(!empty($nilai->nilai_pelajaran->al_quran))
-                            <td>{{$nilai->nilai_pelajaran->al_quran}}
-                        @else 
-                            <td>0</td>
-                        @endif
-                        @if(!empty($nilai->nilai_pelajaran->al_hadist))
-                            <td>{{$nilai->nilai_pelajaran->al_hadist}}
-                        @else 
-                            <td>0</td>
-                        @endif
-                        @if(!empty($nilai->nilai_sikap->mengaji))
-                            <td>{{$nilai->nilai_sikap->mengaji}}
-                        @else 
-                            <td>0</td>
-                        @endif
-                        @if(!empty($nilai->nilai_sikap->hafalan))
-                            <td>{{$nilai->nilai_sikap->hafalan}}
-                        @else 
-                            <td>0</td>
-                        @endif
-                        @if(!empty($nilai->absensi->sakit))
-                            <td>{{$nilai->absensi->sakit}}
-                        @else 
-                            <td>0</td>
-                        @endif
-                        @if(!empty($nilai->absensi->izin))
-                            <td>{{$nilai->absensi->izin}}
-                        @else 
-                            <td>0</td>
-                        @endif
-                        @if(!empty($nilai->absensi->alpha))
-                            <td>{{$nilai->absensi->alpha}}
-                        @else 
-                            <td>0</td>
-                        @endif
-
-                    <td>{{$nilai->nilai_sikap->mengaji}}</td>
-                    <td>{{$nilai->nilai_sikap->hafalan}}</td>
-                    <td>{{$nilai->nilai_sikap->disiplin}}</td>
-                    <td>{{$nilai->nilai_sikap->hafalan}}</td>
-                    <td>{{$nilai->nilai_sikap->bersih}}</td>
-                    <td>{{$nilai->nilai_sikap->sopan}}</td>
-                    <td>{{$nilai->absensi->sakit}}</td>
-                    <td>{{$nilai->absensi->izin}}</td>
-                    <td>{{$nilai->absensi->alpha}}</td>
-                    <td>{{$nilai->jumlah}}</td>
-                    <td>{{$nilai->rata_rata}}</td>
-                    <td>{{$nilai->rangking}}</td>
-                    {{-- <td >                                        
-                        <form method="post" action="/nilai/{{$nilai->id}}" class="form-inline">
-                            <a href="/nilai/{{$nilai->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                            <a href="/nilai/{{$nilai->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
-                            @csrf
-                            @method('delete')
-                            <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
-                        </form>           
-                        <div class="modal modal-danger fade" id="delete ">
-                            <div class="modal-dialog modal-sm">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title"></h4>
-                                </div>
-                                <div class="modal-body">
-                                <p>Apakah Anda Yakin Ingin Menghapus Data Ini....???</p>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
-                                <button type="button" class="btn btn-outline pull-right">Yes</button>
-                            </div>
-                            </div>
-                            </div>
-                        </div>
-                    </td> --}}
-                </tr>
-                    @endforeach
-                </tbody>
-            </table>
             </div>
-        </div>
-        </div>
-    </div>
-    </div>
-</section>
-@stop
-
-
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-    @section('plugins.Datatables', true)
-@stop
+        </section>
+        <script>
+            window.addEventListener("load", window.print());
+        </script>
+    </body>
+</html>

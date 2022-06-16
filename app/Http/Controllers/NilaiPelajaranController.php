@@ -64,7 +64,6 @@ class NilaiPelajaranController extends Controller
                 'b_arab' => 'required',
                 'praktikum' => 'required',
                 'jumlah' => 'required',
-
             ]
         );
         

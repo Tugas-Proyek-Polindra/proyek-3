@@ -131,19 +131,31 @@
 @section('js')
 <script >
 
-    $(document).ready(function() {
-        const al_quran = document.getElementById('al_quran').value;
-        const al_hadist = document.getElementById('al_hadist').value;
-        const aqidah = document.getElementById('aqidah').value;
-        const akhlaq = document.getElementById('akhlaq').value;
-        const fiqih = document.getElementById('fiqih').value;
-        const tarikh = document.getElementById('tarikh').value;
-        const b_arab = document.getElementById('b_arab').value;
-        const praktikum = document.getElementById('praktikum').value;
-            
-        var jumlah = parseInt(al_quran) + parseInt(al_hadist) + parseInt(aqidah) + parseInt(akhlaq) + parseInt(fiqih) + parseInt(tarikh) + parseInt(b_arab) + parseInt(tarikh) + parseInt(praktikum);
+        let al_quran = document.getElementById('al_quran').value;
+        let al_hadist = document.getElementById('al_hadist').value;
+        let aqidah = document.getElementById('aqidah').value;
+        let akhlaq = document.getElementById('akhlaq').value;
+        let fiqih = document.getElementById('fiqih').value;
+        let tarikh = document.getElementById('tarikh').value;
+        let b_arab = document.getElementById('b_arab').value;
+        let praktikum = document.getElementById('praktikum').value;
 
-        $("#jumlah").val(jumlah);
+    $("#form").ready(function() {
+        $("#al_quran, #al_hadist, #aqidah, #akhlaq, #fiqih, #tarikh, #b_arab, #praktikum").keyup(function() {
+
+            $("#al_quran").val(al_quran);
+            $("#al_hadist").val(al_hadist);
+            $("#aqidah").val(aqidah);
+            $("#akhlaq").val(akhlaq);
+            $("#fiqih").val(fiqih);
+            $("#tarikh").val(b_arab);
+            $("#b_arab").val(tarikh);
+            $("#praktikum").val(praktikum);
+
+            let jumlah = parseInt(al_quran) + parseInt(al_hadist) + parseInt(aqidah) + parseInt(akhlaq) + parseInt(fiqih) + parseInt(tarikh) + parseInt(b_arab) + parseInt(tarikh) + parseInt(praktikum);
+            
+            $("#jumlah").val(jumlah);
+        });
     });
 
     $("#form").on('submit', function(event){

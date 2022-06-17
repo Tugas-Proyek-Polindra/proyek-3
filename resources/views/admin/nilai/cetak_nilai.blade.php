@@ -149,7 +149,7 @@
                                         
                                         <td>{{$nilai->jumlah}}</td>
                                         <td>{{$nilai->rata_rata}}</td>
-                                        <td>{{$nilai->rangking}}</td>
+                                        {{-- <td>{{$nilai->rangking}}</td> --}}
                                     
                                 </tr>
                                 @endforeach

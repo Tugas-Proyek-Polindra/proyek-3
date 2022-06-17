@@ -24,6 +24,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '786',
+            'rata_rata' => '87.6',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 2,
@@ -35,6 +37,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '756',
+            'rata_rata' => '78.9',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 3,
@@ -46,6 +50,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '986',
+            'rata_rata' => '98.7',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 4,
@@ -57,6 +63,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '756',
+            'rata_rata' => '78.9',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 5,
@@ -68,6 +76,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '756',
+            'rata_rata' => '78.9',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 6,
@@ -79,6 +89,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '897',
+            'rata_rata' => '91.8',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 7,
@@ -90,6 +102,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '756',
+            'rata_rata' => '78.9',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 8,
@@ -101,6 +115,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '756',
+            'rata_rata' => '78.9',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 9,
@@ -112,6 +128,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '875',
+            'rata_rata' => '781.8',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 10,
@@ -123,6 +141,8 @@ class NilaiPelajaranSeeder extends Seeder
             'tarikh' => '93',
             'b_arab' => '90',
             'praktikum' => '89',
+            'jumlah' => '790',
+            'rata_rata' => '79.9',
         ]);
 
 

@@ -95,12 +95,12 @@ class SantriController extends Controller
         //     'santri_id' => $santri->id,
         // ]);
 
-        RekapNilai::create([
-            'santri_id' => $santri->id,
-            // 'nilai_pelajaran_id' => $nilai_pelajaran->id,
-            // 'nilai_sikap_id' => $nilai_sikap->id,
-            // 'absensi_id' => $absensi->id,
-        ]);
+        // RekapNilai::create([
+        //     'santri_id' => $santri->id,
+        //     // 'nilai_pelajaran_id' => $nilai_pelajaran->id,
+        //     // 'nilai_sikap_id' => $nilai_sikap->id,
+        //     // 'absensi_id' => $absensi->id,
+        // ]);
 
         return redirect('/santri')->with('pesan', 'Data Berhasil Ditambahkan !');
     }

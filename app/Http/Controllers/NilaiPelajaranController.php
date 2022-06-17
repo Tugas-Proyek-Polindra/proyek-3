@@ -80,13 +80,13 @@ class NilaiPelajaranController extends Controller
             'jumlah' => $request->jumlah,
         ]);
 
-        // RekapNilai::create([
-        //     // 'santri_id' => $santri->id,
-        //     'santri_id' => $request->santri_id,
-        //     'nilai_pelajaran_id' => $nilai_pelajaran->id,
-        //     // 'nilai_sikap_id' => $nilai_sikap->id,
-        //     // 'absensi_id' => $absensi->id,
-        // ]);
+        RekapNilai::create([
+            // 'santri_id' => $santri->id,
+            'santri_id' => $request->santri_id,
+            'nilai_pelajaran_id' => $nilai_pelajaran->id,
+            'nilai_sikap_id' => $nilai_pelajaran->id,
+            'absensi_id' => $nilai_pelajaran->id,
+        ]);
 
         return redirect('/nilai-pelajaran')->with('pesan', 'Data Berhasil Ditambahkan !');
     }

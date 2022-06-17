@@ -16,6 +16,9 @@ class CreateSantrisTable extends Migration
         Schema::create('santris', function (Blueprint $table) {
             $table->id();
             $table->string('nama_santri');
+            $table->foreignId('nilai_pelajaran_id')->nullable();
+            $table->foreignId('nilai_sikap_id')->nullable();
+            $table->foreignId('absensi_id')->nullable();
             $table->string('nisn')->unique();
             $table->string('nik')->unique();
             $table->string('tempat_lahir');

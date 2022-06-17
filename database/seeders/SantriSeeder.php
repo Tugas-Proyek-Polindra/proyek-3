@@ -26,7 +26,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '083162945201',
             'nama_ibu' => 'Marpuah',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 1,
+            'nilai_sikap_id' => 1,
+            'absensi_id' => 1,
         ]);
         Santri::create([
             'nama_santri' => 'Angel Melisza Zivania',
@@ -39,7 +42,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '083842897922',
             'nama_ibu' => 'Kasitri',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 2,
+            'nilai_sikap_id' => 2,
+            'absensi_id' => 2,
         ]);
         Santri::create([
             'nama_santri' => 'Bayu Nur Ilham',
@@ -52,7 +58,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '082127143317',
             'nama_ibu' => 'Linah Mardiana',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 3,
+            'nilai_sikap_id' => 3,
+            'absensi_id' => 3,
         ]);
         Santri::create([
             'nama_santri' => 'Laras Ayu Juliyanti',
@@ -65,7 +74,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '083120475029',
             'nama_ibu' => 'Mutiawati',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 4,
+            'nilai_sikap_id' => 4,
+            'absensi_id' => 4,
         ]);
         Santri::create([
             'nama_santri' => 'Muhammad Ridho Firdaus',
@@ -78,7 +90,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '081318061411',
             'nama_ibu' => 'Oma Isah',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 5,
+            'nilai_sikap_id' => 5,
+            'absensi_id' => 5,
         ]);
         Santri::create([
             'nama_santri' => 'Oktavia Adzansa',
@@ -91,7 +106,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '082315014615',
             'nama_ibu' => 'Yunitasari',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 6,
+            'nilai_sikap_id' => 6,
+            'absensi_id' => 6,
         ]);
         Santri::create([
             'nama_santri' => 'Ramdan Al Fazri',
@@ -104,7 +122,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '082119869118',
             'nama_ibu' => 'Widiawati',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 7,
+            'nilai_sikap_id' => 7,
+            'absensi_id' => 7,
         ]);
         Santri::create([
             'nama_santri' => 'Reno Saputra Pratama',
@@ -117,7 +138,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '083824354260',
             'nama_ibu' => 'Mintarsih',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 8,
+            'nilai_sikap_id' => 8,
+            'absensi_id' => 8,
         ]);
         Santri::create([
             'nama_santri' => 'Adzana Karisma',
@@ -130,7 +154,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '083143085426',
             'nama_ibu' => 'Unasih',
             'sekolah_asal' => 'SDN Bongas Wetan II',
-            'alamat_sekolah' => 'Kampung Munjul'
+            'alamat_sekolah' => 'Kampung Munjul',
+            'nilai_pelajaran_id' => 9,
+            'nilai_sikap_id' => 9,
+            'absensi_id' => 9,
         ]);
         Santri::create([
             'nama_santri' => 'Arrohman',
@@ -143,10 +170,10 @@ class SantriSeeder extends Seeder
             'no_hp' => '087745615809',
             'nama_ibu' => 'Eri Sunaeri',
             'sekolah_asal' => 'SDN Cidenok II',
-            'alamat_sekolah' => 'Jalan Desa'
+            'alamat_sekolah' => 'Jalan Desa',
+            'nilai_pelajaran_id' => 10,
+            'nilai_sikap_id' => 10,
+            'absensi_id' => 10,
         ]);
-
-
-
     }
 }

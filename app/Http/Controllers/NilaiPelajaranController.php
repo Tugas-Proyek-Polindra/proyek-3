@@ -78,12 +78,15 @@ class NilaiPelajaranController extends Controller
             'b_arab' => $request->b_arab,
             'praktikum' => $request->praktikum,
             'jumlah' => $request->jumlah,
+            'rata_rata' => $request->rata_rata,
         ]);
 
         RekapNilai::create([
             // 'santri_id' => $santri->id,
             'santri_id' => $request->santri_id,
             'nilai_pelajaran_id' => $nilai_pelajaran->id,
+            'jumlah' => $nilai_pelajaran->jumlah,
+            'rata_rata' => $nilai_pelajaran->rata_rata,
             'nilai_sikap_id' => $nilai_pelajaran->id,
             'absensi_id' => $nilai_pelajaran->id,
         ]);

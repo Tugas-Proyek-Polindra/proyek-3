@@ -23,7 +23,7 @@ class CreateRekapNilaisTable extends Migration
             $table->foreignId('absensi_id')->nullable();
             $table->integer('jumlah')->nullable();
             $table->float('rata_rata')->nullable();
-            $table->integer('rangking')->nullable();
+            $table->unsignedInteger('rangking')->default(11);
             $table->timestamps();
         });
     }

@@ -23,7 +23,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 1,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -34,7 +34,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 3,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -45,7 +45,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 5,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -66,7 +66,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 7,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -77,7 +77,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 6,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -88,7 +88,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 10,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -99,7 +99,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 9,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -110,7 +110,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 8,
         ]);
         RekapNilai::create([
             // 'user_id' => 2,
@@ -121,7 +121,7 @@ class RekapNilaiSeeder extends Seeder
             // 'kelas_id' => 1,
             'jumlah' => 599,
             'rata_rata' => 74.88,
-            'rangking' => 4,
+            'rangking' => 2,
         ]);
 
     }

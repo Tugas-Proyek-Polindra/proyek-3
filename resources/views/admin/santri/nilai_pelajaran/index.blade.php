@@ -31,6 +31,7 @@
                     <table class="table table-hover table-bordered table-stripped" id="table-nilai-pelajaran">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Nama Santri</th>
                                 <th>Al-Qur'an</th>
                                 <th>Al-Hadist</th>
@@ -46,6 +47,7 @@
                         <tbody>
                             @foreach ($nilai_pelajaran as $mapel)
                         <tr>
+                            <td> {{$loop->iteration}} </td>
                             <td>{{$mapel->santri->nama_santri}}</td>
                             <td>{{$mapel->al_quran}}</td>
                             <td>{{$mapel->al_hadist}}</td>

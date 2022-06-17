@@ -113,13 +113,11 @@
                         </div>
                         <div class="form-group">
                             <label for="jumlah">Jumlah</label>
-                            {{-- <input type="number" name="jumlah" id="" class="form-control" value="{{old('jumlah')}}"> --}}
-                            <input name="jumlah" id="jumlah" class="form-control" value="{{old('jumlah')}}" readonly="">
-                            <div class="text-danger">
-                                @error('jumlah')
-                                {{$message}}
-                                @enderror
-                            </div>
+                            <input name="jumlah" id="jumlah" class="form-control" value="{{old('jumlah')}}" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="rata_rata">Rata-Rata</label>
+                            <input name="rata_rata" id="rata_rata" class="form-control" value="{{old('rata_rata')}}" readonly="">
                         </div>
                         {{-- <div class="form-group">
                             <label for="rata_rata">Rata-Rata</label>
@@ -165,7 +163,10 @@
 
                 let jumlah = parseInt(al_quran) + parseInt(al_hadist) + parseInt(aqidah) + parseInt(akhlaq) + parseInt(fiqih) + parseInt(tarikh) + parseInt(b_arab) + parseInt(tarikh) + parseInt(praktikum);
 
+                let rata_rata = jumlah/8;
+
                 $("#jumlah").val(jumlah);
+                $("#rata_rata").val(rata_rata);
             });
         });
         

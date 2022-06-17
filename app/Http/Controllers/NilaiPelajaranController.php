@@ -139,7 +139,7 @@ class NilaiPelajaranController extends Controller
                 'b_arab' => 'required',
                 'tarikh' => 'required',
                 'praktikum' => 'required',
-                'jumlah' => 'required',
+                // 'jumlah' => 'required',
             ]
         );
 
@@ -157,7 +157,7 @@ class NilaiPelajaranController extends Controller
             'b_arab' => $request->b_arab,
             'tarikh' => $request->tarikh,
             'praktikum' => $request->praktikum,
-            'jumlah' => $request->jumlah
+            // 'jumlah' => $request->jumlah
         ]);
 
         

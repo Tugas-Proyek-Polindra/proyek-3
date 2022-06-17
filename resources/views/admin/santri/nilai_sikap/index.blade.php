@@ -31,6 +31,7 @@
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Nama Santri</th>
                                 <th>Mengaji</th>
                                 <th>Hafalan</th>
@@ -44,6 +45,7 @@
                         <tbody>
                             @foreach ($nilai_sikap as $sikap)
                         <tr>
+                            <td> {{$loop->iteration}} </td>
                             <td>{{$sikap->santri->nama_santri}}</td>
                             <td>{{$sikap->mengaji}}</td>
                             <td>{{$sikap->hafalan}}</td>

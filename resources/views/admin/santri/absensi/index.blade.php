@@ -31,6 +31,7 @@
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                             <tr>
+                                <th>No</th>
                                 <th>Nama Santri</th>
                                 <th>Sakit</th>
                                 <th>Izin</th>
@@ -41,15 +42,16 @@
                         <tbody>
                             @foreach ($absensi as $absen)
                         <tr>
+                            <td> {{$loop->iteration}} </td>
                             <td>{{$absen->santri->nama_santri}}</td>
                             <td>{{$absen->sakit}}</td>
                             <td>{{$absen->izin}}</td>
                             <td>{{$absen->alpha}}</td>
                             <td width="5%">
                                 <div class="btn btn-group">
-                                <a href="/absensi/{{$absen->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                                {{-- <a href="/absensi/{{$absen->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a> --}}
                                 <a href="/absensi/{{$absen->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
-                                <a href="{{route('absensi.destroy', $absen)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+                                {{-- <a href="{{route('absensi.destroy', $absen)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a> --}}
                                 </div>
                             </td>
                         </tr>

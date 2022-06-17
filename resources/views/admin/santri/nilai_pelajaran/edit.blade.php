@@ -15,11 +15,11 @@
             <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
-            {{-- <form action="/nilai-pelajaran/{{$nilai_pelajaran->id}}" method="POST" enctype="multipart/form-data" > --}}
-            <form id="form" >
-                {{-- @method('put')
-                @csrf --}}
-                {{ csrf_field() }}
+            <form action="/nilai-pelajaran/{{$nilai_pelajaran->id}}" method="POST" enctype="multipart/form-data" >
+            {{-- <form id="form" > --}}
+                @method('put')
+                @csrf
+                {{-- {{ csrf_field() }} --}}
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
@@ -107,9 +107,9 @@
                             </div>
                         </div> 
                         <div class="form-group">
-                            <label for="jumlah">Jumlah</label>
+                            {{-- <label for="jumlah">Jumlah</label>
                             <input name="jumlah" id="jumlah"  class="form-control" value="{{old('jumlah', $nilai_pelajaran->jumlah)}}" disabled>
-                            {{-- <input name="rata_rata" id="rata_rata" class="form-control" value="{{old('rata_rata', $nilai_pelajaran->rata_rata)}}"> --}}
+                            <input name="rata_rata" id="rata_rata" class="form-control" value="{{old('rata_rata', $nilai_pelajaran->rata_rata)}}"> --}}
                         </div>
 
                         {{-- Footer --}}
@@ -129,7 +129,7 @@
 
 
 @section('js')
-<script >
+{{-- <script >
 
         let al_quran = document.getElementById('al_quran').value;
         let al_hadist = document.getElementById('al_hadist').value;
@@ -190,6 +190,6 @@
     //     document.getElementById('rata_rata').value = rata_rata;
     // }
     
-</script>
+</script> --}}
 @stop
 

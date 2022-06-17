@@ -62,9 +62,12 @@ class PelajaranController extends Controller
      * @param  \App\Models\Pelajaran  $pelajaran
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pelajaran $pelajaran)
+    public function edit($id)
     {
-        //
+        $pelajaran = Pelajaran::where('id', $id)->first();
+        return view('admin.pelajaran.edit', [
+            "pelajaran" => $pelajaran,
+        ]);
     }
 
     /**
@@ -74,9 +77,18 @@ class PelajaranController extends Controller
      * @param  \App\Models\Pelajaran  $pelajaran
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pelajaran $pelajaran)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            
+            'nama_pelajaran' => 'required',
+            'nilai_kkm' => 'required',
+        ]);
+
+        $pelajaran = Pelajaran::find($id)
+            ->update($validatedData);
+
+        return redirect('/pelajaran')->with('pesan', 'Data Berhasil Di Update !');
     }
 
     /**

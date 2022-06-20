@@ -27,7 +27,9 @@
 
             <div class="card">
                 <div class="card-body">
+                    @can('staff')
                     <a href="/absensi/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    @endcan
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                             <tr>

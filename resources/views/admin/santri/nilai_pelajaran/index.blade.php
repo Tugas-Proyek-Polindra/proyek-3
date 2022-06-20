@@ -27,7 +27,10 @@
 
             <div class="card" >
                 <div class="card-body">
-                    <a href="/nilai-pelajaran/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    @can('staff')
+                        <a href="/nilai-pelajaran/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    @endcan
+                    
                     <table class="table table-hover table-bordered table-stripped" id="table-nilai-pelajaran">
                         <thead>
                             <tr>

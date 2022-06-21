@@ -43,7 +43,7 @@
                                 <th>Fiqih</th>
                                 <th>Tarikh</th>
                                 <th>B.Arab</th>
-                                <th>Praktikum</th>
+                                <th>Praktik</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

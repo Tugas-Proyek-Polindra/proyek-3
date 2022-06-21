@@ -128,20 +128,18 @@ class NilaiPelajaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate(
-            [
-                'al_quran' => 'required',
-                'al_hadist' => 'required',
-                'aqidah' => 'required',
-                'akhlaq' => 'required',
-                'fiqih' => 'required',
-                'tarikh' => 'required',
-                'b_arab' => 'required',
-                'tarikh' => 'required',
-                'praktikum' => 'required',
-                // 'jumlah' => 'required',
-            ]
-        );
+        $al_quran = $request->input('al_quran');
+        $al_hadist = $request->input('al_hadist');
+        $aqidah = $request->input('aqidah');
+        $akhlaq = $request->input('akhlaq');
+        $fiqih = $request->input('fiqih');
+        $tarikh = $request->input('tarikh');
+        $b_arab = $request->input('b_arab');
+        $praktikum = $request->input('praktikum');
+
+        $jumlah = ($al_quran+ $al_hadist+$aqidah+$akhlaq+$fiqih+$tarikh+$b_arab+$praktikum);
+
+        $rata_rata = $jumlah/8;
 
         $santri = Santri::where('id', $id)->first();
         $nilai_pelajaran = NilaiPelajaran::where('id', $id)->first();
@@ -157,10 +155,9 @@ class NilaiPelajaranController extends Controller
             'b_arab' => $request->b_arab,
             'tarikh' => $request->tarikh,
             'praktikum' => $request->praktikum,
-            // 'jumlah' => $request->jumlah
+            'jumlah' => $jumlah,
+            'rata_rata' => $rata_rata,
         ]);
-
-        
 
         return redirect('nilai-pelajaran')->with('pesan', 'Data Berhasil Di Update !');
     }

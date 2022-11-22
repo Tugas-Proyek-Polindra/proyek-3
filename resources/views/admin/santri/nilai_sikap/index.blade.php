@@ -27,9 +27,9 @@
 
             <div class="card">
                 <div class="card-body">
-                    @can('staff')
+                    {{-- @can('staff')
                     <a href="{{ route('nilai-sikap.create') }}" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
-                    @endcan
+                    @endcan --}}
                     
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>

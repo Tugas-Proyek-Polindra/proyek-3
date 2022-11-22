@@ -55,15 +55,15 @@
                         </select>
                     </div> --}}
                 </div>
-                <table id="example2" class="table table-bordered table-striped">
+                <table id="example2" class="table table-bordered table-striped table-responsive p-0">
                     <thead>
                         <tr>
                             <th>No</th>
                             <th>Nama Santri</th>
                             <th>Al-Qur'an</th>
                             <th>Al-Hadist</th>
-                            {{-- <th>Aqidah</th>
-                            <th>Akhlaq</th>
+                            <th>Aqidah</th>
+                            {{-- <th>Akhlaq</th>
                             <th>Fiqih</th>
                             <th>Tarikh</th>
                             <th>B.Arab</th>
@@ -97,6 +97,11 @@
                             @endif
                             @if(!empty($nilai->nilai_pelajaran->al_hadist))
                                 <td>{{$nilai->nilai_pelajaran->al_hadist}}
+                            @else 
+                                <td>0</td>
+                            @endif
+                            @if(!empty($nilai->nilai_pelajaran->aqidah))
+                                <td>{{$nilai->nilai_pelajaran->aqidah}}
                             @else 
                                 <td>0</td>
                             @endif
@@ -155,6 +160,7 @@
         $('#example2').DataTable({
             "responsive": true,
             "searching": false,
+            "processing": true,
         });
         function notificationBeforeDelete(event, el) {
             event.preventDefault();

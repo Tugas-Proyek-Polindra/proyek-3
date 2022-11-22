@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="card-body">
                     <a href="/santri/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
-                    <table class="table table-hover table-bordered table-stripped" id="example2">
+                    <table class="table table-hover table-bordered table-stripped table-responsive p-0" id="example2">
                         <thead>
                             <tr>
                                 <th>No</th>

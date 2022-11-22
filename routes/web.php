@@ -12,6 +12,7 @@ use App\Http\Controllers\NilaiSikapController;
 use App\Http\Controllers\RiwayatKeaktifanController;
 use App\Http\Controllers\RekapNilaiController;
 use App\Http\Controllers\AbsensiController;
+use App\Http\Controllers\ExcelCSVController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/absensi', AbsensiController::class);
 
     Route::get('/nilai-cetak', [RekapNilaiController::class, 'nilaiCetak']);
+    Route::get('/excel-file', [ExcelCSVController::class, 'index']);
+
+    Route::get('excel-csv-file', [ExcelCSVController::class, 'index']);
+    Route::post('import-excel-csv-file', [ExcelCSVController::class, 'importExcelCSV']);
+    Route::get('export-excel-csv-file/{slug}', [ExcelCSVController::class, 'exportExcelCSV']);
+
 });
 
 

@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="card-body">
                     <a href="/guru/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
-                    <table class="table table-hover table-bordered table-stripped" id="example2">
+                    <table class="table table-hover table-bordered table-stripped table-responsive p-0" id="example2">
                         <thead>
                         <tr>
                             <th>No</th>
@@ -39,9 +39,9 @@
                             <th>Jenis Kelamin</th>
                             <th>No.HP</th>
                             <th>Aksi</th>
-                            {{-- <th>Nama Ibu</th>
+                            <th>Nama Ibu</th>
                             <th>Status Pegawai</th>
-                            <th>Pendidikan Terakhir</th> --}}
+                            <th>Pendidikan Terakhir</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -58,9 +58,9 @@
                                 <td {{$guru->jenis_kelamin ? 'selected' : '' }} value="P">Perempuan</td>
                             @endif
                             <td>{{$guru->no_hp}}</td>
-                            {{-- <td>{{$guru->nama_ibu}}</td>
+                            <td>{{$guru->nama_ibu}}</td>
                             <td>{{$guru->status_pegawai}}</td>
-                            <td>{{$guru->pendidikan_terakhir}}</td> --}}
+                            <td>{{$guru->pendidikan_terakhir}}</td>
                             <td width="5%">
                                 <div class="btn btn-group">
                                     <a href="/guru/{{$guru->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>

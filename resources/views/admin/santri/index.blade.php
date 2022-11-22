@@ -33,15 +33,15 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama Santri</th>
-                                {{-- <th>NISN</th>
+                                <th>NISN</th>
                                 <th>NIK</th>
                                 <th>Tempat Lahir</th>
-                                <th>Tanggal Lahir</th> --}}
+                                <th>Tanggal Lahir</th>
                                 <th>Jenis Kelamin</th>
                                 <th>No HP</th>
                                 <th>Nama Ibu</th>
                                 <th>Sekolah Asal</th>
-                                {{-- <th>Alamat Sekolah</th> --}}
+                                <th>Alamat Sekolah</th>
                                 <th>Aksi</th>
                               </tr>
                         </thead>
@@ -50,10 +50,10 @@
                             <tr>
                                 <td> {{$loop->iteration}} </td>
                                 <td>{{$santri->nama_santri}}</td>
-                                {{-- <td>{{$santri->nisn}}</td>
+                                <td>{{$santri->nisn}}</td>
                                 <td>{{$santri->nik}}</td>
                                 <td>{{$santri->tempat_lahir}}</td>
-                                <td>{{$santri->tgl_lahir}}</td> --}}
+                                <td>{{$santri->tgl_lahir}}</td>
                                     @if ($santri->jenis_kelamin == 'L' )
                                     <td {{$santri->jenis_kelamin ? 'selected' : '' }} value="L">Laki-Laki</td>
                                     @elseif($santri->jenis_kelamin == 'P' )
@@ -61,7 +61,7 @@
                                     @endif
                                 <td>{{$santri->no_hp}}</td>
                                 <td>{{$santri->nama_ibu}}</td>
-                                {{-- <td>{{$santri->sekolah_asal}}</td> --}}
+                                <td>{{$santri->sekolah_asal}}</td>
                                 <td>{{$santri->alamat_sekolah}}</td>
                                 <td width="5%">
                                     <div class="btn btn-group">

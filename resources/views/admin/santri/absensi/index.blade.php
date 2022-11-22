@@ -74,6 +74,7 @@
     <script>
         $('#example2').DataTable({
             "responsive": true,
+            'iDisplayLength': 25
         });
         function notificationBeforeDelete(event, el) {
             event.preventDefault();

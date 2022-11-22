@@ -87,12 +87,8 @@
     </form>
     <script>
         $('#example2').DataTable({
-            "paging": true,
-            "lengthChange": true,
-            "searching": false,
-            "info": true,
-            "autoWidth": false,
             "responsive": true,
+            'iDisplayLength': 25
         });
         function notificationBeforeDelete(event, el) {
             event.preventDefault();

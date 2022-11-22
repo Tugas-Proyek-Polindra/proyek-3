@@ -63,7 +63,7 @@
             </div>
             <div class="card-footer">
                 <div class="text-left ">
-                <a href="/santri" class="btn btn-sm bg-teal">
+                <a href="{{ route('santri.index') }}" class="btn btn-sm bg-teal">
                     <i class="fas fa-arrow-left"></i>
                 </a>
 

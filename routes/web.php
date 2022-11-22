@@ -29,7 +29,9 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
-Auth::routes();
+Auth::routes([
+    'register' => false
+]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
@@ -50,14 +52,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/nilai-pelajaran', NilaiPelajaranController::class);
     Route::resource('/nilai-sikap', NilaiSikapController::class);
     Route::resource('/absensi', AbsensiController::class);
-
-    Route::get('/nilai-cetak', [RekapNilaiController::class, 'nilaiCetak']);
-    Route::get('/excel-file', [ExcelCSVController::class, 'index']);
-
-    Route::get('excel-csv-file', [ExcelCSVController::class, 'index']);
-    Route::post('import-excel-csv-file', [ExcelCSVController::class, 'importExcelCSV']);
-    Route::get('export-excel-csv-file/{slug}', [ExcelCSVController::class, 'exportExcelCSV']);
-
 });
 
 

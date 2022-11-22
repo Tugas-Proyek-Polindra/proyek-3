@@ -16,7 +16,7 @@
             <h3 class="card-title">Tambah @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/nilai-sikap" method="POST" enctype="multipart/form-data" >
+            <form action="{{ route('nilai-sikap.store') }}" method="POST" enctype="multipart/form-data" >
                 @csrf
                 <div class="row">
                     <div class="col-lg">

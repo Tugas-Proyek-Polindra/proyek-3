@@ -259,7 +259,7 @@ return [
         ['header' => 'FEATURE'],
         [
             'text'    => 'Rekap Nilai',
-            'url'     => 'nilai',
+            'url'     => 'rekap-nilai',
             // 'can'    => 'staff',
             'icon'    => 'fas fa-fw fa-book',
         ],

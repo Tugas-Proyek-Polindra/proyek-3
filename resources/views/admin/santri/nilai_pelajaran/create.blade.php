@@ -30,8 +30,8 @@
                                     @if (old('santri_id') == $s->id)
                                         <option value="{{$s->id}}" selected>{{$s->nama_santri}}</option>
                                         <input type="hidden" name="nilai_pelajaran_id" class="form-control" value="{{$s->id}}">
-                                        
-                                        
+                                        <input type="hidden" name="nilai_sikap_id" class="form-control" value="{{$s->id}}">
+                                        <input type="hidden" name="absensi_id" class="form-control" value="{{$s->id}}">
                                     @else
                                         <option value="{{$s->id}}">{{$s->nama_santri}}</option>
                                     @endif          

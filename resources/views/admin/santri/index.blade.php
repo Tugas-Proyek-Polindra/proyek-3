@@ -27,7 +27,7 @@
 
             <div class="card">
                 <div class="card-body">
-                    <a href="/santri/create" class="btn btn-primary mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    <a href="{{ route('santri.create') }}" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                     <table class="table table-hover table-bordered table-stripped table-responsive p-0" id="example2">
                         <thead>
                             <tr>
@@ -65,8 +65,8 @@
                                 <td>{{$santri->alamat_sekolah}}</td>
                                 <td width="5%">
                                     <div class="btn btn-group">
-                                        <a href="/santri/{{$santri->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                                        <a href="/santri/{{$santri->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                                        <a href="{{ route('santri.show', $santri) }}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                                        <a href="{{ route('santri.edit', $santri) }}" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                                     <a href="{{route('santri.destroy', $santri)}}" onclick="notificationBeforeDelete(event, this)" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
                                     </div>
                                 </td>

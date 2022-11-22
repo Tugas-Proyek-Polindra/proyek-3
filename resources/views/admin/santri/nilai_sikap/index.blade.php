@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="card-body">
                     @can('staff')
-                    <a href="/nilai-sikap/create" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    <a href="{{ route('nilai-sikap.create') }}" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                     @endcan
                     
                     <table class="table table-hover table-bordered table-stripped" id="example2">
@@ -57,7 +57,7 @@
                             <td>{{$sikap->sopan}}</td>
                             <td>{{$sikap->keterangan}}</td>
                             <td >
-                                <a href="/nilai-sikap/{{$sikap->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                                <a href="{{ route('nilai-sikap.edit', $sikap) }}" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                             </td>
                         </tr>
                         @endforeach

@@ -15,7 +15,7 @@
             <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/nilai-sikap/{{$nilai_sikap->id}}" method="POST" enctype="multipart/form-data" >
+            <form action="{{ route('nilai-sikap.update', $nilai_sikap) }}" method="POST" enctype="multipart/form-data" >
                 @method('put')
                 @csrf
                 <div class="row">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="box-footer">
-                <button type="submit" class="btn btn-primary float-right floa">Simpan</button>
+                <button type="submit" class="btn btn-primary float-right floa">Update</button>
                 </div>
             </form>        
         </div>

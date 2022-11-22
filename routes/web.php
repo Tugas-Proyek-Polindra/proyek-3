@@ -45,7 +45,7 @@ Route::group(['middleware' => 'staff'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('/nilai', RekapNilaiController::class);
+    Route::resource('/rekap-nilai', RekapNilaiController::class);
     Route::resource('/pelajaran', PelajaranController::class);
     Route::resource('/nilai-pelajaran', NilaiPelajaranController::class);
     Route::resource('/nilai-sikap', NilaiSikapController::class);

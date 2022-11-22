@@ -205,8 +205,14 @@
     <script>
         $(function () {
         $("#example1").DataTable({
+            "lengthChange": true,
             "responsive": true, "lengthChange": false, "autoWidth": false,
-            "buttons": ["copy", "excel", "pdf"]
+            "buttons": ["copy", "excel",
+            {
+                extend: 'pdfHtml5',
+                orientation: 'landscape',
+                pageSize: 'LEGAL' 
+            }]
         }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq( )');
         });
 

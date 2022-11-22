@@ -29,9 +29,9 @@
             <div class="card">
                 <div class="card-body">
                 <div class="row">
-                    <div class="col-sm mb-2">
+                    {{-- <div class="col-sm mb-2">
                         <a href="/nilai-cetak" class="btn btn-success btn-sm me-5" target="_blank"><i class="fa fa-fw fa-print" ></i> Print</a>
-                    </div>
+                    </div> --}}
                     {{-- <div class="col-sm-2 m-2">
                         <select name="kelas_id" id="kelas" class="form-control">
                             @foreach ($kelas as $s)
@@ -55,7 +55,7 @@
                         </select>
                     </div> --}}
                 </div>
-                <table id="example2" class="table table-bordered table-striped table-responsive p-0">
+                <table id="example1" class="table table-bordered table-striped table-responsive p- ">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -63,22 +63,22 @@
                             <th>Al-Qur'an</th>
                             <th>Al-Hadist</th>
                             <th>Aqidah</th>
-                            {{-- <th>Akhlaq</th>
+                            <th>Akhlaq</th>
                             <th>Fiqih</th>
                             <th>Tarikh</th>
                             <th>B.Arab</th>
-                            <th>Praktikum</th> --}}
+                            <th>Praktikum</th>
                             <th>Mengaji</th>
                             <th>Hafalan</th> 
-                            {{-- <th>Disiplin</th>
+                            <th>Disiplin</th>
                             <th>Bersih</th>
-                            <th>Sopan</th> --}}
+                            <th>Sopan</th>
                             <th>Sakit</th>
                             <th>Izin</th>
                             <th>Alpha</th>
                             <th>Jumlah</th>
                             <th>Rata-rata</th>
-                            {{-- <th>Rangking</th> --}}
+                            <th>Rangking</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -86,59 +86,105 @@
                         @foreach ($rekap_nilai as $nilai)
                         <td> {{$loop->iteration}} </td>
                             @if(!empty($nilai->santri->nama_santri))
-                                <td>{{$nilai->santri->nama_santri}}
+                                <td>{{$nilai->santri->nama_santri}}</td>
                             @else 
                                 <td>Empty</td>
                             @endif
                             @if(!empty($nilai->nilai_pelajaran->al_quran))
-                                <td>{{$nilai->nilai_pelajaran->al_quran}}
+                                <td>{{$nilai->nilai_pelajaran->al_quran}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->nilai_pelajaran->al_hadist))
-                                <td>{{$nilai->nilai_pelajaran->al_hadist}}
+                                <td>{{$nilai->nilai_pelajaran->al_hadist}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->nilai_pelajaran->aqidah))
-                                <td>{{$nilai->nilai_pelajaran->aqidah}}
+                                <td>{{$nilai->nilai_pelajaran->aqidah}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_pelajaran->akhlaq))
+                                <td>{{$nilai->nilai_pelajaran->akhlaq}}</td>
+                            @else 
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_pelajaran->fiqih))
+                                <td>{{$nilai->nilai_pelajaran->fiqih}}</td>
+                            @else 
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_pelajaran->tarikh))
+                                <td>{{$nilai->nilai_pelajaran->tarikh}}</td>
+                            @else 
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_pelajaran->b_arab))
+                                <td>{{$nilai->nilai_pelajaran->b_arab}}</td>
+                            @else 
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_pelajaran->praktikum))
+                                <td>{{$nilai->nilai_pelajaran->praktikum}}</td>
+                            @else 
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->nilai_sikap->mengaji))
-                                <td>{{$nilai->nilai_sikap->mengaji}}
+                                <td>{{$nilai->nilai_sikap->mengaji}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->nilai_sikap->hafalan))
-                                <td>{{$nilai->nilai_sikap->hafalan}}
+                                <td>{{$nilai->nilai_sikap->hafalan}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_sikap->disiplin))
+                                <td>{{$nilai->nilai_sikap->disiplin}}</td>
+                            @else 
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_sikap->bersih))
+                                <td>{{$nilai->nilai_sikap->bersih}}</td>
+                            @else 
+                                <td> </td>
+                            @endif
+                            @if(!empty($nilai->nilai_sikap->sopan))
+                                <td>{{$nilai->nilai_sikap->sopan}}</td>
+                            @else 
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->absensi->sakit))
-                                <td>{{$nilai->absensi->sakit}}
+                                <td>{{$nilai->absensi->sakit}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->absensi->izin))
-                                <td>{{$nilai->absensi->izin}}
+                                <td>{{$nilai->absensi->izin}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->absensi->alpha))
-                                <td>{{$nilai->absensi->alpha}}
+                                <td>{{$nilai->absensi->alpha}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->nilai_pelajaran->jumlah))
-                                <td>{{$nilai->nilai_pelajaran->jumlah}}
+                                <td>{{$nilai->nilai_pelajaran->jumlah}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
                             @endif
                             @if(!empty($nilai->nilai_pelajaran->rata_rata))
-                                <td>{{$nilai->nilai_pelajaran->rata_rata}}
+                                <td>{{$nilai->nilai_pelajaran->rata_rata}}</td>
                             @else 
-                                <td>0</td>
+                                <td> </td>
+                            @endif
+
+                            @if(!empty($nilai->nilai_pelajaran->rangking))
+                                <td>{{$nilai->nilai_pelajaran->rangking}}</td>
+                            @else 
+                                <td> </td>
                             @endif
                     </tr>
                         @endforeach
@@ -157,11 +203,13 @@
         @csrf
     </form>
     <script>
-        $('#example2').DataTable({
-            "responsive": true,
-            "searching": false,
-            "processing": true,
+        $(function () {
+        $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "excel", "pdf"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq( )');
         });
+
         function notificationBeforeDelete(event, el) {
             event.preventDefault();
             if (confirm('Apakah anda yakin akan menghapus data ? ')) {

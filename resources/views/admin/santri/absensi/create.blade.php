@@ -24,11 +24,14 @@
                             <label for="santri_id">Nama Santri</label>
                             <select name="santri_id" id="absensi" class="form-control">
                                 @foreach ($santri as $s)
+                                @if (empty($s->nilai_absensi_id))
                                     @if (old('santri_id') == $s->id)
                                         <option value="{{$s->id}}" selected>{{$s->nama_santri}}</option>
+                                        <input type="hidden" name="absensi_id" class="form-control" value="{{$s->id}}">
                                     @else
                                         <option value="{{$s->id}}">{{$s->nama_santri}}</option>
-                                    @endif          
+                                    @endif  
+                                @endif     
                                 @endforeach
                             </select>
                             {{-- <input name="nama_santri" class="form-control" value="{{old('nama_santri')}} readonly"

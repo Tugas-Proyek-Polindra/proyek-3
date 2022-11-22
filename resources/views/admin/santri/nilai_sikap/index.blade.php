@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="card-body">
                     @can('staff')
-                    <a href="/nilai-sikap/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                    <a href="/nilai-sikap/create" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                     @endcan
                     
                     <table class="table table-hover table-bordered table-stripped" id="example2">

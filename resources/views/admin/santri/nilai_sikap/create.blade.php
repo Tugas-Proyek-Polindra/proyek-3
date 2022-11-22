@@ -24,10 +24,13 @@
                             <label for="santri_id">Nama Santri</label>
                             <select name="santri_id" id="absensi" class="form-control">
                                 @foreach ($santri as $s)
-                                    @if (old('santri_id') == $s->id)
-                                        <option value="{{$s->id}}" selected>{{$s->nama_santri}}</option>
-                                    @else
-                                        <option value="{{$s->id}}">{{$s->nama_santri}}</option>
+                                    @if (empty($s->nilai_sikap_id))
+                                        @if (old('santri_id') == $s->id)
+                                            <option value="{{$s->id}}" selected>{{$s->nama_santri}}</option>
+                                            <input type="hidden" name="nilai_sikap_id" class="form-control" value="{{$s->id}}">
+                                        @else
+                                            <option value="{{$s->id}}">{{$s->nama_santri}}</option>
+                                        @endif
                                     @endif
                                 @endforeach
                             </select>

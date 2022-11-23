@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -56,9 +58,10 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        $guru = $request->user();
+        return view('profile', compact('guru'));
     }
 
     /**
@@ -68,9 +71,33 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'name' => 'required|max:255',
+                'email' => 'required|email',
+                'password' => 'required|min:5|max:255',
+                'nik' => 'required',
+                'tempat_lahir' => 'required',
+                'tgl_lahir' => 'required',
+                'jenis_kelamin' => 'required',
+                'no_hp' => 'required',
+                'nama_ibu' => 'required',
+                'status_pegawai' => 'required',
+                'pendidikan_terakhir' => 'required',
+                // 'username' => 'required',
+                // 'riwayat_keaktifan_id' => 'required',
+                ]
+            );
+
+
+        $validatedData['password'] = Hash::make($validatedData['password']);
+
+        $profile = $request->user()
+            ->update($validatedData);
+
+        return redirect('/home')->with('pesan', 'Data Berhasil Diupdate !');
     }
 
     /**

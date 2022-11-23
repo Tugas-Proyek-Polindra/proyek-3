@@ -69,7 +69,9 @@ class GuruController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        User::create($validatedData);
+        // User::create($validatedData);
+        $profile = User::find($id)
+            ->update($validatedData);
 
         return redirect('/guru')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
@@ -97,7 +99,7 @@ class GuruController extends Controller
     public function edit($id)
     {
         $guru = User::where('id', $id)->first();
-        return view('admin.guru.edit', [
+        return view('profile', [
             "guru" => $guru,
         ]);
     }

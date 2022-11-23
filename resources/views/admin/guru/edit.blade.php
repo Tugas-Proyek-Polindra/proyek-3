@@ -12,7 +12,7 @@
 <section class="content p-3">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Tambah @yield('title')</h3>
+            <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
             <form action="/guru/{{$guru->id}}" method="POST" enctype="multipart/form-data" >
@@ -39,7 +39,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" name="password" class="form-control" value="{{old('password', $guru->password)}}">
                             <div class="text-danger">
@@ -47,7 +47,7 @@
                                 {{$message}}
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <div class="form-group">
                             <label for="username">Nama Panggilan</label>
                             <input name="username" class="form-control" value="{{old('username')}}">

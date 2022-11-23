@@ -34,7 +34,8 @@ Auth::routes([
 ]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
 // Route::get('/santri', [SantriController::class, 'index'])->name('santri');
 // Route::get('/pelajaran', [PelajaranController::class, 'index']);

@@ -28,7 +28,7 @@
 
             <div class="card">
                 <div class="card-body">
-                <a href="/keaktifan/create" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
+                {{-- <a href="/keaktifan/create" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a> --}}
                     <table class="table table-hover table-bordered table-stripped" id="example2">
                         <thead>
                         <tr>

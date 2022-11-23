@@ -31,7 +31,7 @@
                         <a href="/nilai-pelajaran/create" class="btn btn-primary btn-sm mb-2"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
                     @endcan --}}
                     
-                    <table class="table table-hover table-bordered table-stripped" id="table-nilai-pelajaran">
+                    <table class="table table-bordered table-striped table-responsive p-0" id="table-nilai-pelajaran">
                         <thead>
                             <tr>
                                 <th>No</th>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\RiwayatKeaktifan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -63,10 +64,16 @@ class GuruController extends Controller
 
 
         $validatedData['password'] = Hash::make($validatedData['password']);
+        // $validatedData['user_id'] = $request->id;
 
-        // User::create($validatedData);
-        $profile = User::find($id)
-            ->update($validatedData);
+        $guru = User::create($validatedData);
+
+        $riwayat_keaktifan = RiwayatKeaktifan::create([
+            'user_id' => $guru->id,
+        ]);
+
+        // $profile = User::find($id)
+        //     ->update($validatedData);
 
         return redirect('/guru')->with('pesan', 'Data Berhasil Ditambahkan !');
     }
@@ -144,6 +151,7 @@ class GuruController extends Controller
     public function destroy($id)
     {
         $guru = User::find($id);
+        // $guru = RiwayatKeaktifan::find($id);
         $guru->delete();
         return redirect('/guru')->with('pesan', 'Data Berhasil Dihapus !');
     }

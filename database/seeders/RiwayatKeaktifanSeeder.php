@@ -22,5 +22,33 @@ class RiwayatKeaktifanSeeder extends Seeder
             'status_penugasan' => 'Tetap',
             'tugas_utama' => 'Lainnya',
         ]);
+        RiwayatKeaktifan::create([
+            'user_id' => '3',
+            'status_keaktifan' => 'Aktif',
+            'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
+            'status_penugasan' => 'Tetap',
+            'tugas_utama' => 'Kepala Madrasah',
+        ]);
+        RiwayatKeaktifan::create([
+            'user_id' => '4',
+            'status_keaktifan' => 'Aktif',
+            'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
+            'status_penugasan' => 'Tetap',
+            'tugas_utama' => 'Lainnya',
+        ]);
+        RiwayatKeaktifan::create([
+            'user_id' => '5',
+            'status_keaktifan' => 'Aktif',
+            'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
+            'status_penugasan' => 'Tetap',
+            'tugas_utama' => 'Lainnya',
+        ]);
+        RiwayatKeaktifan::create([
+            'user_id' => '6',
+            'status_keaktifan' => 'Aktif',
+            'tgl_mulai_bertugas' => Carbon::createFromFormat('Y-m-d', '2021-07-01')->format('Y-m-d'),
+            'status_penugasan' => 'Tetap',
+            'tugas_utama' => 'Lainnya',
+        ]);
     }
 }

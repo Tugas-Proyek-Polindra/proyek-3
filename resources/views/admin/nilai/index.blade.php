@@ -55,7 +55,7 @@
                         </select>
                     </div> --}}
                 </div>
-                <table id="example1" class="table table-bordered table-striped table-responsive p- ">
+                <table id="example1" class="table table-bordered table-striped table-responsive p-0 ">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -78,7 +78,7 @@
                             <th>Alpha</th>
                             <th>Jumlah</th>
                             <th>Rata-rata</th>
-                            <th>Rangking</th>
+                            <th>Rangk</th>
                         </tr>
                     </thead>
                     <tbody>

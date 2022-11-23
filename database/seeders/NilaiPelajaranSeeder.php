@@ -129,7 +129,7 @@ class NilaiPelajaranSeeder extends Seeder
             'b_arab' => '90',
             'praktikum' => '89',
             'jumlah' => '875',
-            'rata_rata' => '781.8',
+            'rata_rata' => '78.8',
         ]);
         NilaiPelajaran::create([
             'santri_id' => 10,

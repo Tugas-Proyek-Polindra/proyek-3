@@ -73,29 +73,37 @@ class ProfileController extends Controller
      */
     public function update(Request $request)
     {
-        $validatedData = $request->validate(
+        $request->validate(
             [
                 'name' => 'required|max:255',
                 'email' => 'required|email',
-                'password' => 'required|min:5|max:255',
-                'nik' => 'required',
-                'tempat_lahir' => 'required',
-                'tgl_lahir' => 'required',
-                'jenis_kelamin' => 'required',
-                'no_hp' => 'required',
-                'nama_ibu' => 'required',
-                'status_pegawai' => 'required',
-                'pendidikan_terakhir' => 'required',
+                'password' => 'sometimes|nullable',
+                'nik' => 'sometimes|nullable',
+                'tempat_lahir' => 'sometimes|nullable',
+                'tgl_lahir' => 'sometimes|nullable',
+                'jenis_kelamin' => 'sometimes|nullable',
+                'no_hp' => 'sometimes|nullable',
+                'nama_ibu' => 'sometimes|nullable',
+                'status_pegawai' => 'sometimes|nullable',
+                'pendidikan_terakhir' => 'sometimes|nullable',
                 // 'username' => 'required',
                 // 'riwayat_keaktifan_id' => 'required',
                 ]
             );
 
+        $guru = $request->user();
+        $guru->name = $request->name;
+        $guru->email = $request->email;
+        $guru->nik = $request->nik;
+        $guru->tempat_lahir = $request->tempat_lahir;
+        $guru->jenis_kelamin = $request->jenis_kelamin;
+        $guru->no_hp = $request->no_hp;
+        $guru->nama_ibu = $request->nama_ibu;
+        $guru->status_pegawai = $request->status_pegawai;
+        $guru->pendidikan_terakhir = $request->pendidikan_terakhir;
 
-        $validatedData['password'] = Hash::make($validatedData['password']);
-
-        $profile = $request->user()
-            ->update($validatedData);
+        if ($request->password) $guru->password = bcrypt($request->password);
+        $guru->save();
 
         return redirect('/home')->with('pesan', 'Data Berhasil Diupdate !');
     }

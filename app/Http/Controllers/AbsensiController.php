@@ -13,15 +13,9 @@ class AbsensiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         return view('admin.santri.absensi.index',[
-            
             "absensi" => Absensi::all(),
         ]);
     }
@@ -58,17 +52,6 @@ class AbsensiController extends Controller
         Absensi::create($validatedData);
 
         return redirect('/absensi')->with('pesan', 'Data Berhasil Ditambahkan !');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Absensi  $absensi
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Absensi $absensi)
-    {
-        //
     }
 
     /**

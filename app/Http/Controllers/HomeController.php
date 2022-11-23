@@ -24,13 +24,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        // $this->middleware('auth');
-
         return view('home');
     }
-
-    // public function dashboard()
-    // {
-    //     return view('landingpage');
-    // }
 }

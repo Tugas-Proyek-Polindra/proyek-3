@@ -75,4 +75,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(RekapNilai::class);
     }
+
+    public function riwayat_keaktifan()
+    {
+        return $this->hasOne(RiwayatKeaktifan::class);
+    }
 }

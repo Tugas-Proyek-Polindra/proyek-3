@@ -44,7 +44,7 @@ Route::group(['middleware' => 'staff'], function () {
     Route::resource('/santri', SantriController::class);
     Route::resource('/kelas', KelasController::class);
     Route::resource('/guru', GuruController::class);
-    Route::resource('/keaktifan', RiwayatKeaktifanController::class);
+    Route::resource('/keaktifan', RiwayatKeaktifanController::class)->except(['show', 'destroy', 'create']);
 });
 
 Route::group(['middleware' => 'auth'], function () {
@@ -52,7 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('/pelajaran', PelajaranController::class);
     Route::resource('/nilai-pelajaran', NilaiPelajaranController::class);
     Route::resource('/nilai-sikap', NilaiSikapController::class);
-    Route::resource('/absensi', AbsensiController::class);
+    Route::resource('/absensi', AbsensiController::class)->except('show');
 });
 
 

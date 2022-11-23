@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\RiwayatKeaktifan;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RiwayatKeaktifanController extends Controller
@@ -12,11 +13,6 @@ class RiwayatKeaktifanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
         return view('admin.guru.riwayat_keaktifan.index',[
@@ -31,7 +27,7 @@ class RiwayatKeaktifanController extends Controller
      */
     public function create()
     {
-        //
+        // 
     }
 
     /**
@@ -62,9 +58,13 @@ class RiwayatKeaktifanController extends Controller
      * @param  \App\Models\RiwayatKeaktifan  $riwayatKeaktifan
      * @return \Illuminate\Http\Response
      */
-    public function edit(RiwayatKeaktifan $riwayatKeaktifan)
+    public function edit($id)
     {
-        //
+        $riwayatKeaktifan = RiwayatKeaktifan::where('id', $id)->first();
+        return view('admin.guru.riwayat_keaktifan.edit', [
+            "riwayat_keaktifan" => $riwayatKeaktifan,
+            // "guru" => User::all(),
+        ]);
     }
 
     /**
@@ -74,9 +74,21 @@ class RiwayatKeaktifanController extends Controller
      * @param  \App\Models\RiwayatKeaktifan  $riwayatKeaktifan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RiwayatKeaktifan $riwayatKeaktifan)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate(
+            [
+                'status_keaktifan' => 'required',
+                'tgl_mulai_bertugas' => 'required',
+                'status_penugasan' => 'required',
+                'tugas_utama' => 'required',
+                ]
+            );
+
+        $profile = RiwayatKeaktifan::find($id)
+            ->update($validatedData);
+
+        return redirect('/keaktifan')->with('pesan', 'Data Berhasil Diupdate !');
     }
 
     /**

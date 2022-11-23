@@ -113,7 +113,7 @@ class SantriController extends Controller
      */
     public function show($id)
     {
-        $santri = Santri::where('id', $id)->first();
+        $santri = Santri::where('id', $id)->get();
         return view('admin.santri.show', [
             "santri" => $santri,
         ]);
